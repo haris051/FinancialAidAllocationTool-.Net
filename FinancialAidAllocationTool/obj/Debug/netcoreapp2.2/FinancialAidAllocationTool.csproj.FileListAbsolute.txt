@@ -1,0 +1,117 @@
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Settings.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Settings.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (17-April-2020)/FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/bin/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Home/Settings.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (19-April-2020) /FinancialAidAllocationTool/obj/Debug/netcoreapp2.2/FinancialAidAllocationTool.csproj.CopyComplete

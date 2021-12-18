@@ -1,0 +1,17 @@
+@model FinancialAidAllocationTool.Models.Application.FaatFiles
+@using HtmlHelpers.BeginCollectionItemCore;
+
+
+@using (Html.BeginCollectionItem("FaatFiles"))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            @Model.FileName
+            <input hidden asp-for="FileName"/>
+            <input hidden asp-for="FileType"/>
+            <input type="hidden" asp-for="FileData"/>
+
+        </div>
+    </div>
+
+}

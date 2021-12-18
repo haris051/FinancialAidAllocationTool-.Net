@@ -1,0 +1,213 @@
+﻿@model List<FinancialAidAllocationTool.Models.FaatClassDefinition>
+  @using System.Collections.Generic;
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin-top: 20px;">
+      
+<section class="Boxes"> 
+
+          
+@{
+  using(Html.BeginForm("SelectAll", "Home",FormMethod.Post))
+  {
+      <div class="row">
+        <div class="col-sm">
+          @if(TempData["IsAcceptAllEnabled"].ToString() == "1")
+          {
+              <button  name="AcceptAll" class="btn btn-primary AcceptAll"  value="Accept" onclick="SubmitForms()">Accept All</button>
+          }
+          else
+          {
+              <button  name="AcceptAll" disabled class="btn btn-primary AcceptAll"  value="Accept" onclick="SubmitForms()">Accept All</button>
+          }
+        </div>
+        <div class="col-sm">
+          @if(TempData["IsRejectAllEnabled"].ToString() == "1")
+          {
+              <button  name="RejectAll" class="btn btn-primary RejectAll"  value="Reject" onclick="SubmitForms()">Reject All</button>
+          }
+          else
+          {
+              <button  name="RejectAll" disabled class="btn btn-primary RejectAll"  value="Reject" onclick="SubmitForms()">Reject All</button>
+          }
+        </div>
+    </div>
+  }
+                
+  var count =0 ;
+  
+  @foreach(var obj in Model)
+  {  
+
+
+      <div class="table-responsive">
+          <table class="table table-sm MyTable">
+              <tr id=@count onclick="ToggleMenu(this)">
+                  <td class="MyTableTd">
+                    <h5><u>@obj.Discipline @obj.SemesterCount @obj.Section</u></h5>
+                  </td>
+                  <td class="MyTableTd" style="text-align:right" colspan="6"> 
+                    <h5><u>Total Strength : @obj.ClassStrength</u></h5>
+                  </td>
+              </tr>                               
+          </table>
+      </div>
+@foreach(var i in obj.FaatScholarLog)
+        
+          {
+            using(Html.BeginForm("MeritList", "Home",FormMethod.Post))
+            { 
+                <div class="table-responsive">
+
+                <table class="table table-sm table-borderless table-hover MyTable" style="table-layout:fixed" >
+                      <tr id=@count class="collapse @count">
+                          <td style="display:none">
+                              @Html.TextBox("Discipline",obj.Discipline,new{@style="border: 0px none;"})
+
+                          </td>
+                          <td style="display:none">
+                            @Html.Hidden("SemesterNo",obj.Semester,new{@style="width:0px"})
+
+                          </td>
+                          <td style="display:none">
+                            @Html.Hidden("SemesterCount",obj.SemesterCount,new{@style="width:0px"})
+
+                          </td>
+                          <td style="display:none">
+                            @Html.Hidden("Section",obj.Section,new{@style="width:0px"})
+
+                          </td>
+                          
+                          
+        
+                          <td style="vertical-align: middle;" colspan="2" class="MyTableTd">
+                            <input type="hidden" value=@i.AridNo name="RegistrationNo" style="border: 0px none;" readonly></input>
+                              @i.AridNo
+                          </td>
+                            <td colspan="2" style="vertical-align: middle;text-align:center;" class="MyTableTd">
+                              @Math.Round(Convert.ToDecimal(i.Cgpa), 2)
+                            <input type="hidden" value=@i.Cgpa name="CGPA" style="border: 0px none;text-align:center;border:none;" readonly></input>
+                            </td>
+                            <td style="padding: 0;vertical-align:middle;" class="MyTableTd">
+                              @if(i.Status == "Accept")
+                              {
+                                <input value=@i.T.Credit name="AllocationAmount" style="width:100%;"></input>  
+                              }
+                              else
+                              {
+                                <input value="" disabled name="AllocationAmount" style="width:100%;"></input>  
+                              }
+                          </td>
+                          <td>
+                            @Html.Hidden("Status",obj.Semester,new{@style="width:0px"})
+
+                          </td>
+                            <td>
+                              @if(i.Status == "Accept")
+                              {
+                                  <button type="submit" disabled name="Submit" id=@i.AridNo value="Accept"  class="btn btn-success btn-sm">Accept</button>
+                              }
+                              else
+                              {
+                                  <button type="submit" name="Submit" id=@i.AridNo value="Accept"  class="btn btn-success btn-sm">Accept</button>
+                              }
+
+                          </td>
+                            <td>
+                              @if(i.Status == "Reject")
+                              {
+                                  <button type="submit" disabled name="Submit" value="Reject" class="btn btn-danger btn-sm">Reject</button>
+                              }    
+                              else
+                              {
+                                  <button type="submit" name="Submit" value="Reject" class="btn btn-danger btn-sm">Reject</button> 
+                              }
+                          </td>
+                      </tr>
+
+
+                </table>
+              </div>
+                                
+            }
+            
+      
+      
+      }
+      count++;
+      }
+      
+} 
+</section>   
+               @{
+            
+
+                  <script type="text/javascript">
+                              function SubmitForms()
+                              { 
+
+                                
+                              
+                             
+                                var AllocatedAmountLength=document.getElementsByName("AllocationAmount").length;
+                                var Amount = [];
+                                for (i = 0; i < AllocatedAmountLength; i++) { 
+                                  //Push each element to the array
+                                  Amount.push(document.getElementsByName("AllocationAmount")[i].value);
+                                }
+
+
+                                var RegistrationNoLength=document.getElementsByName("RegistrationNo").length;
+                                var RegisterNo = [];
+                                for (i = 0; i < RegistrationNoLength; i++) { 
+                                  //Push each element to the array
+                                  RegisterNo.push(document.getElementsByName("RegistrationNo")[i].value);
+                                }
+
+                                
+                               
+                               
+                                                       $.post("/Home/CompleteList",
+                                                        {
+                                                          AllocatedAmount: Amount,
+                                                          RegistrationNo : RegisterNo,
+                                                          Status : "Accept",
+                                                          Type : "MeritList",
+                                                          Discipline: '@Model[1].Discipline'
+                                                        },
+                                                        function(data, status){
+                                                         // alert("Data: " + data + "\nStatus: " + status);
+                                                        });
+                           
+                              return true;
+                              }
+
+                              
+                              function ToggleMenu(x)
+                              {   
+                                 
+                                  $("."+x.id).toggleClass("collapse");
+                                  
+                                  
+                              }
+                            </script>
+               }
+               
+                            
+                       
+                          
+             
+                      
+                       
+                        
+                       
+              
+         
+               
+               
+
+                
+
+

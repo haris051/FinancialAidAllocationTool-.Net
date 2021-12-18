@@ -1,0 +1,108 @@
+@model FinancialAidAllocationTool.Models.Policy.FaatRule
+@using HtmlHelpers.BeginCollectionItemCore;
+ @using (Html.BeginCollectionItem("Policy.FaatRule"))
+ { 
+
+ @*
+       <div class="row" style="margin-top : 10px">
+        <div class="col-lg-1" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                Strength
+          </div>
+          <div class="col-lg-1">
+                <input class="form-control" type="number" asp-for=Strength>
+          </div>
+
+          <div class="col-lg-1" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                Top
+          </div>
+          <div class="col-lg-1">
+                
+                <input class="form-control" readonly type="number" asp-for=Top>
+          </div>
+                <input hidden asp-for=Id>
+      </div>
+              <div class="row" style="margin-top : 10px;text-align:center;">
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-2">
+                <ul class="list-group ">
+                   <li class="list-group-item bg-info">
+                        <div class="row">
+                        <div class="col-lg-6" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                            Student
+                        </div>
+                         <div class="col-lg-6" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                            Amount 
+                        </div>
+                        </div>
+                   </li>
+              
+
+ 
+     @foreach (var item in Model.FaatRuleDescription)
+     {
+        <partial name="MeritRuleDescription" for="@item" />
+     }
+                </ul>
+                </div>
+                </div>
+*@
+       
+     <div class="col-xl-3 col-lg-3 col-12" style="margin-top: 5px; margin-right:50px;">
+           <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-2 col-3 px-0 pl-1" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                Strength
+          </div>
+           @if(Model.Top==1)
+          {
+                 <div class="col-xl-3 col-lg-1 col-1 px-0 pl-1" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                    &lt;&#61;
+                   </div>
+                
+          }
+          else
+          {
+          <div class="col-xl-3 col-lg-1 col-1" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                &gt;
+          </div>
+          }
+          <div class="col-xl-2 col-lg-3 col-2 px-0">
+                <input class="form-control px-0" style="text-align: center;" type="number" asp-for=Strength>
+          </div>
+         
+          <div class="col-xl-2 col-lg-2 col-md-1 col-3 px-0 pl-1" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                Top
+          </div>
+          <div class="col-xl-2 col-lg-2 col-2 px-0">
+                
+                <input class="form-control px-0" style="text-align: center;" readonly type="number" asp-for=Top>
+          </div>
+           </div>
+                <input hidden asp-for=Id>
+     
+              <div class="row" style="margin-top : 10px;text-align:center;">
+                  <div class="col-lg-12 col-12 px-0">
+                <ul class="list-group ">
+                   <li class="list-group-item bg-info">
+                        <div class="row">
+                        <div class="col-lg-6 col-6" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                            Student
+                        </div>
+                         <div class="col-lg-6 col-6" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                            Amount 
+                        </div>
+                        </div>
+                   </li>
+              
+
+ 
+     @foreach (var item in Model.FaatRuleDescription)
+     {
+        <partial name="MeritRuleDescription" for="@item" />
+     }
+                </ul>
+                </div>
+                </div>
+                 </div>
+                
+  
+ }

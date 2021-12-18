@@ -1,0 +1,76 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.FaatClassDefinition
+
+@{
+    ViewData["Title"] = "Edit";
+    
+}
+
+@using (Html.BeginCollectionItem("FaatClassDefinition"))
+{
+    <div class="card mt-1 MainTable">
+          <div class="card-header">
+               <div class="THead row">
+          
+                    <div class="col-lg-5 col-md-4 col-xs-2 col-4 Cell" style="text-align: left;padding-top:4px;">
+                    <h6 style="font-size: 2vh;">@Model.Discipline@Model.SemesterCount@Model.Section</h6>            
+                    </div>
+                    <div class="col-lg-2 col-md-2  col-xs-2 col-1 d-xl-block d-lg-block d-md-block d-none Cell">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-4 px-0" style="text-align:right;">
+                      <button class="btn btn-sm btn-danger RejectClass" data-toggle="Reject" data-placement="top" title="Reject all Class Students" style="font-size:2vh;" data=@Model.Id @if(Model.FaatScholarLog.Where(e=> e.Status=="Reject").Count() == Model.FaatScholarLog.Count()){ <text>disabled</text>}><i class="fas fa-times-circle"></i></button>
+   
+                      <button type="button" class="btn btn-sm btn-success AcceptClass" data-toggle="Accept" data-placement="top" title="Accept All Class Students" style="font-size:2vh;" data=@Model.Id @if(Model.FaatScholarLog.Where(e=>e.Status== "Accept").Count() == Model.FaatScholarLog.Count()){ <text>disabled</text>}><i class="fas fa-check-circle"></i></button>
+   
+                      <button class="btn btn-sm btn-primary ManualAdd" data-toggle="Manual" data-placement="top" title="Manual Add Students" style="font-size:2vh;" value=@Model.Discipline-@Model.SemesterCount-@Model.Section-@Model.Id><i class="fas fa-plus-circle"></i></button>
+                    </div>
+                    <div class="col-lg-1 col-md-2  col-xs-6 col-4 Cell px-0" style="text-align: Right;padding-top:4px;">
+                    <h6 style="font-size: 1.8vh;">Total Strength:@Model.ClassStrength</h6>
+                    @Html.HiddenFor(m => m.Id, new{@class="CID"})
+                    @Html.HiddenFor(m => m.Discipline,new {@class="DISP"})
+                    @Html.HiddenFor(m => m.Semester,new{@class="SEMS"})
+                    @Html.HiddenFor(m => m.SemesterCount,new{@class="SEMC"})
+                    @Html.HiddenFor(m => m.Section,new{@class="SEC"})
+                    @Html.HiddenFor(m => m.ClassStrength,new{@class="STRENGTH"})
+                    </div>
+                    
+               </div>
+          </div>
+    
+          <div class="TBody collapse">
+                         
+               <ul class="list-group MainTable2">
+                    <li class="list-group-item bg-info d-none d-lg-block d-md-block">
+                         <div class="row" style="text-align: center;">
+                              <div class="col-lg-2 col-md-2" style="text-align: center;">
+                                   Arid No
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0" style="text-align: center;">
+                                   Name
+                              </div>
+                              <div class="col-lg-2 col-md-2" style="text-align: center;">
+                                   CGPA
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0" style="text-align: center;">
+                                   Amount
+                              </div>
+                              <div class="col-lg-4 col-md-4" style="text-align: center;">
+                                   Actions
+                              </div>
+                         </div>
+                    </li>
+                         
+                    @foreach (var item in Model.FaatScholarLog)
+                    {        
+                         <partial name="MeritBasedClassStudent" for="@item" view-data="@ViewData"/>
+                    }
+               </ul>
+          </div>
+     </div>    
+    
+}
+
+

@@ -1,0 +1,76 @@
+@model IEnumerable<FinancialAidAllocationTool.Models.Ledger.DonationLedger>
+    @{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    
+    <h1>Manage Donations</h1>
+    
+    <div class="row d-flex">
+        <div class="col-sm" style="text-align: center;">
+            <h4 class="text-primary pt-2">Donation</h4>
+        </div>
+        <div class="col-sm">
+    @Html.TextBox("Enter Donation","","",new{@id="Donations",@class = "form-control",Type="number"})
+        </div>
+        <div class="col-sm" style="text-align: center;">
+    <Button id="AddDonation" class="btn btn-lg btn-primary fas fa-hands-helping mt-1" style="border-radius: 50%;">Save</Button>
+        </div>
+    </div>
+    
+   
+    <div class="table-wrapper-scroll-y my-custom-scrollbar" style="margin-top: 4px;"> 
+    <table class="table table-bordered table-striped mb-0" id="tblDonation"> 
+        
+        <thead>
+            <tr>
+                <th>
+                    Transaction Id
+                </th> 
+                <th>
+                    Date
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Credit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Debit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Memo)
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbodyDonation">
+            
+                @foreach(var DonationLedger in Model)
+                {
+                  <partial name="AddDonationLedger" for="@DonationLedger"/>
+
+                }
+            
+        
+        </tbody>
+
+
+
+
+    </table>
+    
+    </div>
+</div>
+    <script>
+
+     $("#AddDonation").click(function () {
+         var Donations = document.getElementById("Donations").value;
+        $.ajax({
+            url: "/Ledger/AddDonationLedger/",
+            data:{donations:Donations},                
+                success: function (result) {        
+                $("#tblDonation .tbodyDonation").append(result);
+                    
+                //$(".RuleURL").toggleClass('collapse');
+            }
+        });
+       // return false;
+    });
+    </script>

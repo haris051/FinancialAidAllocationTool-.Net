@@ -1,0 +1,73 @@
+@model FinancialAidAllocationTool.Models.Application.FaatAppGuardianOtherIncomeResourceFiles
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+        @using (Html.BeginCollectionItem("FaatAppGuardianOtherIncomeResourceFiles"))
+        {
+               <li class="list-group-item border border-dark">
+                 <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-3 d-xl-block  d-none guardian">
+                        <input asp-for=@Model.ResourceType class="form-control">
+                </div>
+               
+                <div class="col-xl-3 col-lg-3 col-md-3 col-3 d-xl-block d-none guardian">
+                        <input asp-for=@Model.Income class="form-control">
+                </div>
+               
+                <div class="col-xl-4 col-lg-3 col-md-3 col-3 MyFont d-xl-block  d-none guardian" style="text-align: center;">
+                       
+                                      <a class="AttachFile" ><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="ViewImage" hidden alt="" src="" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+                                      <input type="file" id="customFile6" asp-for="file" hidden>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-3 d-xl-block d-none guardian">
+                   <a href="#" class="btn btn-danger delete-GO">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+                </div>
+                
+                          
+                            
+                  </div>
+                  <div class="row">
+                          <div class="col-lg-6 col-md-6 col-6 d-xl-none px-0">
+                                  <label class="font-weight-bold" style="margin-top: 6px;">Resource Type</label>
+                          </div>
+                <div class="col-lg-6 col-md-6 col-6 d-xl-none">
+                        <input asp-for=@Model.ResourceType class="form-control" placeholder="Resource Type">
+                </div>
+               <div class="col-lg-6 col-md-6 col-6 d-xl-none px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Income</label>
+               </div>
+                <div class="col-lg-6 col-md-6 col-6 d-xl-none">
+                        <input asp-for=@Model.Income class="form-control" placeholder="Income">
+                </div>
+               <div class="col-lg-6 col-md-6 col-6 d-xl-none px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Resource Files</label>
+               </div>
+                <div class="col-lg-6 col-md-6 col-6 custom-file MyFont d-xl-none" style="text-align: center;">
+                                      <a class="AttachFile" ><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="ViewImage" hidden alt="" src="" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+                                      <input type="file" id="customFile6" asp-for="file" hidden>
+                </div>
+                 <div class="col-lg-6 col-md-6 col-6 d-xl-none px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Discard</label>
+               </div>
+                <div class="col-lg-6 col-md-6 col-6 d-xl-none">
+                   <a href="#" class="btn btn-danger delete-MO">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+                </div>
+                
+                          
+                            
+                  </div>
+          
+                </li>  
+
+           
+
+        }
+}

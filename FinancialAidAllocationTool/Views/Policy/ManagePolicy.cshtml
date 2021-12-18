@@ -1,0 +1,240 @@
+@model IEnumerable<FinancialAidAllocationTool.Models.Policy.FaatPolicy>
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Manage Policy</h1>
+
+
+      <div class="">
+        <form asp-action="ManagePolicy" asp-controller="Policy" method="POST">
+            <div asp-validation-summary="All" class="text-danger"></div>                        
+          
+            <div class="row ">
+                <div class="form-group col-sm">
+                    <div id="Policy" class="panel panel-body" data-parent="#form1">
+                        <button id="addPolicy" class="float-left btn btn-lg btn-warning text-white fa fa-plus">                            
+                        Create Policy</button>
+                    </div>
+                </div>
+
+            </div>
+            
+                <div class="card mt-1">
+                    <div class="card-header" id="tblPolicy">
+                        <div class="row PTHead">
+                            <div class="form-group col-lg-2 col-2 px-0">
+                                <label class="control-label text-success display-5" style="font-size: 2vh;">Expansion</label>
+                            </div>
+                            <div class="form-group col-lg-2 col-3 px-0 text-center">
+                                <label class="control-label text-success display-5" style="font-size: 2vh;">Activate</label>
+                            </div>
+                            <div class="form-group col-lg-3 col-2 text-center">
+                                <label class="control-label text-success display-5" style="font-size: 2vh;">Name</label>
+                            </div>
+                            <div class="form-group col-lg-3 col-2 text-center px-0">
+                                <label class="control-label text-success display-5" style="font-size: 2vh;">Min CGPA</label>
+                            </div>
+                            <div class="form-group col-lg-2 col-3 px-0 text-center">
+                                <label class="control-label text-success display-5" style="font-size: 2vh;">Discard</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
+            
+                               
+
+                    <div class="tbodyPolicy">
+                                @foreach (var item in Model)
+                                {
+
+                                    <partial name="AddPolicy" for="@item"></partial>
+                                
+                                }
+                            
+                        
+                    </div>
+               
+
+                    
+            
+            <div class="row">
+                <div class="form-group col-sm"></div>
+                <div class="form-group col-sm">
+                    <button type="submit" value="Save" class="btn btn-success btn-lg">
+                        <i class="fa fa-arrow-circle-right fa-lg"></i> Save
+                    </button>
+                </div>
+                <div class="form-group col-sm"></div>
+            </div>
+        </form>
+    
+    </div>
+
+    
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+<script type="text/javascript">
+
+    $("#addPolicy").click(function () {
+       
+        $.ajax({
+            url: "/Policy/AddPolicy/",                
+                success: function (result) {        
+                $(".tbodyPolicy").append(result);                   
+                
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.addRule', function (e) {           
+        
+        //console.log($(e.target).closest(".RuleURL").next().find(".tbodyRule"));
+        
+        $.ajax({
+            url: "/Policy/AddRule/",                
+                data: { "containerPrefix":$(this).attr('data')  },
+                success: function (result) {        
+                
+                
+                const clickedElement = $(e.target);
+                //clickedElement.closest(".RuleURL").next().find(".tbodyRule").append(result);
+                clickedElement.closest(".RuleURL").append(result);
+                
+
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.addRuleDescription', function (e) {       
+
+        //alert('add Rule Description');    
+       // const recipients =  $(e.target);                
+        $.ajax({
+            url: "/Policy/AddRuleDescription",            
+            data: { "containerPrefix": $(this).attr('data')  },
+            success: function (result) {
+
+                const clickedElement = $(e.target);
+                //clickedElement.closest("tr").find("#tblRuleDesc .tbodyRuleDesc").append(result);
+                //clickedElement.parent().parent().parent().next('.tbodyRuleDesc').append(result);
+                //console.log(clickedElement.parent().parent().parent().next('.tbodyRuleDesc'));
+                clickedElement.closest('.RuleDescURL').next('.tbodyRuleDesc').append(result);
+            }
+        });
+
+        return false;
+    });
+
+    $(document).on('click', '.delete-policy', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+         //   $(this).closest('.rowPolicy').next().remove();
+            $(this).closest('.rowPolicy').remove();
+        }
+        return false;
+    });
+
+    $(document).on('click', '.delete-rule', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+            $(this).closest('.rowRule').next().remove();
+            $(this).closest('.rowRule').next().remove();
+            $(this).closest('.rowRule').remove();
+        }
+        return false;
+    });
+
+    $(document).on('click', '.delete-ruleDesc', function (e) {  
+
+        if (confirm('Are you sure you want to delete?')) {
+                      
+            $(this).closest('.D').remove();
+        }
+        return false;
+    });
+
+    $(document).on('click', '.addRuleExpand', function (e) {  
+                
+        if ($(this).hasClass("fa-minus")) {              
+            $(this).removeClass("fa-minus");
+            $(this).addClass("fa-plus");
+        }
+        else
+        {
+            $(this).removeClass("fa-plus");
+            $(this).addClass("fa-minus");
+        }
+        
+          
+        //$(this).parent().parent().parent().find('.PR').toggleClass("collapse");
+        $(this).parent().parent().parent().parent().find('.RuleURL').toggleClass("collapse");        
+        
+        return false;
+    });
+
+    $(document).on('click', '.addRuleDescExpand', function (e) {  
+        
+        if ($(this).hasClass("fa-minus")) {              
+            $(this).removeClass("fa-minus");
+            $(this).addClass("fa-plus");
+        }
+        else
+        {
+            $(this).removeClass("fa-plus");
+            $(this).addClass("fa-minus");
+        }  
+        //$(this).parent().parent().parent().find('.RD').toggleClass("collapse");
+        //$(this).parent().parent().parent().find('.RuleDescURL').toggleClass("collapse");
+        
+        $(this).closest(".rowRule").next().next('.tbodyRuleDesc').toggleClass("collapse");
+        $(this).closest(".rowRule").next('.RuleDescURL').toggleClass("collapse");
+        
+        return false;
+    });
+   function Radio()
+   {
+   
+    $("input:radio").change(function (e) {  
+
+       // $('input[type=radio]:checked').not(this).prop('checked', false);
+        $(".Radio").prop('checked', false)
+        $(".Radio").removeClass("fas fa-check-circle");
+       
+       $(this).closest(".Radio").prop('checked', true)
+       
+              
+        $(this).closest(".Radio").addClass("fas fa-check-circle");
+       
+    });
+   }   
+    $("input:radio:checked").each(function(e) {
+        $(this).closest(".Radio").addClass("fas fa-check-circle");
+        
+    });
+
+  
+   // $(".PR").toggleClass('collapse');
+    //$(".RuleURL").toggleClass('collapse');
+
+    
+   // $(".RD").toggleClass('collapse');
+    //$(".RuleDescURL").toggleClass('collapse');
+
+
+   
+
+</script>

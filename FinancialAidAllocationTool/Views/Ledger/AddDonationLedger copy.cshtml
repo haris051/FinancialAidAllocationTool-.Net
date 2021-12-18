@@ -1,0 +1,22 @@
+@model FinancialAidAllocationTool.Models.Ledger.DonationLedger
+@{
+    Layout=null;
+}
+<tr>
+    <td>
+        @Model.TransactionId
+    </td> 
+      <td>
+        @Html.DisplayFor(x => x.TransactionDate)
+    </td>
+      <td>
+        @Model.Credit
+    </td>
+      <td>
+        @Model.Debit
+    </td>
+      <td>
+        @Model.Memo
+    </td>
+    
+</tr>

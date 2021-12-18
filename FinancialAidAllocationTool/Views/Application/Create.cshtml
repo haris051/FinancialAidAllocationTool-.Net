@@ -1,0 +1,557 @@
+@model FinancialAidAllocationTool.Models.Application.FaatApplication
+@using Microsoft.AspNetCore.Mvc.Rendering;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+  var studentcount =0;
+  var jobcount =0;
+</script>
+
+<div style="height: 80%:;width:100%;overflow-x:hidden;margin-top:60px; margin-bottom:80px;">
+      
+        <form asp-action="Create" id="regForm" enctype="multipart/form-data" method="POST">
+         
+                               <ul id="progressbar" style="text-align: center; color:black" class="px-0 mt-1">
+                                <li style="color: white;" class="active step">Upload Pic</li>
+  
+                               <li style="color: white;" class="step">Student Details</li>
+                               <li style="color: white;" class="step">Parents Details</li>
+                               <li style="color: white;" class="step">Resident Details</li>
+                               <li style="color: white;" class="step">Sibling Information</li>
+                               
+                               </ul>
+                               
+                             <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+                             <div>
+                               <section class="tab" style="margin-left:auto;margin-right:auto;">
+                                 <div class="row">
+                                   <div class="col-xl-4 col-lg-4 col-md-3 d-none d-xl-block d-lg-block d-md-block"></div>
+   <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+                   <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1" id="StudentDetails">
+                                 <h5>Upload Profile Picture</h5>
+                        </div>
+                  </div>
+                  <hr style="border-bottom: 1px solid grey;"/>
+                   <div class="row">
+                     
+                     <div class="col-xl-12" style="text-align: center;">
+                              <img class="rounded-circle ChangeImage" id="output" src="~/Images/User.png" data-holder-rendered="true" style="height: 150px;width:150px;">
+
+                                        
+                     </div>
+
+                   </div>
+                   <div class="row" style="margin-top: 10px;">
+                     <div class="col-xl-12" style="text-align: center;">
+                        <button type="button" class="btn btn-sm btn-success UploadJob"><i class="fa fa-upload" aria-hidden="true"></i>upload</button>
+                                      <p></p>
+                                <input type="file"  accept="image/*" asp-for="file" id="file"  onchange="loadFile(event)" style="display: none;"> 
+                     </div>
+                   </div>
+          
+              
+          </div>
+      </div>
+
+   </div>
+ </div>
+                                     
+                               </section>
+                             </div>                       
+                              @Html.RenderAction("StudentDetails","Application",null)
+                              @Html.RenderAction("ParentDetails","Application",null)
+                              @Html.RenderAction("ResidenceInfo","Application",null)
+                              @Html.RenderAction("SiblingsInfo","Application",null)
+                              
+                            
+                                
+             
+        </form>
+
+<div style="overflow:auto;">
+                                <div style="float:right;">
+                                <a type="button" id="prevBtn" class="btn btn-primary btn-md" onclick="nextPrev(-1)"> Previous</a>
+                                <a type="button" id="nextBtn" class="btn btn-success btn-md" onclick="nextPrev(1)">Next</a>
+                                </div>
+                                
+                                </div>
+
+
+</div>
+   
+<div id="myModal" class="Mymodal">
+    <a href="#" class="Myclose" style="font-size: large;margin-top:60px;"><i class="fas fa-times"></i></a>
+  <img class="Mymodal-content" id="img01" style="width:100%;max-width:600px;height:100%;max-height:500px;">
+  <div id="Mycaption"></div>
+</div>
+<script>
+
+
+ $(document).on('click', '.ViewImage', function (e) {    
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $(this);
+var modalImg = $("#img01");
+var captionText = document.getElementById("Mycaption");
+
+  modal.style.display = "block";
+  $(modalImg).attr("src",$(this).attr("src"));
+  
+  captionText.innerHTML = $(this).attr("alt");
+
+
+// Get the <span> element that closes the modal
+
+
+// When the user clicks on <span> (x), close the modal
+
+
+
+        
+        return false;
+    });
+$(document).on('click', '.Myclose', function (e) { 
+     var modal = document.getElementById("myModal");
+ modal.style.display = "none";
+ return false;
+
+ });
+
+
+
+
+   $(document).on('click', '.ChangeImage', function (e) {    
+         $("#file").click();
+
+        
+        return false;
+    });
+    var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+    
+    };
+
+     $(document).on('click', '.AttachDC', function (e) { 
+                  $(this).next().next().next().click();
+      
+       var image = $(this).next().next();
+       $(this).next().next().next().on("change", function(event) {
+          $(image).attr("src",URL.createObjectURL(event.target.files[0]));
+          $(image).attr("alt",$(this).val().split("\\").pop());
+          $(image).attr("hidden",false);
+          $(this).prev().prev().attr("hidden",true);    
+      }
+      );
+
+          return false;      
+
+     });
+
+   $(document).on('click', '.Upload', function (e) {    
+
+          $(this).next().next().click();
+       //   alert("File Upload Successfully");
+      // $(this).val().split("\\").pop()
+      $(this).next().next().on("change", function() {
+          console.log($(this).val().split("\\").pop());
+        
+          $(this).prev().text($(this).val().split("\\").pop());
+      }
+      );
+      
+           // $(this).parent().parent().parent().remove();
+        
+        return false;
+    });
+     $(document).on('click', '.AttachFile', function (e) {    
+
+             $(this).next().next().click();
+       //   alert("File Upload Successfully");
+      // $(this).val().split("\\").pop()
+       var image = $(this).next();
+       $(this).next().next().on("change", function(event) {
+          $(image).attr("src",URL.createObjectURL(event.target.files[0]));
+          $(image).attr("alt",$(this).val().split("\\").pop());
+          $(image).attr("hidden",false);
+      }
+      );
+        
+        
+       return false;
+      
+    
+});
+     $(document).on('click', '.UploadJob', function (e) {    
+
+             $(this).next().next().click();
+       //   alert("File Upload Successfully");
+      // $(this).val().split("\\").pop()
+      $(this).next().next().on("change", function() {
+          console.log($(this).val().split("\\").pop());
+        
+          $(this).prev().text($(this).val().split("\\").pop());
+      }
+      );
+        
+        return false;
+    });
+  
+
+  $(document).on('click', '.delete-MO', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+            $(this).parent().parent().parent().remove();
+        }
+        return false;
+    });
+    $(document).on('click', '.delete-GO', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+            $(this).parent().parent().parent().remove();
+        }
+        return false;
+    });
+   
+     function OwnHouse(x)
+     {
+     // $(this).attr('checked',true);
+      if(!$(".own").parent().find(".OthersValue").hasClass("collapse"))
+      {
+      $(".own").parent().find(".OthersValue").toggleClass("collapse");
+
+      }
+     }
+       function RentHouse(x) 
+    {
+    //  $(this).attr('checked',true);
+      if(!$(".rent").parent().find(".OthersValue").hasClass("collapse"))
+      {
+      $(".rent").parent().find(".OthersValue").toggleClass("collapse");
+
+      }
+    }
+
+      function OthersHouse(x)
+    {
+     // $(this).attr('checked',true);
+      if($(".others").parent().find(".OthersValue").hasClass("collapse"))
+      {
+      $(".others").parent().find(".OthersValue").toggleClass("collapse");
+
+      }
+     
+    }
+    function OtherValue(x)
+    {
+        $(".others").val(x.value);
+    }
+  
+    $(".GuardianIncome").click(function () {
+       
+        $.ajax({
+            url: "/Application/GuardianOtherIncome/",           
+            data: { "containerPrefix": $(this).attr('data')},                
+                success: function (result) {        
+                $(".GI").append(result);                   
+                
+            }
+        });
+        return false;
+    });
+    $(".MotherIncome").click(function () {
+       
+        $.ajax({
+            url: "/Application/MotherOtherIncome/",           
+            data: { "containerPrefix": $(this).attr('data')},                
+                success: function (result) {        
+                $(".MI").append(result);                   
+                
+            }
+        });
+        return false;
+    });
+
+ 
+ 
+    $(".CNIC").click(function ()
+    {
+      $(this).val("true");
+      if(!$(this).parent().next().find(".D").hasClass("collapse"))
+      {
+      $(this).parent().next().find(".D").toggleClass("collapse");
+
+      }
+     
+
+    });
+  
+  
+    $(".DC").click(function ()
+    {
+      $(this).val("false");
+     if($(this).parent().next().find(".D").hasClass("collapse"))
+      {
+      $(this).parent().next().find(".D").toggleClass("collapse");
+
+      }
+      
+
+    });
+
+  
+
+// Add the following code if you want the name of the file appear on select
+//$(".custom-file-input").on("change", function() {
+ // var fileName = $(this).val().split("\\").pop();
+ // $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+ //   var file1 = $(this)[0].files[0];
+ //   var formData = new FormData();
+  //  formData.append("files", file1);
+        //var fileInput = document.getElementById('customFile');
+       // var file = fileInput.files[0];
+       // var formData = new FormData();
+       // formData.append('file', file);
+
+//$.ajax({
+  //          url: "/Application/FileSection/",                
+    //        type: "POST",
+      //      contentType: false,
+        //    data: formData,
+          //  dataType: "html",
+     //       cache: false,
+      //      processData: false,
+       //     async: false,
+               
+         //       success: function (result) { 
+
+                   
+           //       $('.files').append(result);
+            //      console.log($(this));
+            //      console.log($(this).parent().next());
+            //      console.log($(this).parent());
+            //      console.log($(this).parent().next().find('.files'));
+            //      $(this).closest('.UploadDocuments').find('.files').append(result);       
+           //     $(".files").append(result);
+                //$("#tblRule .tbodyRule").append(result);
+               // const clickedElement = $(e.target);
+               
+              // $(".AddStudentRow").append(result);
+
+              //  clickedElement.closest("tr").find("#tblRule .tbodyRule").append(result);
+                //clickedElement.closest("tr").find('.PR').toggle('collapse');
+//            }
+ //       });
+ //       return false;
+
+
+
+//});
+
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).next(".custom-file-label").addClass("selected").html(fileName);
+   
+    
+        //var fileInput = document.getElementById('customFile');
+       // var file = fileInput.files[0];
+       // var formData = new FormData();
+       // formData.append('file', file);
+
+        
+        return false;
+
+
+
+});
+
+
+
+
+
+
+
+
+ $(document).on('click', '.AddStudent', function (e) {       
+    //$("#addRule").click(function () {
+        //alert('add Rule');
+         
+          studentcount = studentcount+1;
+        $.ajax({
+            url: "/Application/AddSibStudent/",                
+                data: { "containerPrefix": $(this).attr('data'),
+                        "StudentCount" : studentcount
+                
+                  },
+                success: function (result) {  
+               
+             //            $(".stdcount").val($(result).find(".Std").val());
+            //             $(".stdcount").val(1);
+            //   $(e.target).closest(".s").find(".stdcount").val($(result).find(".Std").val());
+            //   $(e.target).next(".stdcount").val($(result).find(".Std").val());
+            //     $(this).next().val($(result).find(".Std").val());
+                //$("#tblRule .tbodyRule").append(result);
+               // const clickedElement = $(e.target);
+               
+               $(".AddStudentRow").append(result);
+
+              //  clickedElement.closest("tr").find("#tblRule .tbodyRule").append(result);
+                //clickedElement.closest("tr").find('.PR').toggle('collapse');
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.AddJobHolders', function (e) {       
+    //$("#addRule").click(function () {
+        //alert('add Rule');
+       // var count = $(this).next().attr("value");
+        jobcount = jobcount + 1;
+        $.ajax({
+            url: "/Application/AddSibJobHolder/",                
+                data: { "containerPrefix": $(this).attr('data'),
+                        "JobCount" : jobcount 
+                  },
+                success: function (result) {        
+                
+                //$("#tblRule .tbodyRule").append(result);
+               // const clickedElement = $(e.target);
+               
+               $(".AddJobHolderRow").append(result);
+
+              //  clickedElement.closest("tr").find("#tblRule .tbodyRule").append(result);
+                //clickedElement.closest("tr").find('.PR').toggle('collapse');
+            }
+        });
+        return false;
+    });
+      $(document).on('click', '.delete-Student', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+            $(this).parent().parent().parent().remove();
+        }
+        return false;
+    });
+
+       $(document).on('click', '.delete-JobHolder', function (e) {    
+
+        if (confirm('Are you sure you want to delete?')) {
+          
+            $(this).parent().parent().parent().remove();
+        }
+        return false;
+    });
+
+    function ToggleMenu(x)
+    {   
+                                 
+    $("."+x.id).toggleClass("collapse");
+                                  
+                                  
+    }
+   var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  
+  fixStepIndicator(n);
+}
+
+function nextPrev(n) {
+ if(n==-1)
+ {
+     fixbackIndicator(n);
+
+
+ }
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+ // if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  for(i=0;i<=currentTab;i++)
+  {
+      x[i].className += " active";
+  }
+}
+function fixbackIndicator(n)
+{
+  x = document.getElementsByClassName("step");
+  x[currentTab].className = x[currentTab].className.replace(" active","");
+}
+     
+</script>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

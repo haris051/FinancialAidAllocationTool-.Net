@@ -1,0 +1,136 @@
+@model FinancialAidAllocationTool.Models.Application.FaatAppMotherOtherIncomeResourceFiles
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+  String ImageUrl = "";
+}
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+        @using (Html.BeginCollectionItem("FaatAppMotherOtherIncomeResourceFiles"))
+        {          <input asp-for="Id" hidden>
+                  <li class="list-group-item border border-dark">
+                 <div class="row">
+                <div class="col-xl-4 d-xl-block  d-none guardian">
+                    <label class="Parentlbl">@Model.ResourceType</label>
+                    <input asp-for="ResourceType" hidden class="Parent form-control">               
+                   
+                </div>
+               
+                <div class="col-xl-3  d-xl-block d-none guardian">
+                        <label class="Parentlbl">@Model.Income</label>
+                        <input asp-for="Income" hidden class="Parent form-control">               
+
+                </div>
+               
+                <div class="col-xl-4  MyFont d-xl-block  d-none guardian" style="text-align: center;">
+                     @if(@Model.FileData!=null)
+                     {
+                               
+                                 string img = Convert.ToBase64String(Model.FileData);
+                                   ImageUrl = string.Format("data:" + @Model.FileType + ";base64,{0}", img);
+                                  
+                               <img class="Parentlbl ViewImage" alt="@Model.FileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" >
+                               <input asp-for="FileData" hidden>
+                               <input asp-for="FileType" hidden>
+                               <input asp-for="FileName" hidden>
+                                  
+
+                                        
+                                        
+                                       
+
+                     }
+                     else
+                     {
+                          <label class="Parentlbl">No Files</label>
+                          
+
+                     }
+                      <a class="AttachFile Parent" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Parent ViewImage" alt="@Model.FileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" hidden>
+
+                                     <input type="file" hidden  asp-for="file">
+                                   
+
+                </div>
+                <div class="col-xl-1 d-xl-block  d-none">
+                        <a href="#" class="text-danger delete-MO Parent" hidden>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a>
+                </div>
+                
+                          
+                            
+                  </div>
+                        
+                  <div class="row">
+                     <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource:</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0 d-xl-none">
+                  <label class="Parentlbl">@Model.ResourceType</label>
+                   <input asp-for="ResourceType" hidden class="Parent form-control">               
+
+                </div>
+                <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Income:</label>
+                     </div>
+               
+                <div class="col-lg-6 col-md-8 col-6 px-0 d-xl-none">
+                        <label class="Parentlbl">@Model.Income</label>
+                          <input asp-for="Income" hidden class="Parent form-control">               
+                       
+                </div>
+               <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource Files</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0 MyFont d-xl-none">
+                           @if(Model.FileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(Model.FileData);
+                                   ImageUrl = string.Format("data:" + @Model.FileType + ";base64,{0}", img);
+                                  
+                               <img class="Parentlbl ViewImage" alt="@Model.FileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+                               <input asp-for="FileData" type="hidden">
+                               <input asp-for="FileType" type="hidden">
+                               <input asp-for="FileName" type="hidden">
+                 <a class="AttachFile Parentlbl" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Parent ViewImage" alt="@Model.FileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" hidden>
+
+                                     <input type="file" hidden  asp-for="file">
+
+
+      
+                           }
+                           else
+                           {
+                             <label class="Parentlbl">No Files</label>
+                                   
+                           }
+                            <a class="AttachFile Parent" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Parent ViewImage" alt="@Model.FileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" hidden>
+
+                                     <input type="file" hidden  asp-for="file">
+                     
+                </div>
+                 <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold Parent">Discard</label>
+                     </div>
+                      <div class="col-lg-6 col-md-8 col-6 d-xl-none Parent" hidden>
+                   <a href="#" class="btn btn-danger delete-MO">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+                </div>
+                    
+               
+                
+                          
+                            
+                  </div>
+          
+                </li>  
+
+                   
+
+ 
+
+               
+        }
+}

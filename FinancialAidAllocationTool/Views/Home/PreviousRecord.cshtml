@@ -1,0 +1,162 @@
+@model IEnumerable<FinancialAidAllocationTool.Models.FaatScholarLog>
+@{
+    Layout="~/Views/Shared/_Layout.cshtml";
+}
+
+<section style="margin-top: 60px;margin-bottom:80px;"> <h3 style="color: white;">Previous Records</h3> 
+<div class="card d-xl-block d-lg-block d-none" style="">
+
+<ul class="list-group">
+    <li class="list-group-item bg-info px-1">
+
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-2">
+        Class 
+    </div>
+    <div class="col-lg-2">
+      Semester
+    </div>
+    <div class="col-lg-2 col-md-3 col-3">
+        Type
+    </div>
+    <div class="col-lg-1 col-md-2 col-2">
+       Status
+    </div>
+    <div class="col-lg-2 col-md-2 col-2">
+       Recommendations  
+    </div>
+    <div class="col-lg-3 col-md-3 col-3">
+      Allocation Amount
+    </div>
+</div>
+
+</li>
+@foreach (var item in Model)
+{
+    
+<li class="list-group-item px-1">
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-2">
+        @item.CD.Discipline @item.CD.SemesterCount @item.CD.Section
+    </div>
+    <div class="col-lg-2">
+            @item.CD.Semester
+    </div>
+    <div class="col-lg-2 col-md-3 col-3">
+        @item.Type
+    </div>
+    <div class="col-lg-1 col-md-2 col-2">
+       @item.Status
+    </div>
+     <div class="col-lg-2 col-md-2 col-2">
+       @* <button data-toggle="modal" data-target="#exampleModal" id="Recommend" value=@item.ApplicationId>View</button> *@
+       <button class="Recommend btn btn-sm btn-primary" value=@item.ApplicationId-@item.CD.Id>Recommendation</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-3">
+      @item.AllocationAmount
+    </div>
+</div>
+</li>
+}
+</ul>
+</div>
+@foreach (var item in Model)
+{
+    
+
+<div class="card d-xl-none d-lg-none d-block" style="margin-bottom: 6px;">
+      <div class="card-header">
+           <h4>@item.Status</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+                <div class="col-4">
+                   <label>Type</label>
+                </div>
+                <div class="col-8">
+                   <label>@item.Type</label>
+                </div>
+                <div class="col-4">
+                   <label>Class</label>
+                </div>
+                <div class="col-8">
+                   <label>@item.CD.Discipline  @item.CD.SemesterCount  @item.CD.Section</label>
+                </div>
+                <div class="col-4">
+                      <label>Semester</label>
+                </div>
+                <div class="col-8">
+                      <label>@item.CD.Semester</label>
+                </div>
+                
+               
+
+                <div class="col-4">
+                   <label>Amount</label>
+                </div>
+                <div class="col-8">
+                   <label>@item.AllocationAmount</label>
+                </div>
+                
+        </div>
+
+      </div>
+      <div class="card-footer">
+          <button class="Recommend btn btn-sm btn-primary" value=@item.ApplicationId-@item.CD.Id>Recommendation</button>
+
+      </div>
+</div>
+
+}
+ @Html.ActionLink("Back to List", "NeedBasedList","Home",new {Discipline=@TempData["Param"]},new { @class = "btn btn-success btn-md" })
+      
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Recommendations</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closbtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<script>
+    $(".Recommend").click(function () {
+       //console.log("Modal");
+       var val = $(this).attr("value");
+       console.log(val);
+        $.ajax({
+            
+            url: "/Home/History/",
+            type: "GET",
+             data: { "id":val },                
+                success: function (result) {
+                  //console.log(result);
+                  $('.modal-body').empty();        
+                  $('.modal-body').append(result);  
+                    
+                    $('#modal').modal('show');                   
+                
+            },
+            error: function() {  
+                    alert("Content load failed.");  
+                }  
+        });
+        return false;
+    });
+     $("#closbtn").click(function()  
+        {  
+             
+            $('#modal').modal('hide');  
+        }); 
+</script>

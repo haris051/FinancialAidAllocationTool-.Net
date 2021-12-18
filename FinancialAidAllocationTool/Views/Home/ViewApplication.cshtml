@@ -1,0 +1,1321 @@
+@model FinancialAidAllocationTool.Models.Application.FaatApplication
+
+@{
+Layout = null;
+var count =1;
+var flag=false;
+}
+<script>
+  var flag = true;
+</script>
+
+
+<div class="row">
+   <div class="col-xl-12 col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+          
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active h-100 p-3" id="StudentDetails" role="tabpanel" aria-labelledby="Student-tab">
+                            <div class="row" style="margin-top: 10px;">
+                               <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1">
+                                   <h5>Student Details</h5>
+                              </div>
+                          </div>
+                            <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>
+                            <div class="row">
+                                
+            
+                                    <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                    <label class="font-weight-bold">Arid No</label>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-8 col-8">                        
+                                    <label>@Model.FaatAppStudentDetail.ToList()[0].AridNo</label>                
+                                    </div>
+            
+
+                              
+
+
+                              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                    <label class="font-weight-bold">Name</label>
+                              </div>
+                              <div class="col-xl-3 col-lg-3 col-md-8 col-8">                                                     
+                                    <label  class ="control-label">@Model.FaatAppStudentDetail.ToList()[0].Name</label>              
+                              </div>
+
+                               
+                            <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">            
+                              <label class="font-weight-bold">Class</label> 
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                               <label>@Model.FaatAppStudentDetail.ToList()[0].Class</label>              
+                            </div>
+                                
+                       
+
+
+                    
+                           <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                  
+                                            <label class="font-weight-bold">Section</label>
+                           </div> 
+                            <div class="col-xl-3 col-lg-3 col-md-8 col-8">                           
+                                            <label>@Model.FaatAppStudentDetail.ToList()[0].Section</label>         
+                            </div>
+                          
+    
+     <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+
+           
+                <label class="font-weight-bold">CGPA</label>
+     </div>
+      <div class="col-xl-3 col-lg-3 col-md-8 col-8">         
+                <label>@Model.FaatAppStudentDetail.ToList()[0].Cpga</label>          
+      </div>
+    
+       <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+
+            
+                    <label class="font-weight-bold">Semester</label>
+       </div>
+        <div class="col-xl-3 col-lg-3 col-md-8 col-8">                             
+                     <label>@Model.FaatAppStudentDetail.ToList()[0].Semester</label>          
+        </div>
+    
+
+
+
+   
+           <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                           <label class="font-weight-bold">Mobile No</label>
+           </div>
+            <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                <label>@Model.FaatAppStudentDetail.ToList()[0].MobileNo</label>
+            </div>
+          
+             
+              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                    <label class="font-weight-bold">Residence</label>
+              </div>
+              @if(@Model.FaatAppStudentDetail.ToList()[0].Residence==null)
+              {
+                <div class="col-xl-3 col-lg-3 col-md-8 col-8">           
+                     <label>No data</label>
+             </div>
+
+              }
+              else
+              {
+               <div class="col-xl-3 col-lg-3 col-md-8 col-8">           
+                     <label>@Model.FaatAppStudentDetail.ToList()[0].Residence</label>
+             </div>
+              }
+              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                       <label class="font-weight-bold">Email</label>
+              </div>
+                 @if(@Model.FaatAppStudentDetail.ToList()[0].EmailAddress==null)
+                 {
+                   <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                        <label>No Data</label>
+               </div>
+                 }
+                 else
+                 {
+                                                                          
+               <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                        <label>@Model.FaatAppStudentDetail.ToList()[0].EmailAddress</label>
+               </div>
+                 }
+                            </div>
+                <div class="row">
+                            
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-12 px-0">          
+                                <label class="font-weight-bold">Reason to Apply</label>
+
+
+                </div>
+                </div>
+                <div class="row">
+                  @if(@Model.FaatAppStudentDetail.ToList()[0].ReasonToApply==null)
+                  {
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 px-0">
+                                <textarea  class ="form-control" readonly>No data</textarea>
+                     </div>
+                  }
+                  else
+                  {
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 px-0">
+                                <textarea  class ="form-control" readonly>@Model.FaatAppStudentDetail.ToList()[0].ReasonToApply</textarea>
+                      </div>
+                  }
+                </div>
+
+                                 
+                             
+
+                </div>
+
+
+              
+          
+
+
+       <div class="tab-pane fade h-100 p-3" id="ParentDetails" role="tabpanel" aria-labelledby="Parent-tab">
+         
+
+    
+  
+    <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                       <div class="row">
+                <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0">
+                <h5>Parent Details</h5>
+                </div>
+            </div>
+             <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6 px-0 px-0">
+
+                            <label>Who is Financing or Supporting you?</label>  
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].FinancingPerson != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                           <label>@Model.FaatAppParentDetail.ToList()[0].FinancingPerson</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                           <label class="text-xs text-danger">No data</label>
+
+
+                    </div>
+
+                    }
+           </div>
+           <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>
+          
+             <div class="row" style="margin-top: 1px;">
+               
+            <div class="col-12 col-md-12 col-lg-6 col-sm-6 col-xl-6" style="margin-top: 2px;">
+                  <div class="row">
+                 <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                <h6>Father/Guardian Details</h6>
+                </div>
+                </div>
+                   <div class="row">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold" asp-for="@Model.FaatAppParentDetail.ToList()[0].FatherIsAlive"></label>
+                       </div>
+                       
+                       <div class="col-xl-2 col-lg-2 col-md-2 col-6 px-0">
+
+                            <label> @if(Model.FaatAppParentDetail.ToList()[0].FatherIsAlive==true){<text>Alive</text>} else{<text>Dead</text>}</label>
+                       </div>
+                 
+                   
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                               @if(@Model.FaatAppParentDetail.ToList()[0].FatherIsAlive==false)
+                               {
+                                 @if(@Model.FaatAppParentDetail.ToList()[0].FatherCNICDeathCertificateFileData!=null)
+                                 {
+                                  string img = Convert.ToBase64String(@Model.FaatAppParentDetail.ToList()[0].FatherCNICDeathCertificateFileData);
+                                  string ImageUrl = string.Format("data:" + @Model.FaatAppParentDetail.ToList()[0].FatherCNICDeathCertificateFileType + ";base64,{0}", img);
+                                  <img class="ViewImage" alt="@Model.FaatAppParentDetail.ToList()[0].FatherCNICDeathCertificateFileName" src=@ImageUrl data-holder-rendered="true" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                 }
+                               }
+                           
+                       </div>
+                     </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Name</label> 
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GName != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label>@Model.FaatAppParentDetail.ToList()[0].GName</label>
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger">No Data</label>
+                       </div>
+
+                       }
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Company</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GCompany != null)
+                       {
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label>@Model.FaatAppParentDetail.ToList()[0].GCompany</label>
+   
+
+                        </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger">No Data</label>
+   
+
+                        </div>
+
+                       }
+
+                   </div>
+                  
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Occupation</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GOccupation != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label>@Model.FaatAppParentDetail.ToList()[0].GOccupation</label>
+
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger">No Data</label>
+
+                       </div>
+
+                       }
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Designation</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GDesignation != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                       <label>@Model.FaatAppParentDetail.ToList()[0].GDesignation</label>
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                       <label class="text-xs text-danger">No Data</label>
+
+                       </div>
+
+                       }
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Monthly Income</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GMonthlyIncome != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label>@Model.FaatAppParentDetail.ToList()[0].GMonthlyIncome</label>
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger">No Data</label>
+
+                       </div>
+
+                       }
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Office Tel:</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GOfficeTelNo != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label>@Model.FaatAppParentDetail.ToList()[0].GOfficeTelNo</label>
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger">No Data</label>
+
+                       </div>
+
+                       }
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Office Address</label>
+                       </div>
+                       @if(@Model.FaatAppParentDetail.ToList()[0].GOfficeAddress != null)
+                       {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label>@Model.FaatAppParentDetail.ToList()[0].GOfficeAddress</label>
+
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger">No data</label>
+
+                       </div>
+
+                       }
+                         <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                                    <label class="font-weight-bold">Email Address</label>
+                                </div>
+                                @if(@Model.FaatAppParentDetail.ToList()[0].GEmailAddress != null)
+                                {
+                            <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                     <label>@Model.FaatAppParentDetail.ToList()[0].GEmailAddress</label>
+
+                            </div>
+                                }
+                                else
+                                {
+                                  <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="text-xs text-danger">No Data</label>
+
+                            </div>
+
+                                }
+
+                   </div>
+                   <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>   
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-12 px-0">
+                            <label class="text-success GuardianIncome float-left">Other Income Resources</label> 
+                       </div>
+
+                   </div>
+                    <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource File
+                              </div>
+                             
+                         </div>
+                    </li>
+                          @if(Model.FaatAppParentDetail.ToList()[0].FaatAppGuardianOtherIncomeResourceFiles != null)
+                          {
+                       @foreach (var item in Model.FaatAppParentDetail.ToList()[0].FaatAppGuardianOtherIncomeResourceFiles)
+                        {
+                           <li class="list-group-item border border-dark">
+                 <div class="row">
+                <div class="col-xl-4 d-xl-block  d-none guardian" style="text-align: center;">
+                    <label>@item.ResourceType</label>
+                </div>
+               
+                <div class="col-xl-4  d-xl-block d-none guardian" style="text-align: center;">
+                        <label>@item.Income</label>
+                </div>
+               
+                <div class="col-xl-4  MyFont d-xl-block  d-none guardian" style="text-align: center;">
+                     @if(@item.FileData!=null)
+                     {
+                                 string img = Convert.ToBase64String(item.FileData);
+                                  string ImageUrl = string.Format("data:" + @item.FileType + ";base64,{0}", img);
+                                <img class="ViewImage" alt="@item.FileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+
+                     }
+                     else
+                     {
+                          <label>No Files</label>
+
+                     }
+                </div>
+               
+                
+                          
+                            
+                  </div>
+                        
+                  <div class="row">
+                     <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource:</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0 d-xl-none">
+                  <label>@item.ResourceType</label>
+                </div>
+                <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Income:</label>
+                     </div>
+               
+                <div class="col-lg-6 col-md-8 col-6 px-0 d-xl-none">
+                        <label>@item.Income</label>
+                </div>
+               <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource Files</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0  MyFont d-xl-none">
+                           @if(item.FileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(item.FileData);
+                                  string ImageUrl = string.Format("data:" + item.FileType + ";base64,{0}", img);
+                                  <img class="ViewImage" alt="@item.FileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+      
+                           }
+                           else
+                           {
+                             <label>No Files</label>
+                           }
+                </div>
+               
+                
+                          
+                            
+                  </div>
+          
+                </li>  
+
+                            
+                        }
+                          }
+                          else
+                          {
+                            <li class="list-group-item border border-dark" style="text-align: center;">
+                                   No data
+                            </li>
+
+                          }
+                    </ul>
+
+                 
+
+            </div>
+              
+                
+                
+             
+            <div class="col-12 col-md-12 col-lg-6 col-xl-6" style="margin-top: 2px;">
+                <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                         <h6>Mother Details</h6>
+                        </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Mother is Alive</label>
+                       </div>
+                       <div class="col-xl-2 col-lg-2 col-md-2 col-6 px-0">
+                           <label>@if(Model.FaatAppParentDetail.ToList()[0].MotherIsAlive==true){<text>Alive</text>} else{<text>Dead</text>}</label>
+                       </div>
+                
+               
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                            
+                              @if(Model.FaatAppParentDetail.ToList()[0].MotherIsAlive==false)
+                              {
+                                  @if(@Model.FaatAppParentDetail.ToList()[0].MotherCNICDeathCertificateFileData!=null)
+                                                    {
+                                     string img = Convert.ToBase64String(@Model.FaatAppParentDetail.ToList()[0].MotherCNICDeathCertificateFileData);
+                                  string ImageUrl = string.Format("data:" + @Model.FaatAppParentDetail.ToList()[0].MotherCNICDeathCertificateFileType + ";base64,{0}", img);
+                                 <img class="ViewImage" alt="@Model.FaatAppParentDetail.ToList()[0].MotherCNICDeathCertificateFileName" src=@ImageUrl data-holder-rendered="true" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+
+
+                                                    }
+                                      
+                              }
+                       </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Name:</label> 
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MName != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                     <label>@Model.FaatAppParentDetail.ToList()[0].MName</label>
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                     <label class="text-xs text-danger">No Data</label>
+
+                    </div>
+
+                    }
+                     <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Company</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MCompany != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                      <label>@Model.FaatAppParentDetail.ToList()[0].MCompany</label>
+
+
+                    </div>
+                    }
+                    else
+                     {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                      <label class="text-xs text-danger">No data</label>
+
+
+                    </div>
+
+                     }
+
+                </div>
+                  
+                  <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Occupation</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MOccupation != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label>@Model.FaatAppParentDetail.ToList()[0].MOccupation</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger">No Data</label>
+
+
+                    </div>
+
+                    }
+                      <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Designation</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MDesignation != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label>@Model.FaatAppParentDetail.ToList()[0].MDesignation</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger">No Data</label>
+
+
+                    </div>
+
+                    }
+
+                </div>
+                  
+                    <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Monthly Income</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MMonthlyIncome != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label>@Model.FaatAppParentDetail.ToList()[0].MMonthlyIncome</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger">No Data</label>
+
+
+                    </div>
+
+                    }
+                     <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Office Tel:</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MOfficeTelNo != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                     <label>@Model.FaatAppParentDetail.ToList()[0].MOfficeTelNo</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="text-xs text-danger">No Data</label>
+
+
+                    </div>
+
+                    }
+
+                </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Office Address</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MOfficeAddress != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                    <label>@Model.FaatAppParentDetail.ToList()[0].MOfficeAddress</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                                    <label class="text-xs text-danger">No Data</label>
+
+
+                    </div>
+
+
+                    }
+                     <div class="col-xl-6 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Email Address</label>
+                    </div>
+                    @if(@Model.FaatAppParentDetail.ToList()[0].MEmailAddress != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                             <label>@Model.FaatAppParentDetail.ToList()[0].MEmailAddress</label>
+
+
+                    </div>
+                    }
+                    else
+                    {
+                                <div class="col-xl-6 col-lg-6 col-md-8 col-6 px-0">
+                             <label class="text-xs text-danger">No data</label>
+
+
+                    </div>
+
+                    }
+
+                </div>
+                 <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-12">
+                            <label class="text-success GuardianIncome float-left">Other Income Resources</label> 
+                       </div>
+
+                   </div>
+               <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource File
+                              </div>
+                             
+                         </div>
+                    </li>
+               
+                       @foreach (var item in Model.FaatAppParentDetail.ToList()[0].FaatAppMotherOtherIncomeResourceFiles)
+                        {
+                           <li class="list-group-item border border-dark">
+                 <div class="row">
+                <div class="col-xl-4 d-xl-block  d-none guardian" style="text-align: center;">
+                    <label>@item.ResourceType</label>
+                </div>
+               
+                <div class="col-xl-4 d-xl-block d-none guardian" style="text-align: center;">
+                        <label>@item.Income</label>
+                </div>
+               
+                <div class="col-xl-4  MyFont d-xl-block  d-none guardian" style="text-align: center;">
+                     @if(@item.FileData!=null)
+                     {
+                                 string img = Convert.ToBase64String(item.FileData);
+                                  string ImageUrl = string.Format("data:" + @item.FileType + ";base64,{0}", img);
+                                <img class="ViewImage" alt="@item.FileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+
+                     }
+                     else
+                     {
+                          <label>No Files</label>
+
+                     }
+                </div>
+               
+                
+                          
+                            
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource:</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0 d-xl-none">
+                  <label>@item.ResourceType</label>
+                </div>
+                <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Income:</label>
+                     </div>
+               
+                <div class="col-lg-6 col-md-8 col-6  px-0 d-xl-none">
+                        <label>@item.Income</label>
+                </div>
+               <div class="col-lg-6 col-md-4 col-6 px-0 d-xl-none">
+                       <label class="font-weight-bold">Resource Files</label>
+                     </div>
+                <div class="col-lg-6 col-md-8 col-6 px-0 MyFont d-xl-none">
+                           @if(item.FileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(item.FileData);
+                                  string ImageUrl = string.Format("data:" + item.FileType + ";base64,{0}", img);
+                                  <img class="ViewImage" alt="@item.FileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+       
+                           }
+                           else
+                           {
+                             <label>No Files</label>
+                           }
+                </div>
+               
+                
+                          
+                            
+                  </div>
+          
+                </li>  
+
+                            
+                        }
+                    </ul>
+            </div>
+    </div>
+    
+                           
+          </div>
+
+
+
+              </div>
+       </div>
+              <div class="tab-pane fade h-100 p-3" id="ResidenceInfo" role="tabpanel" aria-labelledby="Residence-tab">
+            <div class="row">
+                <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 pl-3">
+                <h5>Residence Information</h5>
+                </div>
+            </div>
+           <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>
+
+              <div class="row">
+                  
+              
+          
+           
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                    <label class="font-weight-bold">Mode of Residence</label>
+                    </div>
+                    @if(@Model.FaatAppResidenceInfo.ToList()[0].Mode != null)
+                    {
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6"> 
+                    <label>@Model.FaatAppResidenceInfo.ToList()[0].Mode</label>
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-3 col-lg-3 col-md-6 col-6"> 
+                    <label class="text-xs text-danger">No Data</label>
+
+                    </div>
+
+
+                    }
+
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                       <label class="font-weight-bold">File Attachments</label>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                       @if(Model.FaatAppResidenceInfo.ToList()[0].ResidenceInfoFileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(Model.FaatAppResidenceInfo.ToList()[0].ResidenceInfoFileData);
+                                  string ImageUrl = string.Format("data:" + Model.FaatAppResidenceInfo.ToList()[0].ResidenceInfoFileType + ";base64,{0}", img);
+                                 <img class="ViewImage" alt="@Model.FaatAppResidenceInfo.ToList()[0].ResidenceInfoFileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+   
+                           }
+                           else
+                           {
+                             <label>No Files</label>
+                           }
+                   </div>
+
+                 
+              </div>
+
+               <div class="row" style="margin-top:2px;">
+                   <div class="col-12">
+                      <label class="font-weight-bold">Address</label>
+                   </div>
+               </div>
+               <div class="row" style="margin-top:2px;">
+                 @if(@Model.FaatAppResidenceInfo.ToList()[0].Address != null)
+                 {
+                   <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+                       <textarea class="form-control" readonly>@Model.FaatAppResidenceInfo.ToList()[0].Address</textarea>
+
+                   </div>
+                 }
+                 else
+                 {
+                   <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+                       <textarea class="form-control text-danger" readonly>No data</textarea>
+
+                   </div>
+
+
+                 }
+
+              </div>
+            
+
+
+
+            
+
+    
+
+</div>
+         
+
+          <div class="tab-pane fade h-100 p-3" id="SiblingInfo" role="tabpanel" aria-labelledby="Siblings-tab">
+           <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0">
+                        <h5>Sibling Information</h5>
+                        </div>
+                </div>
+
+               <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div>
+
+                 <div class="row" style="margin-top: 4px;">
+                    <div class="col-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0">
+                             <label>Job Holder Details</label> 
+                           
+
+                    </div>
+
+                </div>
+
+               @{
+                 var job = 0;
+               }
+               @if(Model.FaatAppSiblingInfo.ToList()[0].FaatAppSibJobHolder.Count()!=0)
+               {
+
+               
+                @foreach (var item in Model.FaatAppSiblingInfo.ToList()[0].FaatAppSibJobHolder)
+                {
+                    job = job +1;
+                    <div class="row">
+                        <div class="col-12 px-0"><label class="text-xs font-weight-bold text-success text-uppercase mb-1">Job Holder @job</label></div>
+                    </div>
+                
+       <div class="row" style="margin-top: 4px;">
+            <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                <label class="font-weight-bold">Name</label>
+
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                <label>@item.Name</label>
+            </div>
+             <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+            <label class="font-weight-bold">Company</label>
+
+             </div>
+            <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+              <label>@item.Company</label>
+
+            </div>
+
+
+   
+            <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                    <label class="font-weight-bold">Designation</label>
+
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                     <label>@item.Designation</label>
+
+            </div>
+             <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                    <label class="font-weight-bold">Monhly Income</label>
+
+             </div>
+            <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                    <label>@item.MonthlyIncome</label>
+
+            </div>
+    
+              <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                           <label class="font-weight-bold">Salary Slip</label>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-7 col-6">                   
+                                     
+                        @if(@item.ContractFileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(@item.ContractFileData);
+                                  string ImageUrl = string.Format("data:" + @item.ContractFileType + ";base64,{0}", img);
+                                  <img class="ViewImage" alt="@item.ContractFileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+        
+                           }
+                           else
+                           {
+                             <div class="row">
+                                  <div class = "col-12">
+                                        <label class="text-xs text-danger">No Data</label>
+                                  </div>
+                             </div>
+                           }                   
+                                     
+                                    
+                            
+              </div>
+           
+    </div>
+                }
+                }
+                else
+                {
+                      <div class="row" style="margin-top: 4px;">
+                                <div class="col-12" style="text-align: center;">
+                                       <label class="text-xs text-danger">No JobHolder</label>
+                                </div>
+                      </div>
+
+                }
+              
+               <div class= "row">
+                  <div class="col-12 px-0">
+           <hr style="border-bottom: 1px solid grey;">
+
+                  </div>
+           </div> 
+                <div class="row">
+                     <div class="col-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0">
+                        <label>Student Details</label> 
+                               
+
+                    </div>
+
+                </div>
+                @{
+                  var student = 0;
+                }
+                @if(Model.FaatAppSiblingInfo.ToList()[0].FaatAppSibStudent.Count() != 0)
+                {
+          @foreach (var item in Model.FaatAppSiblingInfo.ToList()[0].FaatAppSibStudent)
+          {
+              
+                   student = student + 1;
+                   <div class="row">
+                         <div class="col-12 px-0">
+                   <label class="text-xs font-weight-bold text-success text-uppercase mb-1">Student @student</label>
+
+                         </div>
+
+                   </div>
+          
+                 <div class="row" style="margin-top: 4px;">
+        
+                    <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                        <label class="font-weight-bold">Name:</label>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                      <label>@item.Name</label>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                            <label class="font-weight-bold">Institute</label>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                          <label>@item.ClassInstituteName</label>
+                        </div>
+             
+               <div class="col-xl-2 col-lg-3 col-md-5 col-6 px-0">
+                   <label class="font-weight-bold">Fee Slip</label>
+               </div>
+                <div class="col-xl-2 col-lg-3 col-md-7 col-6">
+                            @if(@item.StdentCardFileData!=null)
+                           {
+                                  string img = Convert.ToBase64String(@item.StdentCardFileData);
+                                  string ImageUrl = string.Format("data:" + @item.StdentCardFileType + ";base64,{0}", img);
+                                  <img class="ViewImage" alt="@item.StdentCardFileName" src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+   
+                           }
+                           else
+                           {
+                             <label>No Files</label>
+                           }         
+                                     
+                                    
+                </div>
+               
+               
+
+           </div>
+   
+
+          }
+                }
+                else
+                {
+                    <div class="row">
+                      <div class="col-12" style="text-align: center;">
+                         <label class="text-xs text-danger">No Student</label>
+                      </div>
+                    </div>
+                }        
+               
+
+
+              
+              </div>
+            </div>
+
+      </div>
+
+   </div>
+
+
+   </div>
+</div>
+
+<div id="myModal" class="Mymodal">
+    <a href="#" class="Myclose" style="font-size: large;margin-top:60px;"><i class="fas fa-times"></i></a>
+  <img class="Mymodal-content" id="img01" style="width:100%;max-width:600px;height:100%;max-height:500px;">
+  <div id="Mycaption"></div>
+</div>
+
+<script>
+  $(document).on('click', '.ViewImage', function (e) {    
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $(this);
+var modalImg = $("#img01");
+var captionText = document.getElementById("Mycaption");
+
+  modal.style.display = "block";
+  $(modalImg).attr("src",$(this).attr("src"));
+  
+  captionText.innerHTML = $(this).attr("alt");
+
+
+// Get the <span> element that closes the modal
+
+
+// When the user clicks on <span> (x), close the modal
+
+
+
+        
+        return false;
+    });
+$(document).on('click', '.Myclose', function (e) { 
+     var modal = document.getElementById("myModal");
+ modal.style.display = "none";
+ return false;
+
+ });
+</script>
+
+
+@*
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+             <embed id="img01" height="400px" width="400px">
+           </div>
+      <div class="modal-footer">
+        
+        
+        <a href="#" class="ZoomIn btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></a>
+         <a href="#" class="ZoomOut btn btn-primary"><i class="fa fa-minus" aria-hidden="true"></i></a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closbtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+*@
+ 
+
+    
+   
+  
+ @*
+  <section class="AttachedFiles tab" style="color: white;">
+        <div class="row">
+              <div class="col-sm-12" id="SiblingInfo">
+                <h3>Attached Files</h3>
+            </div>
+        </div>
+<hr>
+  
+            <ul class="list-group">
+                 @foreach (var item in Model.FaatFiles)
+                 {
+                     <li class="list-group-item">
+                       <div class="row">
+                           <div class="col-lg-6 col-12">
+                             @{
+                                  string img = Convert.ToBase64String(item.FileData);
+                                  string ImageUrl = string.Format("data:" + item.FileType + ";base64,{0}", img);
+                                  <a href="@ImageUrl" download>
+                                    @item.FileName
+                                  </a>
+                                  
+                             }  
+                              
+                             
+                           </div>
+                           <div class="col-lg-6 col-12">
+                               <a href="#" class="THead">View</a>
+                               <section class="collapse">
+                                @{
+                                    <object data="@ImageUrl" width="400" height="400"> 
+                                     <embed src="@ImageUrl" width="400" height="400"> </embed>
+                                    </object>
+                                 // string img1 = Convert.ToBase64String(item.FileData);
+                                 // string ImageUrl1 = string.Format("data:" + item.FileType + ";base64,{0}", img1);
+                                }
+                 
+                                </section>
+
+                           </div>
+                       </div>     
+
+
+
+                     </li>
+                     
+                     
+                 }
+
+
+
+            </ul>
+ </div>
+  </section>
+   
+ <form id="regForm" asp-action="ViewApplication" asp-controller="Home" method="POST">
+   <section class="Comments tab" style="color: white;">
+        <div class="row">
+              <div class="col-sm-12" id="SiblingInfo">
+                <h3>Comments</h3>
+            </div>
+        </div>
+<hr>
+            @if(User.IsInRole("Admin"))
+            { 
+                @foreach (var item in Model.FaatAppComments)
+                {
+                    
+                      <partial name="AddComments" for="@item"></partial>
+               
+                }
+              
+                flag =true;
+            }
+            @if(User.IsInRole("Committee"))
+            {     
+                @foreach (var item in Model.FaatAppComments)
+                {
+                    @if(@item.Users.AridNo.Contains(User.Claims.Where(e => e.Type.Contains("emailaddress"))
+                   .Select(e => e.Value).SingleOrDefault().ToString()))
+                    {
+                         <partial name="AddComments" for="@item"></partial>
+                         flag= true;
+                    }
+                }
+                @if(@flag == false)
+            {   
+                @Html.RenderAction("AddComments","Home",new{ApplicationID = @Model.Id})
+               
+            }
+                  
+                
+            }
+             
+           
+             
+ </section>  
+ </form>
+
+                                <div style="overflow:auto;">
+                                <div style="float:left;margin-left:12px">
+                                <button type="button" id="prevBtn" class="btn btn-primary" onclick="nextPrev(-1)">Previous</button>
+                                <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextPrev(1)">Next</button>
+                                </div>
+                                </div>
+                                *@

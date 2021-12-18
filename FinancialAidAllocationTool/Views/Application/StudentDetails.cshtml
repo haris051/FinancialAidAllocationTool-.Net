@@ -1,0 +1,204 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppStudentDetail
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@{
+        
+    
+}
+
+@using (Html.BeginCollectionItem("FaatAppStudentDetail"))
+{
+
+
+
+
+<section class="StudentDetails tab">
+ <div class="row">
+   <div class="col-xl-12 col-md-12 col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+                   <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1" id="StudentDetails">
+                                 <h5>Student Details</h5>
+                        </div>
+                  </div>
+                  <hr style="border-bottom: 1px solid grey;">
+                  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+            
+                <div class="form-group">
+                <label asp-for="AridNo" class="font-weight-bold" style="margin-top: 6px;"></label>
+                 @{
+                         if(Model.AridNo!=null)
+                         {
+                           <input asp-for="AridNo" class ="form-control" readonly/>
+
+
+                         }
+                         else
+                         {
+                           <input asp-for="AridNo" class ="form-control"/>
+
+                         }
+                 }
+                <span asp-validation-for="AridNo" class="text-danger"></span>
+                </div>
+            
+
+    </div>
+
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="form-group">
+                <label asp-for="Name" class="font-weight-bold" style="margin-top: 6px;"></label>
+                 @{
+                         if(Model.Name!=null)
+                         {
+                           <input asp-for="Name" class ="form-control" readonly/>
+
+                         }
+                         else
+                         {
+                          <input asp-for="Name" class ="form-control"/>
+    
+                         }
+                 }
+                <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="form-group">
+                <label asp-for="Class" class="font-weight-bold" style="margin-top: 6px;"></label>
+                @{
+                        if(Model.Class!=null)
+                        {
+                          <input asp-for="Class" class ="form-control" readonly/>
+
+                        }
+                        else
+                        {
+                         <input asp-for="Class" class ="form-control"/>
+
+
+                        }
+                }
+                <span asp-validation-for="Class" class="text-danger"></span>
+                </div>
+        </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+            <div class="form-group">
+            <label asp-for="Section" class="font-weight-bold" style="margin-top: 6px;"></label>
+             @{
+                     if(Model.Section!=null)
+                     {
+                       <input asp-for="Section" class ="form-control" readonly/>
+
+                     }
+                     else
+                     {
+                       <input asp-for="Section" class ="form-control"/>
+
+                     }
+             }
+            <span asp-validation-for="Section" class="text-danger"></span>
+            </div>
+    </div>
+    
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+
+            <div class="form-group">
+            <label  class="control-label" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">CGPA</label>
+             @{
+                     if(Model.Cpga!=null && Model.Cpga>0)
+                     {
+                       <input asp-for="Cpga" class ="form-control" readonly/>
+
+
+                     }
+                     else
+                     {
+                        <input asp-for="Cpga" class ="form-control"/>
+
+                     }
+             }
+            <span asp-validation-for="Cpga" class="text-danger"></span>
+            </div>
+    </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+
+            <div class="form-group">
+            <label asp-for="Semester" class="font-weight-bold" style="margin-top: 6px;"></label>
+            @{
+                    if(Model.Semester!=null)
+                    {
+                     <input asp-for="Semester" class ="form-control" readonly/>
+ 
+                    }
+                    else
+                    {
+                      <input asp-for="Semester" class ="form-control"/>
+
+                    }
+            }
+            <span asp-validation-for="Semester" class="text-danger"></span>
+            </div>
+    </div>
+
+
+
+          
+            <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="form-group">
+                <label asp-for="MobileNo" class="font-weight-bold" style="margin-top: 6px;"></label>
+                <input asp-for="MobileNo" class ="form-control"/>
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>
+            </div>
+             
+             <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                    <label asp-for="Residence" class="font-weight-bold" style="margin-top: 6px;"></label>
+                    <br>
+                    <label class="font-weight-bold" style="margin-top: 6px;">Hostel</label>
+                    @Html.RadioButtonFor(m=>m.Residence,"Hostel")
+                    <label class="font-weight-bold" style="margin-top: 6px;">House</label>
+                    @Html.RadioButtonFor(m=>m.Residence,"House")       
+
+             </div>
+                 <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+
+                <div class="form-group">
+                <label asp-for="EmailAddress" class="font-weight-bold" style="margin-top: 6px;"></label>
+                <input asp-for="EmailAddress" class ="form-control"/>
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+               </div>
+   </div>
+   <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                                <div class="form-group">
+                                <label asp-for="ReasonToApply" class="font-weight-bold" style="margin-top: 6px;"></label>
+                                <textarea asp-for="ReasonToApply" class ="form-control"> </textarea>
+                                <span asp-validation-for="ReasonToApply" class="text-danger"></span>
+                                </div> 
+                        </div> 
+
+   </div>
+          
+              
+          </div>
+      </div>
+
+   </div>
+ </div>
+       
+
+ 
+</section>
+}
+
+
+
+
+

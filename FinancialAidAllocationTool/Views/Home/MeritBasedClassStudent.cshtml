@@ -1,0 +1,59 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.FaatScholarLog
+
+@{
+    ViewData["Title"] = "Edit";
+    
+}
+<li class="list-group-item border border-dark StdClass" @if (Model.Status == "Accept") { <text> style="background-color:#D9FEE5;" </text> } else if (Model.Status == "Reject") { <text> style="background-color:#E9967A;" </text> } else {}>
+<input asp-for="Status" class="StdStatus" type="hidden">
+<input asp-for="Tid" type="hidden" class="StdTid">
+
+<div class="row">
+    @using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+    {
+    @using (Html.BeginCollectionItem("FaatScholarLog"))
+    {
+   
+         
+         <div style="text-align: center;" class="col-6 col-lg-2 col-md-2 AridNoCell">        
+            @Model.AridNo
+            @Html.HiddenFor(m => m.AridNo,new{@class = "Arid"})
+        </div>
+         <div style="text-align: center;" class="col-6 col-lg-2 col-md-2 px-0 NameCell">        
+            @Model.Name
+        </div>
+         
+        
+        <div  style="text-align:center;" class="col-6 col-lg-2 col-md-2 Cell2">
+            @Math.Round(Convert.ToDecimal(Model.Cgpa), 2)
+            @Html.HiddenFor(m => m.Cgpa ,new{@class = "CGPA"})
+        </div>
+         
+        <div style="text-align: center;" class="col-6 col-lg-2 col-md-2 px-0 amount Cell2">
+            @if(Model.AllocationAmount == null || @Model.AllocationAmount == 0)
+            {
+                <span class="text-danger">@TempData["Error"]</span>
+            }
+            <input asp-for=@Model.AllocationAmount class="AllocationAmount form-control Amount" style="width:100%;"></input>  
+        </div>
+         
+     
+    
+       
+        <div class="col-6 col-lg-2 col-md-2 Cell2">
+            <button type="button"value="@Model.AridNo" class="btn btn-success btn-sm Accept" style="width: 100%;" @if (Model.Status == "Accept") { <text>disabled</text>}>@if(Model.Status=="Accept"){<i class="fa fa-ban" aria-hidden="true"></i>}<i hidden class="fa fa-ban" aria-hidden="true"></i>Accept</button>
+        </div>
+        <div class="col-6 col-lg-2 col-md-2 Cell2">
+            <button type="button" value="@Model.AridNo" class="btn btn-danger btn-sm Reject" style="width: 100%;" @if (Model.Status == "Reject") { <text>disabled</text>}>@if(Model.Status=="Reject"){<i class="fa fa-ban" aria-hidden="true"></i>}<i hidden class="fa fa-ban" aria-hidden="true"></i> Reject</button> 
+        </div> 
+
+
+    }
+    }
+    
+</div>
+</li>
+
+
+

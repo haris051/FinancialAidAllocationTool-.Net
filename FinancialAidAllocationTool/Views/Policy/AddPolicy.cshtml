@@ -1,0 +1,75 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.Policy.FaatPolicy
+
+@{
+    ViewData["Title"] = "Edit";
+    
+}
+@using (Html.BeginCollectionItem("FaatPolicy"))
+{
+    <div class="card mt-1 rowPolicy PTHead">
+  
+        <div class="card-header">
+   
+        
+            <div class="row P">                                
+                 <div class="form-group col-lg-2 col-2 text-center" style="padding-top: 8px;">
+                    <a href="#" class="float-left addRuleExpand fa fa-plus" style="font-size: 2vh;">
+                                        
+                    </a>                
+                </div>
+                <div class="form-group col-lg-2 col-3 px-0 text-center">
+                 <label class="switch">     
+                @Html.RadioButton("IsSelected","1",new{@class="Radio success",onclick="Radio()"})
+                <span class="slider round"></span>
+        
+                </label>
+                </div>
+               
+                <div class="form-group col-lg-3 col-2 text-center px-0" style="padding-top: 2px;">
+                    <input asp-for="Name" class="form-control" style="font-size: 2vh;"/>                
+                </div>
+                <div class="form-group col-lg-3 col-2 text-center px-0" style="padding-top: 2px;">
+                    <input asp-for="MeritMinCGPA" class="form-control" style="font-size: 2vh;"/>                
+                </div>
+                <div class="form-group col-lg-2 col-3 px-0 text-center" style="padding-top: 2px;">
+                    <a href="#" class="btn btn-danger delete-policy" style="font-size: 2vh;">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </div>                
+            </div>
+            </div>
+      
+    <section>
+        
+         <ul class="list-group collapse RuleURL tbodyRule"> 
+             <li class="list-group-item bg-info">                     
+                <div class="row">            
+                    <div class="form-group col-6" id="Rule">
+                        <a href="#" class="float-left addRule" data ="@ViewData["ContainerPrefix"]">
+                            <i class="fa fa-plus-square" aria-hidden="true"></i>                    
+                        </a>
+                        <h5 class="text-white" >Rule</h5>                       
+                    </div>
+                </div> 
+         
+               
+                    
+                    <span asp-validation-for="FaatRule" class="text-danger"></span>
+            </li>
+                    
+                                    
+                        @foreach (var item in Model.FaatRule)
+                        {
+                            <partial name="AddRule" for="@item" />
+                        }
+                    
+                    </ul>
+               
+          
+       
+    </section>
+     
+     </div>
+}
+

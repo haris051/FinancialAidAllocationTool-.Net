@@ -1,0 +1,89 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppSibJobHolder
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@{
+
+}
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+    @using(Html.BeginCollectionItem("FaatAppSibJobHolder"))
+{
+   <section class="JobHolders" style="margin-top: 4px;">
+           <div class="row">
+          <div class="col-12">
+             <label class="text-xs font-weight-bold text-success text-uppercase mb-1">JobHolder @TempData["JobCount"]</label>
+          </div>
+      </div>
+      <div class="row" style="margin-top:2px;">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                <label class="font-weight-bold" style="margin-top: 6px;">Name</label>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                <input class="form-control" asp-for="Name">
+
+            </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+            <label class="font-weight-bold" style="margin-top: 6px;">Company Name</label>
+
+             </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+             <input class="form-control" asp-for="Company">
+
+            </div>
+
+
+    </div>
+      <div class="row" style="margin-top:2px;">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                    <label class="font-weight-bold" style="margin-top: 6px;">Designation</label>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                    <input class="form-control" asp-for="Designation">
+
+            </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                    <label class="font-weight-bold" style="margin-top: 6px;">Monhly Income</label>
+
+             </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                    <input class="form-control" asp-for="MonthlyIncome">
+
+            </div>
+    </div>
+    <div class="row" style="margin-top:2px;">
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                           <label class="font-weight-bold" style="margin-top: 6px;">Salary Slip</label>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">                   
+                                     
+                                      <a class="AttachFile" ><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="ViewImage" hidden alt="" src="" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+                                      <input type="file" id="customFile6" asp-for="ContractFile" hidden>
+                                     
+                                    
+                            
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                         <label class="font-weight-bold" style="margin-top: 6px;">Discard</label>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                   <a href="#" class="btn btn-danger delete-JobHolder">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+       </div>
+    </div>
+     
+ </section>  
+    
+   
+ 
+
+
+
+
+
+}
+}

@@ -1,0 +1,81 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.Policy.FaatRule
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+    @using (Html.BeginCollectionItem("FaatRule"))
+    {
+        <li class="list-group-item rowRule bg-success">
+                
+            <div class="row R">                    
+                <div class="form-group col-lg-1 col-1 px-0 text-center" >
+                    <a href="#" class="text-primary float-left addRuleDescExpand fa fa-plus">
+                                        
+                    </a>                
+                </div>
+                <div class="form-group col-lg-3 col-3 px-0 text-center">
+                    <label asp-for="Strength" class="control-label text-white"></label>
+                    <span asp-validation-for="Strength" class="text-danger"></span>
+
+                </div>
+                <div class="form-group col-lg-2 col-2 px-0 text-center">
+                    <input asp-for="Strength" class="form-control strength" />
+                </div>
+                <div class="form-group col-lg-2 col-2 px-1 text-center">
+                    <label asp-for="Top" class="control-label text-white"></label>
+                </div>
+                <div class="form-group col-lg-2 col-2 px-0 text-center">
+                    <input asp-for="Top" class="form-control top" />
+                    <span asp-validation-for="FaatRuleDescription" class="text-danger"></span>
+
+                </div>
+                <div class="form-group col-lg-2 col-2 px-1 text-center">
+                    <a href="#" class="btn btn-danger delete-rule">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+         <li class="list-group-item bg-info RuleDescURL collapse">
+            <div class="row">                    
+                
+                <div class="form-group col-6 ">
+                    <a href="#" class="float-left addRuleDescription" data ="@ViewData["ContainerPrefix"]">
+                        <i class="fa fa-plus-square" aria-hidden="true"></i>                            
+                    </a>
+                    <h6 class="text-white">Description</h6>
+                </div>
+            </div>
+         </li>
+        
+        
+            <ul class="list-group RD collapse tbodyRuleDesc">
+               
+                        
+
+                       
+                            
+                            @foreach (var item in Model.FaatRuleDescription)
+                            {
+                                <partial name="AddRuleDescription" for="@item" />
+                            }
+                                    
+                            
+                       
+                
+            </ul>
+        
+        
+
+        }
+}
+
+    
+
+
+

@@ -1,0 +1,56 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        
+    </p>
+</figure>
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Fund Distribution, 2020 SM'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.y:.1f} Rupees</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: 'Rupees'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    series: [{
+        name: 'Scholarship Type',
+        colorByPoint: true,
+        data: [{
+            name: 'Merit Based',
+            y: @ViewData["Merit Based"],
+            
+        }, {
+            name: 'Need Based',
+            y: @ViewData["Need Based"]
+        }]
+    }]
+});
+		</script>

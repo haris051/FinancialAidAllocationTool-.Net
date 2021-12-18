@@ -1,0 +1,101 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.FaatScholarLog
+
+@{
+    ViewData["Title"] = "Edit";
+    
+}
+
+<li class="list-group-item border border-dark Class StdClass"  @if(Model.Status == "Accept") { <text> style="background-color:#D9FEE5;" </text> } else if (Model.Status == "Reject") { <text> style="background-color:#E9967A;" </text> } else {}>
+<input asp-for="Status" class="StdStatus" type="hidden">
+<input asp-for="Tid" type="hidden" class="StdTid">
+@*@Html.ActionLink("","ViewApplication","Home",new{id=@Model.ApplicationId},new{@class="VP"})*@
+<input value="@Model.ApplicationId" class="VP" type="hidden">
+<div class="row">
+  
+    @using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+    {
+    @using (Html.BeginCollectionItem("FaatScholarLog"))
+    {
+
+         @if(User.IsInRole("Admin"))
+         {  
+         <div style="vertical-align: middle;text-align:center;" class="col-6 col-lg-2 col-md-3 ViewApp AridNoCell">        
+            @Model.AridNo
+            @Html.HiddenFor(m => m.AridNo)
+        </div>
+        <div style="vertical-align: middle;text-align:center;" class="col-6 col-lg-2 col-md-3 ViewApp NameCell">
+            @Model.Name
+        </div>
+        
+     
+        <div  style="vertical-align: middle;text-align:center;text-align:center;" class="col-6 col-lg-1 col-md-3 CGPACell ViewApp">
+            @Math.Round(Convert.ToDecimal(Model.Cgpa), 2)
+            @Html.HiddenFor(m => m.Cgpa)
+        </div>
+            
+        <div style="vertical-align:middle;text-align:center;" class="col-6 col-lg-2 col-md-3 amount">
+            @if(Model.AllocationAmount == null || @Model.AllocationAmount == 0)
+            {
+                <span class="text-danger">@TempData["Error"]</span>
+            }
+           
+            <input asp-for=@Model.AllocationAmount class="AllocationAmount form-control" style="width:100%;"></input>
+             
+        </div>
+        
+
+        
+        <Div style="vertical-align: middle;text-align:center;font-size:medium;" class="col-6 col-lg-2 col-md-3 px-0 pr-1">
+            <button  type="submit" class="btn btn-sm btn-primary Recommend" style="width: 100%;" value=@Model.ApplicationId.ToString()-@Model.ClassId.ToString()>Recommendations</button>
+        </Div>
+        <div style="vertical-align: middle;text-align:center;font-size:medium;" class="col-6 col-lg-1 col-md-3 px-0 pr-1">
+            @Html.ActionLink("History","PreviousRecord","Home",new{id=Model.AridNo},new{@class = "btn btn-primary btn-sm",@style="width:100%"})
+
+        </div>
+     
+         <div class="col-6 col-lg-1 col-md-3 px-0 pr-1">
+             <input type="hidden" value="@Model.ClassId">
+            <button type="button" value="@Model.AridNo" class="btn btn-success btn-sm Accept" style="width: 100%;" @if (Model.Status == "Accept" || Model.Status=="Reject") { <text>disabled</text>}>@if(Model.Status=="Accept" || Model.Status=="Reject"){<i class="fa fa-ban" aria-hidden="true"></i>}<i class="fa fa-ban" hidden aria-hidden="true"></i> Accept</button>
+        </div>
+        <div class="col-6 col-lg-1 col-md-3 px-0 pr-1">
+                         <input type="hidden" value="@Model.ClassId">
+
+            <button type="button" value="@Model.AridNo" class="btn btn-danger btn-sm Reject" style="width: 100%;" @if (Model.Status == "Reject" || Model.Status=="Accept") { <text>disabled</text>}>@if(Model.Status=="Accept" || Model.Status=="Reject"){<i class="fa fa-ban" aria-hidden="true"></i>}<i class="fa fa-ban" hidden aria-hidden="true"></i> Reject</button> 
+        </div> 
+
+
+        
+         }  
+         else
+         {
+              <div style="vertical-align: middle;text-align:center;" class="col-6 col-lg-3 col-md-2 ViewApp AridNoCell">        
+            @Model.AridNo
+            @Html.HiddenFor(m => m.AridNo)
+        </div>
+        <div style="vertical-align: middle;text-align:center;" class="col-6 col-lg-3 col-md-2 ViewApp NameCell">
+            @Model.Name
+        </div>
+         <div  style="vertical-align: middle;text-align:center;" class="col-6 d-block d-xl-none d-lg-none d-md-none">
+            <label>CGPA</label>
+        </div>
+     
+        <div  style="vertical-align: middle;text-align:center;" class="col-6 col-lg-2 col-md-2 CGPACell ViewApp">
+            @Math.Round(Convert.ToDecimal(Model.Cgpa), 2)
+            @Html.HiddenFor(m => m.Cgpa)
+        </div>
+       
+      
+        <div style="vertical-align: middle;text-align:center;font-size:medium;" class="col-6 col-lg-2 col-md-3 px-0 pr-1">
+            <button  type="button" class="btn btn-sm btn-primary Recommend" style="width: 100%;" value=@Model.ApplicationId.ToString()-@Model.ClassId.ToString()>Recommendations</button>
+        </div>
+        <div style="vertical-align: middle;text-align:center;font-size:medium;" class="col-6 col-lg-2 col-md-3 px-0 pr-1">
+            @Html.ActionLink("History","PreviousRecord","Home",new{id=Model.AridNo},new{@class = "btn btn-primary btn-sm",@style="width:100%"})
+
+        </div>
+             
+         }     
+    }
+    }
+</div>
+</li>

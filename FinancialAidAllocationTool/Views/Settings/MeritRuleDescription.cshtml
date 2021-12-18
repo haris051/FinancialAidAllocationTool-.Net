@@ -1,0 +1,36 @@
+@model FinancialAidAllocationTool.Models.Policy.FaatRuleDescription
+
+@using HtmlHelpers.BeginCollectionItemCore;
+@using (Html.BeginCollectionItem("FaatRuleDescription"))
+{
+    @*
+        <li class="list-group-item">
+             <div class="row">
+                        <div class="col-lg-6" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                            @Model.StudentNo
+                            <input hidden asp-for="StudentNo">
+                        </div>
+                         <div class="col-lg-6" style="font-size:1vw;padding-top:4px;font-family:courier,arial,helvetica;">
+                            @Model.Amount
+                            <input hidden asp-for="Amount">
+                        </div>
+             </div>
+             <input hidden asp-for=Id>
+            
+        </li>
+        *@
+         <li class="list-group-item">
+             <div class="row">
+                        <div class="col-lg-6 col-6" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                            @Model.StudentNo
+                            <input hidden asp-for="StudentNo">
+                        </div>
+                         <div class="col-lg-6 col-6" style="font-size:2vh;padding-top:4px;font-family:courier,arial,helvetica;">
+                            
+                            <input class="form-control"  asp-for="Amount">
+                        </div>
+             </div>
+             <input hidden asp-for=Id>
+            
+        </li>
+}

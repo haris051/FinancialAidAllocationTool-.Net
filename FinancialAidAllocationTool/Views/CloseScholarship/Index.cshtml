@@ -1,0 +1,261 @@
+@model IEnumerable<FinancialAidAllocationTool.Models.IntakeSeason.FaatIntakeSeason>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<SelectListItem> listItems= new List<SelectListItem>();
+        var Flag1 = true;
+        var Flag2 = true;
+        if(Model.Last().FaatScholarshipStatus.ToList()[0].Status=="Pending")
+        {
+            Flag1 = true;
+            Flag2=false;
+        }
+        else
+        {
+            Flag2= true;
+            Flag1 = false;
+        }
+    listItems.Add(new SelectListItem
+    {
+        Text = "Pending",
+        Value = "Pending",
+        Selected = Flag1
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Complete",
+        Value = "Complete",
+        Selected = Flag2
+       
+    });    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+      <style>
+  .modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  </style>
+</head>
+<body>
+@{
+    if(TempData["Type"].ToString()== "Merit Based")
+    {
+           <h1>Manage Merit Based ScholarShip Process</h1>
+           <span class="text-danger">@TempData["Error"]</span>                  
+                     
+    }
+    else
+    {
+        <h1>Manage Need Based ScholarShip Process</h1>
+           <span class="text-danger">@TempData["Error"]</span>                  
+                     
+
+                                   
+    }
+}
+<form asp-action="ChangeStatus" asp-controller="CloseScholarship" method="POST">
+      <div class="card">
+          <div class="card-header">
+            <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 px-0">
+                        Semester
+                    </div>
+                    
+            
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        @Html.DisplayNameFor(model => model.FaatScholarshipStatus.ToList()[0].Type)
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                        @Html.DisplayNameFor(model => model.FaatScholarshipStatus.ToList()[0].Status)
+                    </div> 
+                    @if(TempData["Type"].ToString()=="Merit Based")
+                    {
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 px-0">
+                       @Html.DisplayNameFor(model => model.FaatScholarshipStatus.ToList()[0].Policy)
+                    </div> 
+                    }
+            </div>
+        </div>
+        <ul class="list-group">
+   
+@foreach (var item in Model)
+
+ {
+        <li class="list-group-item border border-dark">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 px-0">
+                          @item.Year- @item.IntakeSeason
+                         </div>
+                
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4 px-0">
+
+                        @Html.DisplayFor(modelItem => item.FaatScholarshipStatus.ToList()[0].Type)
+                    </div>
+            @{
+                //if(item.FaatScholarshipStatus.ToList()[0].Status=="Pending")
+                if(Model.Last().FaatScholarshipStatus.ToList()[0].Id == item.FaatScholarshipStatus.ToList()[0].Id)
+                {           
+                    @Html.Hidden("ID",@item.FaatScholarshipStatus.ToList()[0].Id)
+                       
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 px-0">
+        
+                        <label class="switch ">                                 
+                            <input type="checkbox" class="success CheckBoxStatus"/>                             
+                            <span class="slider round"></span>                    
+                            @Html.Hidden("Status", item.FaatScholarshipStatus.ToList()[0].Status)
+                        </label>  
+                    </div>
+                    @if(TempData["Type"].ToString()=="Merit Based")
+                    {
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 px-0">
+
+                        <a href="#" class="Policy text-sm-right">View</a> 
+                        @Html.HiddenFor(modelItem => item.FaatScholarshipStatus.ToList()[0].Policy)
+                            
+                        </div>                  
+                    }        
+                }
+                else
+                {    
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 px-4">
+                        <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                        @Html.HiddenFor(modelItem => item.FaatScholarshipStatus.ToList()[0].Status)
+                    </div>
+                    @if(TempData["Type"].ToString()=="Merit Based")
+                    {
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 px-0">
+
+                        <a href="#" class="Policy">View</a>                  
+                        @Html.HiddenFor(modelItem => item.FaatScholarshipStatus.ToList()[0].Policy)
+                         </div>
+                    }
+                }
+            }
+           
+            </div>
+       
+        </li>
+        
+}
+ 
+
+   </ul> 
+   <div class="card-footer">
+       <div class="row">
+           <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                <button class="btn btn-primary" name="Type" value="@TempData["Type"]">Save</button>
+            </div>
+        </div>
+</div>
+</div>
+</form>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="">
+          <h4> Policy</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>          
+        </div>
+        <div class="modal-body" style="">
+            <div id="PolicyHtml"></div>          
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger btn-default pull-left" data-dismiss="modal">Cancel</button>          
+        </div>
+      </div>      
+    </div>
+  </div>
+  
+</body>
+<script>
+    $( document ).ready(function() {
+        
+        if($('.CheckBoxStatus').next().next().val() == "Complete")
+        {
+            $('.CheckBoxStatus').prop('checked', true);
+        }
+        else
+        {
+            $('.CheckBoxStatus').prop('checked', false);        
+        }
+    });
+    
+    $(".CheckBoxStatus").click(function () {
+        
+        if($(this).prop('checked'))
+        {
+            $(this).next().next().val('Complete');
+        }else
+        {
+            $(this).next().next().val('Pending');
+        }
+        
+    });
+
+    $(".Policy").click(function () {
+              
+        //console.log($(this).next().val());
+        var $d = $(this).next();
+        if ($d.length != 0) {
+            if ($d.val().length != 0 ) 
+            {
+                var obj = jQuery.parseJSON($(this).next().val());
+                
+                var PolicyHtml = '';
+                //console.log('--------');
+                
+                PolicyHtml += '<pre><b>Policy: ' + obj.Name + '</b></br>';
+                var r = 0; 
+                $.each( obj.FaatRule, function( key, value ) 
+                {
+                    r=r+1;
+                    
+                    PolicyHtml += '<b>Rule: ' + r + '</b></br>'; 
+                    PolicyHtml += 'Strength: ' + value.Strength +   '   ';             
+                    PolicyHtml += 'Top: ' + value.Top +   '</br>';             
+                    PolicyHtml += '<b>Rule Description</b></br>'; 
+                    $.each( value.FaatRuleDescription, function( key, value ) {
+                        
+                        PolicyHtml += 'Stundent No.:' + value.StudentNo +   '   ';             
+                        PolicyHtml += 'Amount: ' + value.Amount +   '</br>';             
+                    });
+                });
+                PolicyHtml += '</pre>'; 
+                
+                //console.log(PolicyHtml);
+
+                $("#PolicyHtml").html('');
+                $("#PolicyHtml").html(PolicyHtml);
+
+                //console.log(PolicyHtml);
+                //console.log('--------')
+                
+                $("#myModal").modal();
+            }
+            else
+            {
+                alert('Policy does not exist.');        
+            }
+        }
+        else
+        {
+            alert('Policy does not exist.');        
+        }      
+      
+    });
+</script>
+</html>

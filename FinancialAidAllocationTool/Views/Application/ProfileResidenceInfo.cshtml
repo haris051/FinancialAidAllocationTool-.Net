@@ -1,0 +1,107 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppResidenceInfo
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+    string ImageUrl = "";
+}
+
+@using (Html.BeginCollectionItem("FaatAppResidenceInfo"))
+{
+       <input asp-for="Id" hidden>
+
+<section class="ResidenceInfo">
+  <div class="row">
+       <div class="col-lg-12 col-12">
+         <div class="card border-left-success shadow">
+          <div class="card-body">
+         
+           <div class="row">
+                <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 pl-3" id="ResidentDetailsDetails">
+                <h5>Residence Information <a class="ResidenceEdit ResidenceLbl"><i class="fas fa-edit"></i></a> <a hidden class="ResidenceSave Residence"><i class="fas fa-save"></i></a></h5>
+                </div>
+            </div>
+
+           <hr style="border-bottom: 1px solid grey;">
+
+         
+            <div class="row" style="margin-top: 4px;">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-12">
+                    <label class="font-weight-bold" style="margin-top: 6px;" asp-for="Mode" class="control-label"></label>
+                    </div>
+                    <div class="col-lg-9 col-xl-9 col-md-9 col-12"> 
+                               <label class="ResidenceLbl">@Model.Mode</label>
+                               <label class="Residence" hidden>Own</label>
+                                
+
+                                <input hidden type="radio" asp-for="Mode" value="Own" class="own Residence" onclick="OwnHouse(this)">
+                                <label hidden class="Residence">Rented</label>
+                                <input hidden type="radio" asp-for="Mode" value="Rented" class="rent Residence" onclick="RentHouse(this)">
+                    <label hidden class="control-label Residence">Other</label> 
+                    <input hidden type="radio" asp-for="Mode" value="" class="others Residence" onclick="OthersHouse(this)">
+                    <input asp-for="Mode"  hidden class="collapse OthersValue Residence" onkeyup="OtherValue(this)">
+
+                    </div>
+                 
+               </div>
+
+               <div class="row" style="margin-top: 4px;">
+                   <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                      <label class="font-weight-bold" style="margin-top: 6px;" asp-for="Address"></label>
+                      <textarea asp-for="Address" class ="form-control ResidenceLbl" readonly></textarea>
+
+                       <textarea asp-for="Address" class ="form-control Residence" hidden></textarea>
+
+                   </div>
+
+              </div>
+              <div class="row" style="margin-top: 2px;">
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-6">
+                                  <label class="font-weight-bold" style="margin-top: 6px;">Residence Docx</label>
+                   </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-6">
+                           @if(Model.ResidenceInfoFileData!=null)
+                           {
+                                  <input asp-for="ResidenceInfoFileData" type="hidden">
+                                  <input asp-for="ResidenceInfoFileType" type="hidden">
+                                  <input asp-for="ResidenceInfoFileName" type="hidden">
+
+                                  string img = Convert.ToBase64String(Model.ResidenceInfoFileData);
+                                   ImageUrl = string.Format("data:" + Model.ResidenceInfoFileType + ";base64,{0}", img);
+                                      
+                               <img class="ResidenceLbl ViewImage" src="@ImageUrl" alt="@Model.ResidenceInfoFileName" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+   
+                           }
+                           else
+                           {
+                             <label>No Files</label>
+                           }
+                           <a class="AttachFile Residence" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Residence  ViewImage"  hidden src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" alt="@Model.ResidenceInfoFileName">
+                                     <input type="file" hidden class="custom-file-input" asp-for="ResidenceFile">
+                                     
+                                    
+                   </div>
+
+              </div>
+
+
+
+            
+
+    
+
+</div>
+         </div>
+       </div>
+  </div>
+
+         
+  
+  
+          
+             
+          
+
+
+
+          
+</section>
+}

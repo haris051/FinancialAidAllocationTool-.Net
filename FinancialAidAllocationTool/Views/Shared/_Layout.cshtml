@@ -1,0 +1,187 @@
+﻿﻿@using System.Security.Principal;
+@using System.Security.Claims;
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+
+    @RenderSection("head", required: false)
+
+  
+        <link rel="stylesheet" href="~/css/MyStyle.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"  asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/demo.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/component.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/normalize.css" asp-append-version="true"/>
+
+        <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-toggle.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/simple-sidebar.css" asp-append-version="true"/>
+
+
+        <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/Popper.min.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap-toggle.min.js" asp-append-version="true"></script>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <script src="~/lib/Highcharts-8.1.2/highcharts.js" asp-append-version="true"></script>
+        <script src="~/lib/Highcharts-8.1.2/exporting.js" asp-append-version="true"></script>
+        <script src="~/lib/Highcharts-8.1.2/export-data.js" asp-append-version="true"></script>
+        <script src="~/lib/Highcharts-8.1.2/accessibility.js" asp-append-version="true"></script> 
+        <script src="~/js/Slide.js" asp-append-version="true"> 
+          
+             </script>
+            
+        @RenderSection("Scripts", required: false)
+ 
+</head>
+<body style="background:#43ABC9;">
+
+
+       
+
+   
+
+            <nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark sticky-top" style="background-color: ghostWhite;z-index:2;width:100%;position:fixed;">
+       @if(TempData["FatherName"] != null)
+           {
+                              <a class="navbar-brand" style="color: white;"><i class="fas fa-home"></i>@TempData["FatherName"]</a>
+
+           }
+      
+      
+       else if(User.IsInRole("Admin"))
+           {
+             
+           <a asp-controller="Home" asp-action="Dashboard" class="navbar-brand" style="color: white;"><i class="fas fa-home"></i>  Admin</a>
+           }
+           else if(User.IsInRole("Student"))
+           {
+               
+               @if(User.Claims.Where(e => e.Type.Contains("Attempt"))
+                   .Select(e => e.Value).SingleOrDefault() !="first")
+               {
+       <div class="d-xl-none d-lg-block d-md-block d-block">
+                <button type="button" class="openbtn btn btn-dark" onclick="openNav()">
+             <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+               }
+               
+
+             @*  <a asp-controller="Application" asp-action="index" class="navbar-brand" style="color: white;"><i class="fas fa-home"></i> @User.Identity.Name</a>*@
+           }
+           else if(User.IsInRole("Committee"))
+           {
+               <a asp-action="Dashboard" asp-controller="Home" class="navbar-brand" style="color: white;"><i class="fas fa-home"></i> @User.Identity.Name</a>
+           }
+           
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+           
+  <div id="navbarCollapse" class="collapse navbar-collapse bg-dark">
+      @if(User.IsInRole("Admin") || User.IsInRole("Committee"))
+      {
+          if(User.IsInRole("Admin"))
+          {
+      <ul class="nav navbar-nav" style="color: white;">
+          <li class="nav-item dropdown bg-dark">
+              <a href="#" class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown"><i class='fas fa-award'></i> Merit Based</a>
+              <div class="dropdown-menu bg-dark">
+                  @Html.ActionLink("BIIT","MeritBasedList","Home", new {Discipline="BIT"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("BCSC", "MeritBasedList","Home", new {Discipline="BCS"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("MCS", "MeritBasedList","Home",new {Discipline="MCS"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("MIT", "MeritBasedList","Home",new {Discipline="MIT"},new { @class = "dropdown-item text-white" })
+
+              </div>
+          </li>
+      </ul>
+          }
+       <ul class="nav navbar-nav ">
+          <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Need Based</a>
+              <div class="dropdown-menu bg-dark">
+                  @Html.ActionLink("BIIT","NeedBasedList","Home", new {Discipline="BIT"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("BCSC", "NeedBasedList","Home", new {Discipline="BCS"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("MCS", "NeedBasedList","Home",new {Discipline="MCS"},new { @class = "dropdown-item text-white" })
+                  @Html.ActionLink("MIT", "NeedBasedList","Home",new {Discipline="MIT"},new { @class = "dropdown-item text-white" })
+                 
+              </div>
+          </li>
+      </ul>
+      @if(User.IsInRole("Admin"))
+      {  
+          <ul class="navbar-nav bg-dark">
+          <li class="nav-item">
+              <a class="nav-link text-white" asp-action="Committee" asp-controller="Account"><i class="fas fa-user-plus"></i> Committee</a>
+           </li>
+      </ul>   
+      <ul class="navbar-nav bg-dark">
+          <li class="nav-item">
+             <a class="nav-link text-white"  asp-action="index" asp-controller="Settings"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+      </ul>
+      
+      
+      }
+      }
+       @if (User.Identity.IsAuthenticated)
+       {
+           <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link text-white"  asp-controller="account" asp-action="LogOut"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </li>
+           </ul>
+
+       }
+       else
+       {
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="text-info nav-link" asp-controller="account" asp-action="register">
+                <i class="fas fa-user-plus"></i>
+                Register
+            </a>
+        </li>
+        <li>
+            <a class="text-success nav-link" asp-controller="account" asp-action="Login">
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </a>
+
+        </li>
+    </ul>
+       }
+  </div>
+</nav>
+
+   
+
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+       
+       
+    </div>
+
+   
+</body>
+  <footer id="footer" style="background:black;position: fixed;height:60px;" class="fixed-bottom">
+             <hr/>
+            <p style="color: whitesmoke;">&copy; Financial Aid Allocation Tool</p>
+    </footer>
+</html>

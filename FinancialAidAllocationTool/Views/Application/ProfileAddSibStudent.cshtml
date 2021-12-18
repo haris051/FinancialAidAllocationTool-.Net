@@ -1,0 +1,135 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppSibStudent
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@{
+   string ImageUrl= "";
+}
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+    @using(Html.BeginCollectionItem("FaatAppSibStudent"))
+{
+    
+    <input asp-for="Id" hidden>
+    <li class="list-group-item border border-dark">
+            <div class="row">
+                   <div class="col-xl-3 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+<input class="form-control Sibling" hidden asp-for="Name">
+            <label class="SiblingLbl">@Model.Name</label>
+                   </div>
+                   <div class="col-xl-3 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+<input class="form-control Sibling" hidden asp-for="ClassInstituteName">
+                <label class="SiblingLbl">@Model.ClassInstituteName</label>
+                   </div>
+                   <div class="col-xl-3 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+  @if(Model.StdentCardFileData!=null)
+                           {
+                                  <input asp-for="StdentCardFileData" type="hidden">
+                                  <input asp-for="StdentCardFileType" type="hidden">
+                                  <input asp-for="StdentCardFileName" type="hidden">
+
+                                  string img = Convert.ToBase64String(Model.StdentCardFileData);
+                                   ImageUrl = string.Format("data:" + Model.StdentCardFileType + ";base64,{0}", img);
+                                       
+                               <img class="SiblingLbl ViewImage" src="@ImageUrl" alt="@Model.StdentCardFileName" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black"/>
+   
+                           }
+                           else
+                           {
+                             <label class="SiblingLbl">No Files</label>
+                           }
+
+
+
+
+
+                                      <a class="AttachFile Sibling" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Sibling  ViewImage" alt="@Model.StdentCardFileName" hidden src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+                                     <input type="file" hidden class="custom-file-input"  asp-for="StudentCardFile" id="customFile7">
+                        
+                   </div>
+                   <div class="col-xl-3 d-xl-block d-lg-none d-none d-md-none Sibling" hidden style="text-align: center;">
+<a href="#" class="text-danger delete-Student Sibling" hidden>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                   </div>
+            </div>
+  
+
+  <section class="Students d-lg-block d-md-block d-block d-xl-none" style="margin-top: 4px;">
+      
+          
+         
+          
+      
+    <div class="row" style="margin-top:2px;">
+        
+        <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+            <label class="font-weight-bold" style="margin-top: 6px;">Name</label>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+            <input class="form-control Sibling" hidden asp-for="Name">
+            <label class="SiblingLbl">@Model.Name</label>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6 col-6 px-0 pl-3 MyFont">
+                <label class="font-weight-bold" style="margin-top: 6px;">Institute Name</label>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                <input class="form-control Sibling" hidden asp-for="ClassInstituteName">
+                <label class="SiblingLbl">@Model.ClassInstituteName</label>
+            </div>
+    </div>
+        
+           <div class="row" style="margin-top:2px;">
+               <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                   <label class="font-weight-bold" style="margin-top: 6px;">Fee Slip</label>
+               </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                                   @if(Model.StdentCardFileData!=null)
+                           {
+                                  <input asp-for="StdentCardFileData" type="hidden">
+                                  <input asp-for="StdentCardFileType" type="hidden">
+                                  <input asp-for="StdentCardFileName" type="hidden">
+
+                                  string img = Convert.ToBase64String(Model.StdentCardFileData);
+                                   ImageUrl = string.Format("data:" + Model.StdentCardFileType + ";base64,{0}", img);
+                                       
+                               <img class="SiblingLbl ViewImage" src="@ImageUrl" alt="@Model.StdentCardFileName" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black"/>
+   
+                           }
+                           else
+                           {
+                             <label class="SiblingLbl">No Files</label>
+                           }
+
+
+
+
+
+                                      <a class="AttachFile Sibling" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Sibling  ViewImage" alt="@Model.StdentCardFileName" hidden src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black">
+
+                                     <input type="file" hidden class="custom-file-input"  asp-for="StudentCardFile" id="customFile7">
+                        
+                                    
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                      <label class="font-weight-bold Sibling" hidden style="margin-top: 6px;">Discard</label>
+                </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 col-6 Sibling" hidden>
+            
+                    <a href="#" class="text-danger delete-Student">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+           </div>
+        
+       
+        
+        
+
+   </section> 
+    </li>
+
+}
+}

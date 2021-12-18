@@ -1,0 +1,147 @@
+@model FinancialAidAllocationTool.Models.Application.FaatApplication
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var fees = 48000;
+     double ? Remaining = 0.0;
+}
+
+ <div class="row" style="margin-top: 80px;">
+    <div class="col-12">
+       <h3 class="text-white">Parents Console</h3>
+    </div>
+ </div>
+ <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-block d-md-block d-none">
+                         <div class="row" style="text-align: center;">
+                              <div class="col-lg-2 col-md-2 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                   Semester No 
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                   Arid No
+                              </div>
+                              <div class="col-lg-2 col-md-2 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                   Semester Fees
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                   Scholarship Amount
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                   Dues
+                              </div>
+                              
+                         </div>
+                    </li>
+                    <li class="list-group-item d-xl-block d-lg-block d-md-block d-none">
+                         <div class="row" style="text-align: center;">
+                              <div class="col-lg-2 col-md-2 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                @Model.FaatClassDefinition.Semester
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                @Model.AridNo
+                              </div>
+                              <div class="col-lg-2 col-md-2 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                 @fees
+                              </div>
+                              <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                  @if(Model.FaatScholarLog.Count()>0)
+                                  {
+                                   @if(Model.FaatScholarLog.ToList()[0].AllocationAmount != null)
+                                   {
+                                       @Model.FaatScholarLog.ToList()[0].AllocationAmount
+                                   }
+                                  }
+                              </div>
+                               <div class="col-lg-2 col-md-2 px-0 d-xl-block d-lg-block d-md-block d-none" style="text-align: center;">
+                                  @{
+                                       @if(Model.FaatScholarLog.Count()>0)
+                                       {
+                                        if(Model.FaatScholarLog.ToList()[0].AllocationAmount == null)
+                                       {
+                                        Remaining = @fees- 0.0;
+
+                                       }
+                                       else
+                                       {
+                                        Remaining = @fees- @Model.FaatScholarLog.ToList()[0].AllocationAmount;
+
+                                       }
+                                  
+                                       }
+                                       else
+                                       {
+                                         Remaining = @fees- 0.0;
+
+                                       }
+                                       
+                                  
+                                  }
+                                  @Remaining
+                              </div>
+                              
+                         </div>
+                    </li>
+                    
+ </ul>
+ <div class="card d-xl-none d-lg-none d-md-none d-block">
+                        <div class="card-header">
+                             Semester No  : @Model.FaatClassDefinition.Semester
+                        </div>
+                        <div class="card-body">
+                                 <div class="row">
+                                         <div class="col-6">
+                                            Arid No: 
+                                         </div>
+                                         <div class="col-6">
+                                              @Model.AridNo
+                                         </div>
+                                         <div class="col-6">
+                                              Fees:
+                                         </div>
+                                         <div class="col-6">
+                                              @fees
+                                         </div>
+                                         <div class="col-6">
+                                               Scholarship Amount :
+                                         </div>
+                                         <div class="col-6">
+                                              @if(Model.FaatScholarLog.Count()>0)
+                                              {
+                                             @if(@Model.FaatScholarLog.ToList()[0].AllocationAmount != null)
+                                             {
+                                                 @Model.FaatScholarLog.ToList()[0].AllocationAmount
+                                             }
+                                              }
+                                              
+                                         </div>
+                                         <div class="col-6">
+                                               Remaining :
+                                         </div>
+                                         <div class="col-6">
+                                               @{
+                                                    @if(Model.FaatScholarLog.Count()>0)
+                                                    {
+                                       if(@Model.FaatScholarLog.ToList()[0].AllocationAmount == null)
+                                       {
+                                      Remaining = @fees- 0.0;
+
+                                       }
+                                       else
+                                       {
+                                     Remaining = @fees- @Model.FaatScholarLog.ToList()[0].AllocationAmount;
+
+                                       }
+                                                    }
+                                                    else
+                                                    {
+                                                        Remaining = @fees- 0.0;
+                                                    }
+                                  
+                                  }
+                                  @Remaining
+ 
+                                         </div>
+                                 </div>
+                        </div>
+
+                    </div>
+                    

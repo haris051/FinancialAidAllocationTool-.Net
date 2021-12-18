@@ -1,0 +1,166 @@
+@model PaginatedList<FinancialAidAllocationTool.Models.Ledger.DonationLedger>
+    @{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    
+    <h1>Manage Donations</h1>
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+    <div class="card border-left-success shadow h-100 py-2">     
+        <div class="card-body">
+        <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1 DonationAccountStatus">Balance (@TempData["DonationAccountStatus"].ToString())</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800 DonationAccountVal">@TempData["DonationAccountVal"].ToString()
+                </div>
+            </div>
+            <div class="col-auto">      
+            <img class="img" height="50px" width="50px" src="~/Images/pakistan-rupee-currency-symbol.png" />
+            </div>
+        </div>        
+        </div>      
+    </div>
+    </div>
+    </div>
+
+    @* <span class="text-danger">Hello World!</span> *@
+    @if(TempData["Error"]!= null){
+            <span class="text-danger">@TempData["Error"].ToString()</span>
+    }
+    <form asp-action="DonationLedger" asp-controller="Ledger" method="POST">
+    <div class="row d-flex">
+        <div class="col-sm" style="text-align: center;">
+            
+            <h4 class="text-primary pt-2">Donation</h4>
+        </div>
+        <div class="col-sm">
+            <input name="donations"  class="form-control" type="number" onkeyup="myFunction(this)"/>
+            <p id="demo" class="text-danger"></p>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+    <Button id="AddDonation" class="btn btn-lg btn-primary fas fa-hands-helping mt-1" style="border-radius: 50%;">Save</Button>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+
+        <input type="text" onfocus="  (this.type='date')" onblur="(this.type='text')" class="SearchString" name="SearchString" value="@ViewData["currentFilter"]" />
+        <a type="button" class="search btn btn-sm btn-primary">Search</a> 
+        </div>
+    </div>
+    </form>
+    
+    @* <div class="table-wrapper-scroll-y my-custom-scrollbar" style="margin-top: 4px;"> *@
+    @* <table class="table table-bordered table-striped mb-0" id="tblDonation"> *@
+    <div class="" style="margin-top: 4px;">
+    <div class="card-deck">                
+        @* <thead>
+            <tr>
+                <th>
+                    Transaction Id
+                </th> 
+                <th>
+                    Date
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Credit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Debit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Memo)
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbodyDonation"> *@
+            
+                @foreach(var DonationLedger in Model)
+                {
+                  <partial name="AddDonationLedger" for="@DonationLedger"/>
+
+                }
+            
+
+        @* </tbody> *@
+
+
+    </div>
+
+    @* </table> *@
+    
+    @* </div> *@
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<nav aria-label="Page navigation example" >
+  <ul class="pagination">
+    <li class="page-item mr-1">
+      <a asp-action="DonationLedger"
+        asp-route-sortOrder="@ViewData["CurrentSort"]"
+        asp-route-pageNumber="@(Model.PageIndex - 1)"
+        asp-route-currentFilter="@ViewData["CurrentFilter"]"
+        class="btn btn-lg btn-outline-primary @prevDisabled">
+        < Previous
+        </a>
+    </li>
+    <li class="page-item">
+      <a asp-action="DonationLedger"
+        asp-route-sortOrder="@ViewData["CurrentSort"]"
+        asp-route-pageNumber="@(Model.PageIndex + 1)"
+        asp-route-currentFilter="@ViewData["CurrentFilter"]"
+        class="btn btn-lg btn-outline-primary @nextDisabled">
+        Next >        
+    </a>
+
+    </li>
+  </ul>
+</nav>
+
+    
+    
+
+</div>
+    <script>
+function myFunction(x) {
+  var text="";
+
+  // Get the value of the input field with id="numb"
+  var val= x.value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(val)) {
+    text = "Input not valid";
+  }
+  else if(val<1)
+   {
+    text = "Input must be greater than 1";
+   }
+  document.getElementById("demo").innerHTML = text;
+}
+//previous 
+     $("#AddDonation").click(function () {
+         var Donations = document.getElementById("Donations").value;
+        $.ajax({
+            url: "/Ledger/AddDonationLedger/",
+            data:{donations:Donations},                
+                success: function (result) {        
+                $("#tblDonation .tbodyDonation").append(result);
+                    
+                //$(".RuleURL").toggleClass('collapse');
+            }
+        });
+       // return false;
+    });
+       $(".search").click(function () {
+          var id = $('.SearchString').val();
+
+          var action =  "/DonationLedger";
+           var controller = "/Ledger";
+           console.log($(this).attr('href',controller+action+"/"+id));
+           window.location.href = controller+action+"/"+id;
+          //alert( $(this).attr('href'));         
+        return false;
+    });
+    </script>

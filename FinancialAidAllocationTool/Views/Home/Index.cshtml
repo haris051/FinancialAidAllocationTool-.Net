@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+@section head{
+    <style type="text/css">
+         body {
+            margin: 0;
+            background-image: url('/Images/bg.jpg');
+            background-size: cover;
+        }
+    </style>
+}
+@if(TempData["error"] != null && !TempData["error"].Equals(""))
+{
+    @Html.Raw(TempData["error"]);
+}

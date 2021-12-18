@@ -1,0 +1,687 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppParentDetail
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+
+}
+
+@using (Html.BeginCollectionItem("FaatAppParentDetail"))
+{      
+
+    <input asp-for="Id" hidden>
+    <section class="ParentDetails" style="margin-bottom: 80px;">
+<div class="row">
+   <div class="col-xl-12 col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+          
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                       <div class="row">
+                <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0">
+                <h5>Parent Details <a class="ParentEdit Parentlbl"><i class="fas fa-edit"></i></a> <a hidden class="ParentSave Parent"><i class="fas fa-save"></i></a></h5>
+                </div>
+            </div>
+             <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6 px-0">
+
+                            <label>Who is Financing or Supporting you?</label>  
+                    </div>
+                    @if(@Model.FinancingPerson != null)
+                    {
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                           <label class="Parentlbl">@Model.FinancingPerson</label>
+                           <input asp-for="FinancingPerson" hidden class="Parent form-control">               
+
+
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                           <label class="text-xs text-danger Parentlbl">No data</label>
+                            <input asp-for="FinancingPerson" hidden class="Parent form-control"> 
+
+
+                    </div>
+
+                    }
+           </div>
+           <hr style="border-bottom: 1px solid grey;">
+          
+             <div class="row" style="margin-top: 1px;">
+               
+            <div class="col-12 col-md-12 col-lg-6 col-sm-6 col-xl-6" style="margin-top: 2px;">
+                  <div class="row">
+                 <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                <h6>Father/Guardian Details</h6>
+                </div>
+                </div>
+                   <div class="row">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold" asp-for="@Model.FatherIsAlive"></label>
+                       </div>
+                       
+                       <div class="col-xl-4 col-lg-2 col-md-2 col-6 px-0">
+
+                            <label class="Parentlbl"> @if(Model.FatherIsAlive==true){<text>Alive</text>} else{<text>Dead</text>}</label>
+                            @{
+                                   bool Fval1 = true;
+                                   bool Fval2 =true;
+                                   bool FCheck1 = true;
+                                   bool FCheck2 = true;
+                                   if(Model.FatherIsAlive == true)
+                                   {
+                                        Fval1 = true;
+                                        Fval2 = false;
+                                        FCheck1 = true;
+                                        FCheck2 = false;
+                                   }   
+                                   else
+                                   {
+                                        Fval2 = true;
+                                        Fval1 = false;
+                                        FCheck1 = false;
+                                        FCheck2 = true;
+                                   } 
+
+                          }
+                         
+                            
+                            <label hidden class="Parent">Alive</label>
+                            <input hidden class="Parent CNIC" asp-for="FatherIsAlive" type="radio" value="@Fval1" checked=@FCheck1>
+                            <label hidden class="Parent">Not Alive</label>
+                            <input hidden class="Parent DC" asp-for="FatherIsAlive"  type="radio" value="@Fval2" checked=@FCheck2>
+                       </div>
+                 
+                   
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                               @{
+                                    string Fimg = "";
+                                    string FImageUrl = "";
+                               }
+                               @if(@Model.FatherIsAlive==false)
+                               {
+                                 @if(@Model.FatherCNICDeathCertificateFileData!=null)
+                                 {
+                                  Fimg = Convert.ToBase64String(@Model.FatherCNICDeathCertificateFileData);
+                                  FImageUrl = string.Format("data:" + @Model.FatherCNICDeathCertificateFileType + ";base64,{0}", Fimg);
+                                  <a class="Parentlbl"><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="ViewImage Parentlbl" alt="@Model.FatherCNICDeathCertificateFileName" src=@FImageUrl data-holder-rendered="true" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                   <input asp-for="FatherCNICDeathCertificateFileData" type="hidden">
+                                   <input asp-for="FatherCNICDeathCertificateFileType" type="hidden">
+                                   <input asp-for="FatherCNICDeathCertificateFileName" type="hidden">
+
+                                 }
+                               }
+                              
+                                <div  @if(Model.FatherIsAlive==false){<text> class="D Parent"</text>} else{<text>class= "collapse D Parent"</text>} hidden>
+                                    
+                                    <a class="AttachDC"><i class="fa fa-paperclip" aria-hidden="true"></i></a><span @if(Model.FatherIsAlive==false){<text>hidden</text>}>Death Certificate</span><img class="ViewImage" @if(FImageUrl==null){<text>hidden</text>} alt="" src="@FImageUrl" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                     <input type="file" hidden class="" asp-for="FatherFile">
+                            </div>
+                               
+                           
+                       </div>
+                     </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Name</label> 
+                       </div>
+                       @if(@Model.GName != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="Parentlbl">@Model.GName</label>
+                         <input asp-for="GName" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger Parentlbl">No Data</label>
+                             <input asp-for="GName" hidden class="Parent form-control"> 
+                       </div>
+
+                       }
+                        <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Company</label>
+                       </div>
+                       @if(@Model.GCompany != null)
+                       {
+                        <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="Parentlbl">@Model.GCompany</label>
+                         <input asp-for="GCompany" hidden class="Parent form-control">               
+   
+
+                        </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger Parentlbl">No Data</label>
+                             <input asp-for="GCompany" hidden class="Parent form-control"> 
+   
+
+                        </div>
+
+                       }
+
+                   </div>
+                  
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Occupation</label>
+                       </div>
+                       @if(@Model.GOccupation != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="Parentlbl">@Model.GOccupation</label>
+                         <input asp-for="GOccupation" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger Parentlbl">No Data</label>
+                         <input asp-for="GOccupation" hidden class="Parent form-control"> 
+
+                       </div>
+
+                       }
+                        <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Designation</label>
+                       </div>
+                       @if(@Model.GDesignation != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                       <label class="Parentlbl">@Model.GDesignation</label>
+                         <input asp-for="GDesignation" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                       <label class="text-xs text-danger Parentlbl">No Data</label>
+                       <input asp-for="GDesignation" hidden class="Parent form-control"> 
+
+                       </div>
+
+                       }
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Monthly Income</label>
+                       </div>
+                       @if(@Model.GMonthlyIncome != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="Parentlbl">@Model.GMonthlyIncome</label>
+                         <input asp-for="GMonthlyIncome" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger Parentlbl">No Data</label>
+                            <input asp-for="GMonthlyIncome" hidden class="Parent form-control"> 
+
+                       </div>
+
+                       }
+                        <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Office Tel:</label>
+                       </div>
+                       @if(@Model.GOfficeTelNo != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="Parentlbl">@Model.GOfficeTelNo</label>
+                         <input asp-for="GOfficeTelNo" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                          <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger Parentlbl">No Data</label>
+                            <input asp-for="GOfficeTelNo" hidden class="Parent form-control"> 
+
+                       </div>
+
+                       }
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Office Address</label>
+                       </div>
+                       @if(@Model.GOfficeAddress != null)
+                       {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="Parentlbl">@Model.GOfficeAddress</label>
+                         <input asp-for="GOfficeAddress" hidden class="Parent form-control">               
+
+                       </div>
+                       }
+                       else
+                       {
+                         <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                            <label class="text-xs text-danger Parentlbl">No data</label>
+                            <input asp-for="GOfficeAddress" hidden class="Parent form-control">    
+
+                       </div>
+
+                       }
+                         <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                                    <label class="font-weight-bold">Email Address</label>
+                                </div>
+                                @if(@Model.GEmailAddress != null)
+                                {
+                            <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="Parentlbl">@Model.GEmailAddress</label>
+                         <input asp-for="GEmailAddress" hidden class="Parent form-control">               
+
+                            </div>
+                                }
+                                else
+                                {
+                                  <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="text-xs text-danger Parentlbl">No Data</label>
+                                      <input asp-for="GEmailAddress" hidden class="Parent form-control">  
+
+                            </div>
+
+                                }
+
+                   </div>
+                    <hr style="border-bottom: 1px solid grey;" class="px-0">    
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-12 px-0">
+                            <label class="text-success GuardianIncome float-left Parentlbl">Other Income Resources</label>
+                            <a href="#" class="text-success GuardianIncome float-left fa fa-plus Parent" hidden data ="@ViewData["ContainerPrefix"]">Other Income Resources</a> 
+ 
+                       </div>
+
+                   </div>
+                    <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-3" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource File
+                              </div>
+                             
+                         </div>
+                    </li>
+                         <section class="GOther">
+                           @if(Model.FaatAppGuardianOtherIncomeResourceFiles!=null)
+                           {   
+                          @foreach (var item in Model.FaatAppGuardianOtherIncomeResourceFiles)
+                         {
+                              <partial name="ProfileGuardianOtherIncome" for="@item"></partial>
+                         } 
+                           }
+                         </section>
+
+
+
+
+
+                        
+                    </ul>
+
+                 
+
+            </div>
+              
+                
+                <div class="row">
+                      <div class="col-12">
+                         <hr style="border-bottom: 1px solid grey;">
+
+                      </div>
+                </div>
+             
+            <div class="col-12 col-md-12 col-lg-6 col-xl-6" style="margin-top: 2px;">
+                <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                         <h6>Mother Details</h6>
+                        </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Mother is Alive</label>
+                       </div>
+                       <div class="col-xl-4 col-lg-2 col-md-2 col-6 px-0">
+                           <label class="Parentlbl">@if(Model.MotherIsAlive==true){<text>Alive</text>} else{<text>Dead</text>}</label>
+                       <label hidden class="Parent">Alive</label>
+                          @{
+                                   bool val1 = true;
+                                   bool val2 =true;
+                                    bool MCheck1 = true;
+                                   bool MCheck2 = true;
+                                   if(Model.MotherIsAlive == true)
+                                   {
+                                        val1 = true;
+                                        val2 = false;
+                                        MCheck1 = true;
+                                        MCheck2 = false;
+                                   }   
+                                   else
+                                   {
+                                        val2 = true;
+                                        val1 = false;
+                                        MCheck2 = true;
+                                        MCheck1 = false;
+                                   } 
+
+                          }
+                            <input hidden class="Parent CNIC" asp-for="MotherIsAlive"  type="radio" value="@val1" checked=@MCheck1>
+                            <label hidden class="Parent">Not Alive</label>
+                            <input hidden class="Parent DC" asp-for="MotherIsAlive"  type="radio" value="@val2" checked=@MCheck2>
+                       
+                       
+                       
+                       </div>
+                
+               
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                              @{
+                                   string Mimg = "";
+                                   string MImageUrl = "";
+                              }
+                              @if(Model.MotherIsAlive==false)
+                              {
+                                  @if(@Model.MotherCNICDeathCertificateFileData!=null)
+                                                    {
+                                   Mimg = Convert.ToBase64String(@Model.MotherCNICDeathCertificateFileData);
+                                   MImageUrl = string.Format("data:" + @Model.MotherCNICDeathCertificateFileType + ";base64,{0}", Mimg);
+                                   <a class="Parentlbl"><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="ViewImage Parentlbl" alt="@Model.MotherCNICDeathCertificateFileName" src=@MImageUrl data-holder-rendered="true" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                 
+                                   <input asp-for="MotherCNICDeathCertificateFileData" type="hidden">
+                                    <input asp-for="MotherCNICDeathCertificateFileType" type="hidden">
+                                   <input asp-for="MotherCNICDeathCertificateFileName" type="hidden">
+                                  
+
+                                                    }
+                                      
+                              }
+                              
+                               <div  @if(Model.MotherIsAlive==false){<text> class="D Parent"</text>} else{<text>class= "collapse D Parent"</text>} hidden>
+                                    
+                                    <a class="AttachDC"><i class="fa fa-paperclip" aria-hidden="true"></i></a><span @if(Model.MotherIsAlive==false){<text>hidden</text>}>Death Certificate</span><img class="ViewImage" @if(MImageUrl==null){<text>hidden</text>} alt="" src="@MImageUrl" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                     <input type="file" hidden class="" asp-for="MotherFile">
+                            </div>
+                              
+                       </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Name:</label> 
+                    </div>
+                    @if(@Model.MName != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                     <label class="Parentlbl">@Model.MName</label>
+                     <input asp-for="MName" hidden class="Parent form-control">               
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                     <label class="text-xs text-danger Parentlbl">No Data</label>
+                      <input asp-for="MName" hidden class="Parent form-control"> 
+
+                    </div>
+
+                    }
+                     <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Company</label>
+                    </div>
+                    @if(@Model.MCompany != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                      <label class="Parentlbl">@Model.MCompany</label>
+                      <input asp-for="MCompany" hidden class="Parent form-control">               
+
+
+                    </div>
+                    }
+                    else
+                     {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                      <label class="text-xs text-danger Parentlbl">No data</label>
+                      <input asp-for="MCompany" hidden class="Parent form-control">
+
+
+                    </div>
+
+                     }
+
+                </div>
+                  
+                  <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                        <label class="font-weight-bold">Occupation</label>
+                    </div>
+                    @if(@Model.MOccupation != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="Parentlbl">@Model.MOccupation</label>
+
+                         <input asp-for="MOccupation" hidden class="Parent form-control">               
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger Parentlbl">No Data</label>
+                         <input asp-for="MOccupation" hidden class="Parent form-control"> 
+
+
+                    </div>
+
+                    }
+                      <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                            <label class="font-weight-bold">Designation</label>
+                    </div>
+                    @if(@Model.MDesignation != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="Parentlbl">@Model.MDesignation</label>
+
+                         <input asp-for="MDesignation" hidden class="Parent form-control">               
+
+                    </div>
+                    }
+                    else
+                    {
+                       <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                         <label class="text-xs text-danger Parentlbl">No Data</label>
+                                                  <input asp-for="MDesignation" hidden class="Parent form-control">               
+
+
+
+                    </div>
+
+                    }
+
+                </div>
+                  
+                    <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Monthly Income</label>
+                    </div>
+                    @if(@Model.MMonthlyIncome != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="Parentlbl">@Model.MMonthlyIncome</label>
+
+                         <input asp-for="MMonthlyIncome" hidden class="Parent form-control">               
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                        <label class="text-xs text-danger Parentlbl">No Data</label>
+ <input asp-for="MMonthlyIncome" hidden class="Parent form-control">
+
+                    </div>
+
+                    }
+                     <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Office Tel:</label>
+                    </div>
+                    @if(@Model.MOfficeTelNo != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="Parentlbl">@Model.MOfficeTelNo</label>
+
+                         <input asp-for="MOfficeTelNo" hidden class="Parent form-control">               
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                     <label class="text-xs text-danger Parentlbl">No Data</label>
+
+                         <input asp-for="MOfficeTelNo" hidden class="Parent form-control">  
+
+                    </div>
+
+                    }
+
+                </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Office Address</label>
+                    </div>
+                    @if(@Model.MOfficeAddress != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                    <label class="Parentlbl">@Model.MOfficeAddress</label>
+                         <input asp-for="MOfficeAddress" hidden class="Parent form-control">               
+
+
+                    </div>
+                    }
+                    else
+                    {
+                      <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                                    <label class="text-xs text-danger Parentlbl">No Data</label>
+<input asp-for="MOfficeAddress" hidden class="Parent form-control">
+
+                    </div>
+
+
+                    }
+                     <div class="col-xl-4 col-lg-6 col-md-4 col-6 px-0">
+                                     <label class="font-weight-bold">Email Address</label>
+                    </div>
+                    @if(@Model.MEmailAddress != null)
+                    {
+                    <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                             <label class="Parentlbl">@Model.MEmailAddress</label>
+                         <input asp-for="MEmailAddress" hidden class="Parent form-control">               
+
+
+                    </div>
+                    }
+                    else
+                    {
+                                <div class="col-xl-7 col-lg-6 col-md-8 col-6 px-0">
+                             <label class="text-xs text-danger Parentlbl">No data</label>
+
+<input asp-for="MEmailAddress" hidden class="Parent form-control">
+                    </div>
+
+                    }
+
+                </div>
+                  <hr style="border-bottom: 1px solid grey;">
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-12">
+                            <label class="text-success MotherIncome float-left Parentlbl">Other Income Resources</label> 
+                            <a href="#" class="text-success MotherIncome float-left fa fa-plus Parent" hidden data ="@ViewData["ContainerPrefix"]">Other Income Resources</a> 
+
+                       </div>
+
+                   </div>
+               <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-3" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4" style="text-align: center;">
+                                   Resource File
+                              </div>
+                             
+                         </div>
+                    </li>
+
+                    <section class="MOther">
+                         @if(Model.FaatAppMotherOtherIncomeResourceFiles !=null)
+                         {
+                          @foreach (var item in Model.FaatAppMotherOtherIncomeResourceFiles)
+                         {
+                              <partial name="ProfileMotherOtherIncome" for="@item"></partial>
+                         }
+                         } 
+                         </section>
+               
+                       
+                            
+                        
+                    </ul>
+            </div>
+    </div>
+    
+                           
+          </div>
+
+
+
+              </div>
+    
+    
+                           
+          </div>
+      </div>
+
+   </div>
+</div>
+        
+
+       
+    
+  
+                 
+    
+    </section>
+   
+
+}
+
+

@@ -1,0 +1,173 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppSiblingInfo
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+   
+    
+}
+<script>
+    var jobcount = 0;
+    var StudentCount = 0;
+</script>
+@using (Html.BeginCollectionItem("FaatAppSiblingInfo"))
+{
+        <input asp-for="Id" hidden>
+
+<section class="SiblingInfo" style="margin-bottom: 80px;">
+    <input asp-for="NoOfSibling" type="hidden">
+ <div class="row">
+   <div class="col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+                  <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 pl-3" id="SiblingInfo">
+                        <h5>Sibling Information <a class="SiblingEdit SiblingLbl"><i class="fas fa-edit"></i></a> <a hidden class="SiblingSave Sibling"><i class="fas fa-save"></i></a></h5>
+                        </div>
+                </div>
+                <hr style="border-bottom: 1px solid grey;">
+                
+                   
+                <div class="row">
+                     <div class="col-sm-12 s MyFont">
+                            <a hidden href="#" class="text-success AddStudent float-left fa fa-plus Sibling" hidden data ="@ViewData["ContainerPrefix"]">Add Students</a> 
+
+                       
+
+                                <label class="font-weight-bold text-success text-lg SiblingLbl" style="margin-top: 6px;">Students</label>
+
+                    </div>
+
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-3" style="text-align: center;">
+                                   Name
+                              </div>
+                              <div class="col-xl-3" style="text-align: center;">
+                                   Institute Name
+                              </div>
+                              <div class="col-xl-3" style="text-align: center;">
+                                   Fee Slip
+                              </div>
+                               <div class="col-xl-3 Sibling" hidden style="text-align: center;">
+                                   Discard
+                              </div>
+                             
+                         </div>
+                    </li>
+  
+
+
+                <section class="AddStudentRow">
+                    @if(Model.FaatAppSibStudent != null)
+                    {
+                       
+                        @foreach (var item in Model.FaatAppSibStudent)
+                         {
+                            
+                             <div class="row">
+                                      <div class="col-12">
+
+                                             @* <label id="a" class="text-xs font-weight-bold text-success text-uppercase mb-1"></label>*@
+                                      </div>
+                                      @*
+                                      <script>
+                                                  StudentCount = StudentCount+1;
+                                                  document.getElementById("a").innerHTML = "Student" + StudentCount;
+                                                  </script>
+                                                  *@
+                             </div>
+                             
+                              <partial name="ProfileAddSibStudent" for="@item"></partial>
+                         }
+                    } 
+                </section>
+                
+    
+                    
+
+                <hr style="border-bottom: 1px solid grey;">
+                <div class="row" style="margin-top: 4px;">
+                    <div class="col-sm-12 MyFont">
+                         <a hidden href="#" class="text-success AddJobHolders float-left fa fa-plus Sibling" hidden data ="@ViewData["ContainerPrefix"]">Add JobHolders</a> 
+
+                       
+
+                  
+                            <label class="font-weight-bold text-success text-lg SiblingLbl" style="margin-top: 6px;">Job Holders</label>
+
+
+                    </div>
+
+                </div>
+<ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-2" style="text-align: center;">
+                                   Name
+                              </div>
+                              <div class="col-xl-2" style="text-align: center;">
+                                   Company Name
+                              </div>
+                              <div class="col-xl-2" style="text-align: center;">
+                                   Designation
+                              </div>
+                              <div class="col-xl-2" style="text-align: center;">
+                                   Monthly Income
+                              </div>
+                              <div class="col-xl-2" style="text-align: center;">
+                                   Salary Slip
+                              </div>
+                               <div class="col-xl-2 Sibling" hidden style="text-align: center;">
+                                   Discard
+                              </div>
+                             
+                         </div>
+                    </li>
+  
+        
+                     
+                
+                <section class="AddJobHolderRow">
+                    @if(Model.FaatAppSibJobHolder != null)
+                    {    
+                        @foreach (var item in Model.FaatAppSibJobHolder)
+                         {     
+                             <div class="row">
+                                      <div class="col-12">
+                                              @*<label id="b" class="text-xs font-weight-bold text-success text-uppercase mb-1"></label>*@
+                                      </div>
+                                      @*
+                                      <script>
+                                                  jobcount = jobcount+1;
+                                                  document.getElementById("b").innerHTML = "Job Holder" + jobcount;
+                                                  </script>
+                                                  *@
+                             </div>
+                              <partial name="ProfileAddSibJobHolder" for="@item"></partial>
+                         } 
+                    }
+                </section>
+ 
+
+              
+          </div>
+      </div>
+
+   </div>
+
+      
+
+
+
+
+
+</section>
+
+
+
+
+
+}

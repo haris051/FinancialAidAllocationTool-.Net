@@ -1,0 +1,196 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppStudentDetail
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@{
+        
+    
+}
+
+@using (Html.BeginCollectionItem("FaatAppStudentDetail"))
+{
+
+
+<input asp-for="Id" hidden>
+
+<section class="StudentDetails">
+ <div class="row">
+   <div class="col-xl-12 col-md-12 col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+           <div class="row" style="margin-top: 10px;">
+                               <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1">
+                                   <h5>About Me <a  class="StudentEdit StdLbl"><i class="fas fa-edit"></i></a> <a hidden class="StudentSave Student"><i class="fas fa-save"></i></a></h5>
+                              </div>
+                          </div>
+                            <hr style="border-bottom: 1px solid grey;">
+                            <div class="row">
+                                
+            
+                                    <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                    <label class="font-weight-bold">Arid No</label>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-8 col-8">                        
+                                    <label>@Model.AridNo</label> 
+                                    <input asp-for="AridNo" hidden>               
+                                    </div>
+            
+
+                              
+
+
+                              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                    <label class="font-weight-bold">Name</label>
+                              </div>
+                              <div class="col-xl-3 col-lg-3 col-md-8 col-8">                                                     
+                                    <label  class ="control-label">@Model.Name</label> 
+                                    <input asp-for="Name" hidden >               
+             
+                              </div>
+
+                               
+                            <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">            
+                              <label class="font-weight-bold">Class</label> 
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                               <label class ="control-label">@Model.Class</label>   
+                                <input asp-for="Class" hidden >               
+           
+                            </div>
+                                
+                       
+
+
+                    
+                           <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                                  
+                                            <label class="font-weight-bold">Section</label>
+                           </div> 
+                            <div class="col-xl-3 col-lg-3 col-md-8 col-8">                           
+                                            <label class ="control-label">@Model.Section</label>  
+                                             <input asp-for="Section" hidden>               
+       
+                            </div>
+                          
+    
+     <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+
+           
+                <label class="font-weight-bold">CGPA</label>
+     </div>
+      <div class="col-xl-3 col-lg-3 col-md-8 col-8">         
+                <label class ="control-label">@Model.Cpga</label>  
+                <input asp-for="Cpga" hidden>               
+        
+      </div>
+    
+       <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+
+            
+                    <label class="font-weight-bold">Semester</label>
+       </div>
+        <div class="col-xl-3 col-lg-3 col-md-8 col-8">                             
+                     <label class ="control-label">@Model.Semester</label>  
+                    <input asp-for="Semester" hidden>               
+        
+        </div>
+    
+
+
+
+   
+           <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                           <label class="font-weight-bold">Mobile No</label>
+           </div>
+            <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                <label class ="control-label StdLbl">@Model.MobileNo</label>
+                <input asp-for="MobileNo" hidden class="Student form-control">               
+
+            </div>
+          
+             
+              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                    <label class="font-weight-bold">Residence</label>
+              </div>
+              @if(@Model.Residence==null)
+              {
+                <div class="col-xl-3 col-lg-3 col-md-8 col-8">           
+                     <label>No data</label>
+             </div>
+
+              }
+              else
+              {
+               <div class="col-xl-3 col-lg-3 col-md-8 col-8">           
+                     <label class ="control-label StdLbl">@Model.Residence</label>
+
+                     <label class="Student" hidden>House</label>
+                     <input asp-for="Residence" type="radio" value="House" hidden class="Student"> 
+                     <label class="Student" hidden>Hostel</label>  
+                     <input asp-for="Residence" type="radio" value="Hostel" hidden class="Student"> 
+            
+
+             </div>
+              }
+              <div class="col-xl-1 col-lg-3 col-md-4 col-4 px-0">
+                       <label class="font-weight-bold">Email</label>
+              </div>
+                 @if(@Model.EmailAddress==null)
+                 {
+                   <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                        <label>No Data</label>
+               </div>
+                 }
+                 else
+                 {
+                                                                          
+               <div class="col-xl-3 col-lg-3 col-md-8 col-8">
+                        <label class ="control-label StdLbl">@Model.EmailAddress</label>
+                        <input asp-for="EmailAddress" hidden class="Student form-control">               
+
+               </div>
+                 }
+                            </div>
+                <div class="row">
+                            
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-12 px-0">          
+                                <label class="font-weight-bold">Reason to Apply</label>
+
+
+                </div>
+                </div>
+                <div class="row">
+                  @if(@Model.ReasonToApply==null)
+                  {
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 px-0">
+                                <textarea  class ="form-control" readonly>No data</textarea>
+                     </div>
+                  }
+                  else
+                  {
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 px-0">
+                                <textarea  class ="form-control StdLbl" readonly>@Model.ReasonToApply</textarea>
+                                <textarea  class="Student form-control" asp-for="ReasonToApply" hidden></textarea>
+
+                      </div>
+                  }
+                </div>
+
+                                 
+                             
+
+              
+          </div>
+      </div>
+
+   </div>
+ </div>
+       
+
+ 
+</section>
+}
+
+
+
+
+

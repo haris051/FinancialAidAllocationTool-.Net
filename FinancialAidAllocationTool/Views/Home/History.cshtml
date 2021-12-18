@@ -1,0 +1,80 @@
+@model List<FinancialAidAllocationTool.Models.Application.FaatAppComments>
+
+            @if(User.IsInRole("Committee"))
+                       {
+                           @if(Model.ToList()[0].Comments == null && Model.ToList()[0].Amount==null)
+                           {
+                               <h3>Sorry there are no comments</h3>
+                           }
+                           else
+                           {
+                        
+                            <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Recommend Amount:</label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="number" readonly asp-for=@Model.ToList()[0].Amount>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Comments</label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <textarea class="form-control" readonly asp-for=@Model.ToList()[0].Comments></textarea>
+                                              
+                                </div>
+                                 
+                            </div>
+                      
+                         
+                      </div>          
+                                
+                        </div>
+                           }
+                       }
+                       @if(User.IsInRole("Admin"))
+                       {
+                            @if(Model.ToList()[0].Comments == null && Model.ToList()[0].Amount==null)
+                           {
+                               <h3>Sorry there are no comments</h3>
+                           }
+                           else
+                           {
+                           foreach(var item in Model)
+                           {
+                        <div class="card" style="margin-top: 4px;">
+
+                           
+                                <div class="card-body">
+                                     <h5 class="card-title">@item.Users.Name</h5>
+                                     <div class="row">
+                                         <div class="col-lg-6">
+                                             <label>Recommend Amount:</label>
+                                         </div>
+                                         <div class="col-lg-6">
+                                               <input type="number" readonly asp-for=@item.Amount>
+                                         </div>
+                                    </div>
+                                    <div class="row">
+                                     <div class="col-lg-6">
+                                          <label>Comments</label>
+                                     </div>    
+                                    <div class="col-lg-6">
+                                    <textarea class="form-control" readonly asp-for=@item.Comments></textarea>
+
+                                    </div>
+                                    </div>
+                                     
+                                     
+                                
+                                </div>
+                         </div>
+                           }
+                           }
+                              
+                       }
+     

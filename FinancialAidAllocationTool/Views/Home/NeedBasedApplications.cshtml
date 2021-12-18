@@ -1,0 +1,121 @@
+@model IEnumerable<FinancialAidAllocationTool.Models.FaatScholarLog>
+@{
+    Layout="~/Views/Shared/_Layout.cshtml";
+}
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsertionTimestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AridNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CD.Discipline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CD.Semester)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CD.SemesterCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CD.Section)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateTimestamp)
+            </th>
+            <th>
+                View
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    
+        <tr>
+            
+            <td>
+                <div id=@item.Id>
+                @Html.DisplayFor(modelItem => item.Status)
+                </div>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsertionTimestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AridNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CD.Discipline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CD.Semester)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CD.SemesterCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CD.Section)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateTimestamp)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ApplicationId">Application Details</a> |
+            </td>
+            
+            <td>
+               <button type="submit" value="Accept" class="btn btn-success btn-sm" onclick="Status(this)" data=@item.Id>Accept</button>
+             </td>
+
+            <td>
+              <button type="submit" value="Reject" class="btn btn-danger btn-sm" onclick="Status(this)" data=@item.Id>Reject</button>
+
+            </td>
+
+            
+
+        </tr>
+  
+}
+    </tbody>
+</table>
+
+<script>
+function Status(x)
+{
+    document.getElementById(x.getAttribute('data')).innerHTML=x.value;
+    console.log(x.getAttribute('data'));
+    console.log(x.value);
+
+         $.ajax({
+            url: "/Home/Status/",
+            data: { ID: x.getAttribute('data'),
+                    Status:x.value
+            
+            },      
+                success: function (result) {        
+                console.log(result);
+
+            }
+        });
+        return false;
+   
+}
+
+</script>
+

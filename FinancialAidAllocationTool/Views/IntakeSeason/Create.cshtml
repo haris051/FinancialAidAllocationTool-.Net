@@ -1,0 +1,73 @@
+@model FinancialAidAllocationTool.Models.IntakeSeason.FaatIntakeSeason
+
+@{
+    ViewData["Title"] = "Create";
+
+    List<SelectListItem> listItems= new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Fall",
+        Value = "FM"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Spring",
+        Value = "SM",
+        Selected = true
+    });    
+}
+
+
+<div class="row h-100 mt-3">
+   <div class=" col-lg-5 col-sm-12 col-12 align-middle">
+       
+           <div class="card">
+               <div class="card-header">
+                    <h4>FaatIntakeSeason</h4>
+               </div>
+
+          
+        
+          <div class="card-body">
+        <form asp-action="Create">
+            <span> @TempData["error"]</span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-lg-5 col-6">
+                    <label asp-for="Year" class="control-label"></label>
+                    </div>
+                    <div class="col-lg-4 col-5 px-0">
+                    <input asp-for="Year" class="form-control"  readonly />
+                    <span asp-validation-for="Year" class="text-danger"></span>
+                    </div>
+              </div>
+             <div class="row">
+                <div class="col-lg-5 col-6">
+                <label asp-for="IntakeSeason" class="control-label"></label>
+                </div>
+                <div class="col-lg-4 col-5 px-0">
+                @Html.DropDownListFor(model => model.IntakeSeason, listItems)
+                <span asp-validation-for="IntakeSeason" class="text-danger"></span>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-5 col-6"></div>
+                <div class="col-lg-4 col-5 px-0">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+    
+        </form>
+        </div>
+
+<div class="card-footer">
+    <a asp-action="Index">Back to List</a>
+</div>
+ </div>
+      
+   </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

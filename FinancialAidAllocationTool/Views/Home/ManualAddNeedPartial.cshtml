@@ -1,0 +1,30 @@
+@model FinancialAidAllocationTool.Models.FaatScholarLog
+@using HtmlHelpers.BeginCollectionItemCore;
+
+
+@using (Html.BeginCollectionItem("FaatScholarLog"))
+{
+<li class="list-group-item">
+                            <div class="row" style="text-align: center;">
+                                <input asp-for="ClassId" type="hidden">
+                              <div class="col-lg-3 col-md-3 col-3" style="text-align: center;">
+                                   @Model.AridNo
+                                   <input asp-for="AridNo" type="hidden">
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-3" style="text-align: center;">
+                                   @Model.Name
+                                    <input asp-for="Name" type="hidden">
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-3" style="text-align: center;">
+                                    @Math.Round(Convert.ToDecimal(Model.Cgpa), 2)
+                                    <input asp-for="Cgpa" type="hidden">
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-3" style="text-align: center;">
+                                   <input type="checkbox" asp-for="IsManual"/>
+                              </div>
+                              <input hidden asp-for="Id">
+                              <input asp-for="ApplicationId" hidden>
+                            
+                        </div>
+                        </li>
+}

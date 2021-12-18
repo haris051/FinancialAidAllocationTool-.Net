@@ -1,0 +1,55 @@
+
+@model FinancialAidAllocationTool.Models.RegisterView
+
+@{
+
+    ViewBag.Title = "User Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head{
+    <style type="text/css">
+         body {
+           
+            margin: 0;
+            background-image: url('/Images/bg.jpg');
+            background-size: cover
+            
+        }
+    </style>
+}
+
+
+
+<section class="bg-light" style="margin-top: 8%;width:60%; margin-right:auto;margin-left:auto;">
+<div class="row">
+    <div class="col-md-6" style="padding-right:-10px;background-color:white">
+      <img src="~/Images/Biit3.png" width="100%">
+</div>
+    <div class="col-md-6" style="background-color: #37405c;text-align:center;">
+         <h3 style="color: whitesmoke;"><strong>Sign UP</strong></h3>
+        <form method="post" asp-controller="Account" asp-action="Register">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                
+                <input asp-for="AridNo" class="form-control fa" placeholder="&#xf0e0 Arid No." style="background-color: #37405c;color: white;"/>
+                <span asp-validation-for="AridNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Password" class="form-control fa" placeholder="&#xf084 Password" style="background-color: #37405c; color: white;"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="ConfirmPassword" class="form-control fa" placeholder="&#xf084 Confirm Password" style="background-color: #37405c; color: white;"/>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div style="padding-bottom: 10px;">
+            <button type="submit" class="btn" style="width: 100%;background-color:#2fc0ff">Register</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+</section>
+

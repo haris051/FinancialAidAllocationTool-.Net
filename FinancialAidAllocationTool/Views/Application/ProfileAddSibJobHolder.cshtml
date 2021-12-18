@@ -1,0 +1,170 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppSibJobHolder
+@using HtmlHelpers.BeginCollectionItemCore;
+
+@{
+    string ImageUrl = "";
+}
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+    @using(Html.BeginCollectionItem("FaatAppSibJobHolder"))
+{
+        <input asp-for="Id" hidden>
+        <li class="list-group-item border border-dark">
+
+         <div class="row">
+                   <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+                    <input class="form-control Sibling" hidden asp-for="Name">
+                <label class="SiblingLbl">@Model.Name</label>
+                   </div>
+                    <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+                    <input class="form-control Sibling" hidden asp-for="Company">
+             <label class="SiblingLbl">@Model.Company</label>
+                   </div>
+                    <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+                    <input class="form-control Sibling" hidden asp-for="Designation">
+                    <label class="SiblingLbl">@Model.Designation</label>
+                   </div>
+                    <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+                   <input class="form-control Sibling" hidden asp-for="MonthlyIncome">
+                    <label class="SiblingLbl">@Model.MonthlyIncome</label>
+                   </div>
+                    <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none" style="text-align: center;">
+                    @if(Model.ContractFileData!=null)
+                           {
+                                  <input asp-for="ContractFileData" type="hidden">
+                                  <input asp-for="ContractFileType" type="hidden">
+                                  <input asp-for="ContractFileName" type="hidden">
+
+                                  string img = Convert.ToBase64String(Model.ContractFileData);
+                                  ImageUrl = string.Format("data:" + Model.ContractFileType + ";base64,{0}", img);
+                                       
+                               <img class="SiblingLbl ViewImage" alt="@Model.ContractFileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black"/>
+   
+                           }
+                           else
+                           {
+                             <label class="SiblingLbl">No Files</label>
+                           }
+
+
+
+
+
+                                      <a class="AttachFile Sibling" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Sibling  ViewImage" alt="@Model.ContractFileName" hidden src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" hidden>
+                                     <input type="file" hidden class="custom-file-input" asp-for="ContractFile" id="customFile6">
+                                     
+                        
+                   </div>
+                    <div class="col-xl-2 d-xl-block d-lg-none d-none d-md-none Sibling" hidden style="text-align: center;">
+                    <a href="#" class="text-danger delete-JobHolder Sibling" hidden>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                   </div>
+
+
+         </div>
+
+
+
+
+   <section class="JobHolders d-lg-block d-md-block d-block d-xl-none">
+           
+           
+                   
+     
+      <div class="row" style="margin-top:2px;">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                <label class="font-weight-bold" style="margin-top: 6px;">Name</label>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                <input class="form-control Sibling" hidden asp-for="Name">
+                <label class="SiblingLbl">@Model.Name</label>
+
+            </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+            <label class="font-weight-bold" style="margin-top: 6px;">Company Name</label>
+
+             </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+             <input class="form-control Sibling" hidden asp-for="Company">
+             <label class="SiblingLbl">@Model.Company</label>
+
+            </div>
+
+
+    </div>
+      <div class="row" style="margin-top:2px;">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                    <label class="font-weight-bold" style="margin-top: 6px;">Designation</label>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                    <input class="form-control Sibling" hidden asp-for="Designation">
+                    <label class="SiblingLbl">@Model.Designation</label>
+            </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                    <label class="font-weight-bold" style="margin-top: 6px;">Monhly Income</label>
+
+             </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                    <input class="form-control Sibling" hidden asp-for="MonthlyIncome">
+                    <label class="SiblingLbl">@Model.MonthlyIncome</label>
+            </div>
+    </div>
+    <div class="row" style="margin-top:2px;">
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                           <label class="font-weight-bold" style="margin-top: 6px;">Salary Slip</label>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">                   
+                                     
+                         @if(Model.ContractFileData!=null)
+                           {
+                                  <input asp-for="ContractFileData" type="hidden">
+                                  <input asp-for="ContractFileType" type="hidden">
+                                  <input asp-for="ContractFileName" type="hidden">
+
+                                  string img = Convert.ToBase64String(Model.ContractFileData);
+                                  ImageUrl = string.Format("data:" + Model.ContractFileType + ";base64,{0}", img);
+                                       
+                               <img class="SiblingLbl ViewImage" alt="@Model.ContractFileName" src="@ImageUrl" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black"/>
+   
+                           }
+                           else
+                           {
+                             <label class="SiblingLbl">No Files</label>
+                           }
+
+
+
+
+
+                                      <a class="AttachFile Sibling" hidden><i class="fa fa-paperclip" aria-hidden="true"></i></a><img class="Sibling  ViewImage" alt="@Model.ContractFileName" hidden src=@ImageUrl data-holder-rendered="true" style="width: 50px;height:50px;margin-left:4px;border: 3px solid black" hidden>
+                                     <input type="file" hidden class="custom-file-input" asp-for="ContractFile" id="customFile6">
+                                     
+                                    
+                            
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                         <label class="font-weight-bold Sibling" hidden style="margin-top: 6px;">Discard</label>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6 col-6 Sibling" hidden>
+                   <a href="#" class="text-danger delete-JobHolder">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+       </div>
+    </div>
+     
+ </section>  
+        </li>
+    
+   
+ 
+
+
+
+
+
+}
+}

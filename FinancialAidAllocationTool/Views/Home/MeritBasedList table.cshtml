@@ -1,0 +1,154 @@
+﻿@model List<FinancialAidAllocationTool.Models.FaatClassDefinition>
+  @using System.Collections.Generic;
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Merit Based Scholarship</h1>
+<div style="margin-top: 20px;">      
+<section class="Boxes"> 
+
+  <div class="card border-left-success shadow h-100 py-2">     
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+          <div class="text-xs font-weight-bold text-success text-uppercase mb-1 DonationAccountStatus">Balance (@TempData["DonationAccountStatus"].ToString())</div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800 DonationAccountVal">@TempData["DonationAccountVal"].ToString()
+            </div>
+        </div>
+        <div class="col-auto">      
+          <img class="img" height="50px" width="50px" src="~/Images/pakistan-rupee-currency-symbol.png" />
+        </div>
+      </div>        
+    </div>      
+  </div>
+
+  <form >
+      <div asp-validation-summary="All" class="text-danger"></div>                        
+      <span class="text-danger ErrorMessage">@TempData["Error"]</span>
+      <div class="table-responsive">
+        <table class="table table-sm ">
+          <tbody >
+            
+            @if(Model.Count > 0)
+            {
+              <tr>                   
+                <td>
+                    <button type="submit" name="RejectAll" value="Reject All" 
+                      formaction="/Home/RejectAllMeritBased" formmethod="post" 
+                      class="btn btn-danger btn-sm">Reject All                  
+                    </button>
+                </td>
+                <td style="text-align:right"> 
+                    <button type="submit" name="AcceptAll" value="Accept All" 
+                      formaction="/Home/AcceptAllMeritBased" formmethod="post" 
+                      class="btn btn-success btn-sm" > Accept All                 
+                    </button>
+                </td>
+              </tr>
+            }
+            
+           @foreach (var item in Model)
+            {
+                <partial name="MeritBasedClass" for="@item" />
+            }
+          </tbody>
+        </table>
+      </div>            
+  </form>
+</section>
+</div>    
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+<script type="text/javascript">
+
+    $(".Accept").click(function (e) {        
+        //alert('Accept');
+        $.ajax
+        ({
+            url: "/Home/AcceptMeritBased/",     
+            type: "post",
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).closest("tr").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            { 
+              console.log(result);
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text(''); 
+
+                  $(e.target).closest('tr').css('background-color','#D9FEE5'); 
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+    $(".Reject").click(function (e) {
+               
+        //console.log($(this).closest("tr").find(".AllocationAmount").val()); 
+        
+        $.ajax
+        ({
+            url: "/Home/RejectMeritBased/",  
+            type: "post",   
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).closest("tr").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            {
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+
+                  $(e.target).closest('tr').css('background-color','#E9967A'); 
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.THead', function (e) {           
+        
+        $(this).next('tr').toggleClass("collapse");
+        
+        return false;
+    });
+
+</script>

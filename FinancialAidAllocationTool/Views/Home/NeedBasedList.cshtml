@@ -1,0 +1,1164 @@
+﻿@model List<FinancialAidAllocationTool.Models.FaatClassDefinition>
+@using System.Collections.Generic;
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if(Model!=null)
+{
+<div style="margin-top: 60px;margin-bottom: 80px;">      
+<h1 style="color: white;">Need Based Scholarship</h1>
+<div>
+  <div class="card border-left-success shadow h-100 py-2">     
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+          <div class="text-xs font-weight-bold text-success text-uppercase mb-1 DonationAccountStatus">Balance (@TempData["DonationAccountStatus"].ToString())</div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800 DonationAccountVal">@TempData["DonationAccountVal"].ToString()
+            </div>
+        </div>
+        <div class="col-auto">      
+          <img class="img" height="50px" width="50px" src="~/Images/pakistan-rupee-currency-symbol.png" />
+        </div>
+      </div>        
+    </div>      
+  </div>
+
+  <form >
+      <div asp-validation-summary="All" class="text-danger"></div>                        
+      <span class="text-danger ErrorMessage">@TempData["Error"]</span>
+         
+
+           <div class="row">
+             <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6 col-6 pr-0">
+                  <input type="text" style ="background-color:#B0C4DE;"class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">                  
+             </div>
+             @*
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3 px-1">
+                  <input type="number" min="0" max="4" style ="background-color:#B0C4DE;"class="form-control" id="parmCGPA" onkeyup="FilterByCGPA()" placeholder="CGPA" title="Type in a name">                  
+             </div>
+             *@
+             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 pl-1" style="text-align: right;">
+            
+            
+            @if(Model.Count() > 0)
+            {
+              @if(User.IsInRole("Admin"))
+              {
+             
+
+                
+                  <button type="submit" name="RejectAll" value="Reject All" 
+                      formaction="/Home/RejectAllNeedBased" formmethod="post" 
+                      class="btn btn-danger btn-sm RejectAll" style="float: right;" @if(Model.Where(e=>e.FaatScholarLog.Where(e=>e.Status=="Accept" || e.Status=="Reject").Count() == e.FaatScholarLog.Count()).Count()== Model.Count()){<text>disabled</text>}>Reject All                  
+                    </button>
+                 
+                    <button type="submit" name="AcceptAll" value="Accept All" 
+                      formaction="/Home/AcceptAllNeedBased" formmethod="post" 
+                      class="btn btn-success btn-sm AcceptAll" style="float: right;" @if(Model.Where(e=>e.FaatScholarLog.Where(e=>e.Status=="Accept" || e.Status=="Reject").Count() == e.FaatScholarLog.Count()).Count()== Model.Count()){<text>disabled</text>} > Accept All                 
+                    </button>
+            
+              }
+            }
+             </div>
+             </div>
+
+            <section id="myTable">
+           @foreach (var item in Model)
+            {
+                <partial name="NeedBasedClass" for="@item"></partial>
+            }
+         </section>          
+  </form>
+  </div>
+
+</div>   
+}
+else
+{
+  <p>@TempData["Error"]</p>
+}
+<div class="modal fade" tabindex="-1" role="dialog" id="modal1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Manual Student List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body1">
+           </div>
+      <div class="modal-footer" id="modal-footer1">
+        
+        <button type="submit" class="btn btn-success" form="myform">Submit</button>
+        
+        <button type="button" class="btn btn-secondary closbtn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal2">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Recommendations</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body2">
+           </div>
+      <div class="modal-footer" id="modal-footer2">
+        @if(User.IsInRole("Committee"))
+        {
+        <button type="submit" class="btn btn-success" form="myform">Submit</button>
+        }
+        <button type="button" class="btn btn-secondary closbtn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal3">
+  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom: none;">
+        <h6 class="modal-title"> 
+          <div class="d-none d-xl-block d-lg-block">
+           <ul class="nav nav-tabs SelectLG" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active border border-primary border-bottom-0 select" id="Student-tab" data-toggle="tab" href="#StudentDetails" role="tab" aria-controls="StudentDetails" aria-selected="true">Student Details</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link border border-primary border-bottom-0 select" id="Parents-tab" data-toggle="tab" href="#ParentDetails" role="tab" aria-controls="ParentDetails" aria-selected="false">Parent Details</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link border border-primary border-bottom-0 select" id="Residence-tab" data-toggle="tab" href="#ResidenceInfo" role="tab" aria-controls="ResidenceInfo" aria-selected="false">Residence Info</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link border border-primary border-bottom-0 select" id="Siblings-tab" data-toggle="tab" href="#SiblingInfo" role="tab" aria-controls="SiblingInfo" aria-selected="false">Siblings Info</a>
+                </li>
+            </ul>
+            </div>
+         
+            <div class="dropdown d-md-block d-block d-xl-none d-lg-none">
+  <button type="button" class="btn btn-secondary btn-md dropdown-toggle" data-toggle="dropdown" onho>
+    Select
+  </button>
+     <div class="dropdown-menu">
+    <ul class="SelectAll" style="list-style-type: none;margin: 0;padding: 0;">
+    <li class="App" style="text-align: center;"><a class="text-dark AppAct" data-toggle="tab" href="#StudentDetails" role="tab" aria-controls="StudentDetails" aria-selected="true">Student Details</a></li>
+     <div class="dropdown-divider"></div>
+    <li class="App" style="text-align: center;"><a class="text-dark AppAct" data-toggle="tab" href="#ParentDetails" role="tab" aria-controls="ParentDetails" aria-selected="true">Parent Details</a></li>
+     <div class="dropdown-divider"></div>
+    <li class="App" style="text-align: center;"><a class="text-dark AppAct" data-toggle="tab" href="#ResidenceInfo" role="tab" aria-controls="ResidenceInfo" aria-selected="true">Residence Info</a></li>
+     <div class="dropdown-divider"></div>
+    <li class="App" style="text-align: center;"><a class="text-dark AppAct" data-toggle="tab" href="#SiblingInfo" role="tab" aria-controls="SiblingInfo" aria-selected="true">Sibling Info</a></li>
+  </ul>
+     </div>
+
+</div>
+
+
+
+             
+            
+            </h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body3">
+
+           </div>
+      <div class="modal-footer" id="modal-footer3">
+        
+       
+        
+        <button type="button" class="btn btn-secondary closbtn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal4">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body4">
+             <embed id="img01" height="400px" width="400px">
+           </div>
+      <div class="modal-footer" id="modal-footer4">
+        
+        
+        <a href="#" class="ZoomIn btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></a>
+         <a href="#" class="ZoomOut btn btn-primary"><i class="fa fa-minus" aria-hidden="true"></i></a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closbtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+<script type="text/javascript">
+$(".AcceptClass").click(function (e) {
+  
+  var id = $(this).attr("data");
+  var btn = $(this);
+    
+     var json = @Html.Raw(Json.Serialize(@Model));
+     var obj = "";
+     for(var i =0 ; i < Object.keys(json).length;i++)
+     {
+        if(json[i].id == id)
+        {
+          obj = json[i];
+        }
+
+     }
+      console.log(obj);
+       var a = [];
+       var StdList = $(this).parent().parent().parent().next().find(".StdClass");
+       var b = $(this).parent().parent().parent().next().find(".StdClass").find(".AllocationAmount");
+       var status = $(this).parent().parent().parent().next().find(".StdClass").find(".StdStatus")
+       var tid = $(this).parent().parent().parent().next().find(".StdClass").find(".StdTid")
+
+       for(var i=0;i<b.length;i++)
+       {
+            a.push($(this).parent().parent().parent().next().find(".StdClass").find(".AllocationAmount").val());
+            console.log(b.eq(i).val());
+       }
+      
+
+       
+         for(var i =0 ; i < Object.keys(obj.faatScholarLog).length;i++)
+     {
+        
+        
+          obj.faatScholarLog[i].allocationAmount = b.eq(i).val();
+          obj.faatScholarLog[i].Status = status.eq(i).val();
+          obj.faatScholarLog[i].Tid = tid.eq(i).val();        
+
+     }
+     console.log(obj);
+
+      $.ajax
+        ({
+            url: "/Home/AcceptNeedClass/",     
+            type: "post",
+            dataType: "json",
+            data: { "Class":JSON.stringify(obj) }, 
+           
+            success: function (result) 
+            { 
+              
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                              $(btn).prop('disabled',true);
+                           
+                             $(btn).prev().prop('disabled',true);
+
+                            
+                   $(StdList).each(function(i)
+                   {
+                     var count = 0;
+                     $(this).find('.StdTid').each(function(n)
+                     {
+                       
+                       $(this).val(result.tid[count]);
+                      
+                       count = count + 1;
+                     }
+                     );
+                      $(this).find('.StdStatus').each(function(m)
+                      {
+                        $(this).val("Accept");
+                      }
+                      );
+                      $(this).css('background-color','#D9FEE5');
+                       $(this).find('.Accept').each(function(j)
+                       {
+                             $(this).prop('disabled',true);
+                             if($(this).find(".fa-ban").length >1)
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+
+                             }
+                             else
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                             }
+
+                       }
+                       
+                       ) ; 
+                       $(this).find('.Reject').each(function(k)
+                       {
+
+                               $(this).prop('disabled',true);
+
+                              if($(this).find(".fa-ban").length >1)
+                              {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+  
+                              }
+                              else
+                              {
+                                $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                              }
+                       }
+                       
+                       );
+
+                   }
+                   );
+                    var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() == "Pending")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                  $('.RejectAll').prop('disabled',true);
+                }
+
+                  
+                   
+
+                  
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        
+        return false;
+     
+@*
+     //var json = @Html.Raw(Json.Serialize(md));
+    //console.log(json);
+
+       //console.log("Modal");
+   //    var a = [];
+   //    var b = $(this).parent().parent().parent().next().find(".StdClass").find(".Accept");
+    //   for(var i=0;i<b.length;i++)
+     //  {
+           // a.push($(this).parent().parent().parent().next().find(".StdClass").find(".Accept").val());
+     //       console.log(b.eq(i).attr('value'));
+     //  }
+       
+    //   console.log(a[0]);
+    //   var val = $(this).attr("value")
+     //  console.log(val);
+  *@    
+    });
+$(".RejectClass").click(function (e) {
+  var btn = $(this);
+  var id = $(this).attr("data");
+           var StdList = $(this).parent().parent().parent().next().find(".StdClass");
+       var status = $(this).parent().parent().parent().next().find(".StdClass").find(".StdStatus")
+
+     var json = @Html.Raw(Json.Serialize(@Model));
+     var obj = "";
+     var tid = $(this).parent().parent().parent().next().find(".StdClass").find(".StdTid")
+
+     for(var i =0 ; i < Object.keys(json).length;i++)
+     {
+        if(json[i].id == id)
+        {
+          obj = json[i];
+        }
+
+     }
+              for(var i =0 ; i < Object.keys(obj.faatScholarLog).length;i++)
+     {
+        
+        
+       
+          obj.faatScholarLog[i].Status = status.eq(i).val();
+          obj.faatScholarLog[i].Tid = tid.eq(i).val();        
+
+        
+
+     }
+      
+      $.ajax
+        ({
+            url: "/Home/RejectNeedClass/",     
+            type: "post",
+            dataType: "json",
+            data: { "Class":JSON.stringify(obj) }, 
+           
+            success: function (result) 
+            { 
+              
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                             $(btn).prop('disabled',true);
+                             
+                             $(btn).next().prop('disabled',true);
+
+                            
+                   $(StdList).each(function(i)
+                   {
+                     var count = 0;
+                     $(this).find('.StdTid').each(function(n)
+                     {
+                       if(result.tid[count] != null)
+                       {
+                       $(this).val(result.tid[count]);
+                       
+                       }//console.log(result.Tid[count].Tid);
+                       count = count + 1;
+                     }
+                     );
+                      $(this).find('.StdStatus').each(function(m)
+                      {
+                        $(this).val("Reject");
+                      }
+                      );
+                      $(this).css('background-color','#E9967A');
+                       $(this).find('.Reject').each(function(j)
+                       {
+                             $(this).prop('disabled',true);
+                             if($(this).find(".fa-ban").length >1)
+                             {
+                                 $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+                             }
+                             else
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                             }
+                            
+
+                       }
+                       
+                       ) ; 
+                       $(this).find('.Accept').each(function(k)
+                       {
+
+                              $(this).prop('disabled',true);
+
+                              if($(this).find(".fa-ban").length >1)
+                              {
+                                $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+  
+                              }
+                              else
+                              {
+                                $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                              }
+                       }
+                       
+                       );
+                       $(this).find('.AllocationAmount').each(function(l)
+                       {
+                             $(this).val(0);    
+
+                       }
+                       
+                       );
+
+
+                   }
+                   );
+                    var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() == "Pending")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                  $('.RejectAll').prop('disabled',true);
+                }
+
+                  
+                   
+
+                  
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        
+        return false;
+     
+  
+    });
+
+ function myFunction() 
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    @* table = document.getElementById("myTable");
+    tr = table.getElementsByClassName("MainTable")
+    //tr[i] is one Main Table:- Head (Class) + Body (Students)
+    //Search Class
+    var ClassFound = false;
+    for (i = 0; i < tr.length; i++)     
+    {        
+        td = tr[i].getElementsByClassName("Cell")[0];
+        if (td) 
+        {
+            txtValue = td.textContent || td.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+                tr[i].style.display = "";
+                ClassFound = true;
+            } 
+            else 
+            {
+                tr[i].style.display = "none";
+            }
+        }       
+    }     *@
+    //Search Class
+    var ClassFound = false;
+    $( ".MainTable" ).each(function( index ) 
+    {            
+        if ($( this ).find(".Cell").first().text().toUpperCase().indexOf(filter) > -1) 
+        {
+            ClassFound = true;
+            $( this ).css("display","");
+            $( this ).find(".NameCell" ).each(function( index ) 
+            {                       
+                $( this ).closest("li").css("display","");                
+            });
+        }
+        else
+        {
+            $( this ).css("display","none");
+        }
+            
+    });
+
+    //Search Student Name
+    //console.log("ClassFound: " + ClassFound);
+    var StudentNameFound = false;    
+    if(!ClassFound)
+    {   
+        $( ".MainTable" ).each(function( index ) 
+        {            
+            $( this ).find(".NameCell" ).each(function( index ) 
+            {         
+                var name = $( this ).text();               
+                if (name.toUpperCase().indexOf(filter) > -1) 
+                {
+                    //console.log($( this ).closest(".MainTable").find(".Cell").first().text());
+                    //console.log(name);             
+                    $( this ).closest(".MainTable").css("display","");
+                    $( this ).closest("li").css("display","");
+                    StudentNameFound = true;
+                }
+                else
+                {                    
+                    $( this ).closest("li").css("display","none");
+                }
+            });    
+        });
+    }
+
+    console.log("ClassFound:" + ClassFound);
+    console.log("StudentNameFound:" + StudentNameFound);
+    if(!ClassFound && !StudentNameFound)
+    {
+        $( ".MainTable" ).each(function( index ) 
+        {            
+            $( this ).find(".AridNoCell" ).each(function( index ) 
+            {                   
+                var arid_no = $( this ).text();               
+                if (arid_no.toUpperCase().indexOf(filter) > -1) 
+                {                    
+                    $( this ).closest(".MainTable").css("display","");                    
+                    $( this ).closest("li").css("display","");
+                }
+                else
+                {                    
+                    $( this ).closest("li").css("display","none");
+                }
+            });    
+        });
+    }
+}
+$(document).on('click', '.App', function (e) {   
+
+$('.SelectAll li').each(function(i)
+{     
+   
+      $(this).find(".AppAct").removeClass("active");
+      
+       
+});
+$(this).find(".AppAct").addClass("active");
+}
+);
+
+
+
+
+$(".custom-select").change(function(e){
+    var option = $(this).find('option:selected');
+    var id = option.val();
+    e.preventDefault();
+    $(id).tab('show');
+});
+ $(document).on('click', '.ImageView', function (e) {    
+         
+         
+         var img = $(this).next();
+         var modalImg = document.getElementById("img01");
+       // var captionText = document.getElementById("caption");
+      //   modal.style.display = "block";
+      
+      $('#modal4').modal('show'); 
+         modalImg.src = img.attr('src');
+         //captionText.innerHTML = this.alt;
+        return false;
+    });
+    $(document).on('click', '.ZoomIn', function (e) {    
+         
+         
+        
+        
+       // var captionText = document.getElementById("caption");
+      //   modal.style.display = "block";
+          $("#img01").width($("#img01").width()+5);
+          $("#img01").height($("#img01").height()+5);
+         //captionText.innerHTML = this.alt;
+        return false;
+    });
+      $(document).on('click', '.ZoomOut', function (e) {    
+         
+         
+        
+        
+       // var captionText = document.getElementById("caption");
+      //   modal.style.display = "block";
+           $("#img01").width($("#img01").width()-5);
+           $("#img01").height($("#img01").height()-5);
+         //captionText.innerHTML = this.alt;
+        return false;
+    });
+
+
+
+$(document).ready(function () {
+    $(".ViewApp").click(function() {
+    // console.log($(this).parent().parent().next());
+   //  var val=$(this).parent().parent().find(".VP").attr('href');
+   //  document.location.href = val;
+      var val = $(this).parent().parent().find(".VP").attr("value");
+    $.ajax({
+            
+            url: "/Home/ViewApplication/",
+            type: "GET",
+             data: { "id":val },                
+                success: function (result) {
+                  //console.log(result);
+                  $('#modal-body3').empty();        
+                  $('#modal-body3').append(result);  
+                    
+                    $('#modal3').modal('show');                   
+                
+            },
+            error: function() {  
+                    alert("Content load failed.");  
+                }  
+        });
+        return false;
+    
+});
+});
+
+$(".ManualAdd").click(function () {
+       //console.log("Modal");
+       var val = $(this).attr("value")
+      
+        $.ajax({
+            
+            url: "/Home/ManualAddNeed/",
+            type: "GET",
+             data: { "id":val },                
+                success: function (result) {
+                  //console.log(result);
+                  $('#modal-body1').empty();        
+                  $('#modal-body1').append(result);  
+                    
+                    $('#modal1').modal('show');                   
+                
+            },
+            error: function() {  
+                    alert("Content load failed.");  
+                }  
+        });
+        return false;
+    });
+     $(".closbtn").click(function()  
+        {  
+          $(".SelectLG").find(".select").each(function(i)
+          {
+             $(this).removeClass("active");    
+
+          }
+          
+          );
+           $(".SelectLG").find(".select").eq(0).addClass("active");
+
+
+             $('#modal-body1').empty();
+             $('#modal-body2').empty();
+            $('#modal1').modal('hide');  
+            $('#modal2').modal('hide'); 
+            $('#modal3').modal('hide');
+             $('#modal4').modal('hide');
+        });
+
+        $(".close").click(function()
+        {
+          $(".SelectLG").find(".select").each(function(i)
+          {
+             $(this).removeClass("active");    
+
+          }
+          
+          );
+           $(".SelectLG").find(".select").eq(0).addClass("active");
+
+
+             $('#modal-body1').empty();
+             $('#modal-body2').empty();
+            $('#modal1').modal('hide');  
+            $('#modal2').modal('hide'); 
+            $('#modal3').modal('hide');
+             $('#modal4').modal('hide');
+
+        }
+        );
+ $(".Recommend").click(function () {
+       //console.log("Modal");
+       var val = $(this).attr("value")
+       console.log(val);
+        $.ajax({
+            
+            url: "/Home/AddComments/",
+            type: "GET",
+             data: { "id":val },                
+                success: function (result) {
+                  //console.log(result);
+                  $('#modal-body2').empty();        
+                  $('#modal-body2').append(result);  
+                    
+                    $('#modal2').modal('show');                   
+                
+            },
+            error: function() {  
+                    alert("Content load failed.");  
+                }  
+        });
+        return false;
+    });
+     
+
+$(document).ready(function(){
+  $('[data-toggle="View"]').tooltip();   
+});
+$(document).ready(function(){
+  $('[data-toggle="Manual"]').tooltip();   
+});
+$(document).ready(function(){
+  $('[data-toggle="Accept"]').tooltip();   
+});
+$(document).ready(function(){
+  $('[data-toggle="Reject"]').tooltip();   
+});
+
+@*function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+
+  //Clear the other search field  
+  document.getElementById("parmCGPA").value = '';
+  
+  //Display all before performing the new search
+  $( ".MainTable" ).each(function( index ) 
+  {            
+      $( this ).css("display","");
+      $( this ).find(".CGPACell" ).each(function( index )
+      {
+          $( this ).closest("li").css("display","");
+      });
+  });
+
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByClassName("MainTable")
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("Cell")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+*@
+function FilterByCGPA()
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("parmCGPA");
+    filter = input.value;
+    
+    //Clear the other search field  
+    document.getElementById("myInput").value = '';
+
+    //Display all before performing the new search
+    $( ".MainTable" ).each(function( index ) 
+    {            
+        $( this ).css("display","");
+        $( this ).find(".CGPACell" ).each(function( index )
+        {
+            $( this ).closest("li").css("display","");
+        });
+    });
+
+    //Hide all Classes    
+    $( ".MainTable" ).each(function( index ) 
+    {            
+        $( this ).css("display","none");
+    });
+
+    //Display the Filtered CGPA along with class
+    console.log("Filter: " + parseFloat(filter));   
+    var OneFound = false;       
+    $( ".MainTable" ).each(function( index ) 
+    {            
+        $( this ).find(".CGPACell" ).each(function( index ) 
+        {         
+            var cgpa = $( this ).text();
+            console.log(parseFloat(cgpa));              
+            if (parseFloat(cgpa) >= parseFloat(filter)) 
+            {   
+                $( this ).closest(".MainTable").css("display","");
+                $( this ).closest("li").css("display","");                
+                OneFound = true;
+            }
+            else
+            {                    
+                $( this ).closest("li").css("display","none");
+            }
+        });    
+    });
+    
+    if(OneFound == false)
+    {
+        //Show all Classes and its students    
+        $( ".MainTable" ).each(function( index ) 
+        {            
+            $( this ).css("display","");
+            $( this ).find(".CGPACell" ).each(function( index )
+            {
+                $( this ).closest("li").css("display","");
+            });
+        });
+    }
+
+  }
+      $(".Recommendations").click(function(){ 
+          var butval = $(this).val();
+          $("#ApplicationID").val(butval);
+          $("#myModal").modal('show');
+      });
+    
+ 
+    $(".Accept").click(function (e) {        
+        //alert('Accept');
+      
+       
+
+        $.ajax
+        ({
+            url: "/Home/AcceptNeedBased/",     
+            type: "post",
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).parent().parent().find(".amount").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            { 
+              console.log(result);
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text(''); 
+                      $(e.target).parent().parent().parent().find('.StdTid').each(function(n)
+                  {
+                        $(this).val(result.tid);
+                  }
+                  
+                  );
+                   $(e.target).parent().parent().parent().find('.StdStatus').each(function(n)
+                  {
+                        $(this).val('Accept');
+                  }
+                  
+                  );
+                  var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() == "Pending")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                   $('.RejectAll').prop('disabled',true);
+
+                }
+
+                 var statuses =  $(e.target).parent().parent().parent().parent().find('.StdStatus');
+
+                  var check = false;
+                 
+                    $(statuses).each(function(i)
+                    {
+
+                    if(statuses.eq(i).val() == "Pending")
+                              {
+                                      check = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                
+                 if(check == false)
+                 {
+                       $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',true);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',true);
+
+                 }
+     
+                  $(e.target).parent().parent().parent().css('background-color','#D9FEE5'); 
+                    $(e.target).parent().next().find('.Reject').prop('disabled',true); 
+                  $(e.target).prop('disabled',true);
+                      $(e.target).find(".fa-ban").attr("hidden",false);
+        $(e.target).parent().next().find('.Reject').find(".fa-ban").attr("hidden",false);
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+    $(".Reject").click(function (e) {
+             
+
+        
+        //console.log($(this).closest("tr").find(".AllocationAmount").val()); 
+        
+        $.ajax
+        ({
+            url: "/Home/RejectNeedBased/",  
+            type: "post",   
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).parent().parent().find(".amount").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            {
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                      $(e.target).parent().parent().parent().find('.StdTid').each(function(n)
+                  {
+                        $(this).val(result.tid);
+                  }
+                  
+                  );
+
+                  $(e.target).parent().parent().parent().find('.StdStatus').each(function(n)
+                  {
+                        $(this).val('Reject');
+                  }
+                  
+                  );
+                  var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() == "Pending")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                  $('.RejectAll').prop('disabled',true);
+                }
+
+
+                  var statuses =  $(e.target).parent().parent().parent().parent().find('.StdStatus');
+
+                     var check = false;
+                     console.log(statuses);
+                    $(statuses).each(function(i)
+                    {
+                      console.log(statuses.eq(i).val());
+
+                    if(statuses.eq(i).val() == "Pending")
+                              {
+                                      check = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                
+                 if(check == false)
+                 {
+                       $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',true);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',true);
+
+                 }
+     
+     
+     
+
+
+
+
+                  $(e.target).parent().parent().find('.AllocationAmount').val(0);
+                 $(e.target).parent().parent().parent().css('background-color','#E9967A'); 
+                 $(e.target).parent().prev().find('.Accept').prop('disabled',true);
+                  $(e.target).prop('disabled',true);
+                      $(e.target).find(".fa-ban").attr("hidden",false);
+        $(e.target).parent().prev().find('.Accept').find(".fa-ban").attr("hidden",false);
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+     $(document).on('click', '.THead', function (e) {           
+        $(this).parent().next('.TBody').toggleClass("collapse");
+        
+        return false;
+    });
+
+
+</script>

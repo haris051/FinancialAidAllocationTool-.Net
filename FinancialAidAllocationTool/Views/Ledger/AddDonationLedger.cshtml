@@ -1,0 +1,40 @@
+@model FinancialAidAllocationTool.Models.Ledger.DonationLedger
+@{
+    Layout=null;
+}
+@* <tr>
+    <td>
+        @Model.TransactionId
+    </td> 
+      <td>
+        @Html.DisplayFor(x => x.TransactionDate)
+    </td>
+      <td>
+        @Model.Credit
+    </td>
+      <td>
+        @Model.Debit
+    </td>
+      <td>
+        @Model.Memo
+    </td>
+    
+</tr> *@
+
+<div class="card mb-3" style="min-width: 220px;">
+
+    <div class="card-header">        
+      <b>Transaction # </b>@Model.TransactionId
+    </div>
+    
+    <div class="card-body">
+      <h5 class="card-title">Date is @Html.DisplayFor(x => x.TransactionDate)</h5>
+      <p class="card-text">Credit = @Model.Credit</p>
+      <p class="card-text">Debit = @Model.Debit</p>      
+    </div>
+
+    <div class="card-footer" style="text-transform: capitalize;">
+      <b>Memo: </b>@Model.Memo
+    </div>
+  
+</div>

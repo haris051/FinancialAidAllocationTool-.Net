@@ -1,0 +1,823 @@
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/BeginCollectionItemCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Host.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.Globalization.CultureInfoCache.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Identity.Client.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/NuGet.Frameworks.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Collections.Immutable.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.AttributedModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Convention.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Hosting.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Runtime.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.TypedParts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Extensions.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Plus.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.Expressions.Eval.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CoreCompileInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Committee.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibJobHolder.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/FileSection.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ParentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ResidenceInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/SiblingsInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/StudentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Chart/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/AddComments.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Dashboard.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList table.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedApplications.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/PreviousRecord.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Settings.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ViewApplication.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/NeedBased/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddPolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/ManagePolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.Manifest.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.xml
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (16-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.genruntimeconfig.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/BeginCollectionItemCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Host.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.Globalization.CultureInfoCache.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Identity.Client.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/NuGet.Frameworks.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Collections.Immutable.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.AttributedModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Convention.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Hosting.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Runtime.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.TypedParts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Extensions.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Plus.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.Expressions.Eval.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CoreCompileInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Committee.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibJobHolder.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/FileSection.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ParentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ResidenceInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/SiblingsInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/StudentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Chart/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/AddComments.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Dashboard.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/History.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMerit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMeritPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList table.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedApplications.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/PreviousRecord.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Settings.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ViewApplication.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/NeedBased/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddPolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/ManagePolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.Manifest.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.xml
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (21-Aug-2020) /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.genruntimeconfig.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/BeginCollectionItemCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Host.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.Globalization.CultureInfoCache.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Identity.Client.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/NuGet.Frameworks.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Collections.Immutable.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.AttributedModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Convention.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Hosting.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Runtime.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.TypedParts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Extensions.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Plus.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.Expressions.Eval.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CoreCompileInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Committee.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibJobHolder.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/FileSection.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/GuardianOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/MotherOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ParentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ResidenceInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/SiblingsInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/StudentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Chart/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/AddComments.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Dashboard.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/History.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMerit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMeritPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList table.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedApplications.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/PreviousRecord.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ViewApplication.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddPolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/ManagePolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/MeritRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/MeritRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.Manifest.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.xml
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (25-August-2020)/FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.genruntimeconfig.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.Development.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/appsettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/bundleconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/package.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Properties/launchSettings.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.deps.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.runtimeconfig.dev.json
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/BeginCollectionItemCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Host.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.Globalization.CultureInfoCache.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Extensions.PlatformAbstractions.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.Identity.Client.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/NuGet.Frameworks.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Collections.Immutable.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.AttributedModel.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Convention.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Hosting.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.Runtime.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Composition.TypedParts.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Extensions.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.EntityFramework.Plus.EFCore.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/Z.Expressions.Eval.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/bin/Release/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csprojAssemblyReference.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CoreCompileInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.MvcApplicationPartsAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfoInputs.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.AssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.input.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.TagHelpers.output.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorCoreGenerate.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Committee.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibJobHolder.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/AddSibStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/FileSection.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/GuardianOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/MotherOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ParentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileAddSibJobHolder.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileAddSibStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileGuardianOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileMotherOtherIncome.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileParentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileResidenceInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileSiblingsInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ProfileStudentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/ResidenceInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/SiblingsInfo.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/StudentDetails.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Application/UserProfile.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Chart/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/CloseScholarship/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/AddComments.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Dashboard.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/History.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMerit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddMeritPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddNeed.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ManualAddNeedPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList table.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/MeritList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedApplications.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClass.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedClassStudent.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/NeedBasedList.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/PreviousRecord.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ScholarShip.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Home/ViewApplication.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Create.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Delete.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Details.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/Edit.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/IntakeSeason/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/AddDonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger copy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Ledger/DonationLedger.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddPolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/AddRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Policy/ManagePolicy.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/index.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/MeritRule.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Settings/MeritRuleDescription.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.RazorTargetAssemblyInfo.cs
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.Views.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.csproj.CopyComplete
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.Manifest.cache
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/staticwebassets/FinancialAidAllocationTool.StaticWebAssets.xml
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.dll
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.pdb
+/home/muhammad/Projects/FinancialAidAllocationTool (4-sept-2020)   /FinancialAidAllocationTool/obj/Release/netcoreapp3.1/FinancialAidAllocationTool.genruntimeconfig.cache

@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal3">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body" id="modal-body3">
+            <div class="row">
+                
+                <div class="col-xl-10">
+                   <h3 class="text-success"><img src="/Images/ClappingHands.png" height="20" width="20" style="margin-bottom: 10px;margin-right:10px;">Welcome to Biit,@User.Identity.Name</h3>
+                   <p>You can create your profile and Apply for the Need Based Scholarship</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <h4  class="text-primary">What's inside <img src="/Images/Down.png" height="40" width="40" style="margin-top: 10px;margin-left:10px;"></h4>
+                </div>
+
+            </div>
+            <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12">
+               
+					<div class="box-part text-center">
+                        
+<a style="font-size:50px;"><i class="fas fa-user-circle"></i></a><a>
+                        
+						<div class="title">
+							<h4 class="text-success">Profile</h4>
+						</div>
+                        
+						<div class="text">
+							<span>You can Create your prfile,Enter your details,Parent Details,Residence Details,Sibling Details</span>
+						</div>
+                        
+						
+                        
+					 </div>
+				</div>	 
+				
+				 <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12">
+               
+					<div class="box-part text-center">
+					    
+    <a style="font-size:50px;"><i class="fas fa-graduation-cap"></i></a>
+                    
+						<div class="title">
+							<h4 class="text-success">Need Based Scholarship</h4>
+						</div>
+                        
+						<div class="text">
+							<span>You can Apply for the Scholarship once every semester from you profile</span>
+						</div>
+                        
+						
+                        
+					 </div>
+				</div>	 
+            </div>	
+				
+     </div>	
+		 <div class="modal-footer" id="modal-footer3">
+        
+       
+        @Html.ActionLink("Get Started","Create","Application",null,new { @class = "btn btn-success" })
+
+      </div>		
+     </div>
+     
+    </div>
+  </div>
+</div>
+<script>
+  $("#modal3").modal('show');
+</script>

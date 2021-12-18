@@ -1,0 +1,1013 @@
+﻿@model List<FinancialAidAllocationTool.Models.FaatClassDefinition>
+  @using System.Collections.Generic;
+  @using Newtonsoft.Json;
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ 
+
+
+@if(Model != null)
+{
+<div style="margin-top: 60px;margin-bottom: 80px;">   
+  <h1 style="color: White;">Merit Based Scholarship</h1>   
+<section> 
+  <div style="">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+  <div class="card border-left-success shadow h-100 py-2">     
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+          <div class="text-xs font-weight-bold text-success text-uppercase mb-1 DonationAccountStatus">Balance (@TempData["DonationAccountStatus"].ToString())</div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800 DonationAccountVal">@TempData["DonationAccountVal"].ToString()
+            </div>
+        </div>
+        <div class="col-auto">      
+          <img class="img" height="50px" width="50px" src="~/Images/pakistan-rupee-currency-symbol.png" />
+        </div>
+      </div>        
+    </div>      
+  </div>
+  </div>
+  </div>
+
+  <form >
+      <div asp-validation-summary="All" class="text-danger"></div>                        
+      <span class="text-danger ErrorMessage">@TempData["Error"]</span>
+         
+
+           <div class="row">
+             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5">
+                    <input type="text" style ="background-color:#B0C4DE;"class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+             </div>
+             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-7 pl-0" style="text-align: right;">
+            
+            @if(Model.Count > 0)
+            {
+              
+                    <button type="submit" name="RejectAll" value="Reject All" 
+                      formaction="/Home/RejectAllMeritBased" formmethod="post" 
+                      class="btn btn-danger btn-sm RejectAll" style="float:right;" @if(Model.Where(e=>e.FaatScholarLog.Where(e=>e.Status =="Reject").Count() == e.FaatScholarLog.Count()).Count()== Model.Count()){<text>disabled</text>}>Reject All                  
+                    </button>
+               
+                 
+                    <button type="submit" name="AcceptAll" value="Accept All" 
+                      formaction="/Home/AcceptAllMeritBased" formmethod="post" 
+                      class="btn btn-success btn-sm AcceptAll" style="float:right;" @if(Model.Where(e=>e.FaatScholarLog.Where(e=>e.Status=="Accept").Count() == e.FaatScholarLog.Count()).Count()== Model.Count()){<text>disabled</text>}> Accept All                 
+                    </button>
+               
+            }
+            </div>
+             </div>
+             
+            <section id="myTable">
+           @foreach (var item in Model)
+            {
+                <partial name="MeritBasedClass" for="@item"></partial>
+            }
+            </section>
+           
+         
+                 
+  </form>
+  </div>
+</section>
+</div>
+}
+else
+{
+  <p class="text-danger">@TempData["Error"]</p>
+}
+ <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Manual Student List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           </div>
+      <div class="modal-footer">
+        
+        <button type="submit" class="btn btn-success" form="myform">Submit</button>
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closbtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('[data-toggle="Reject"]').tooltip(); 
+    
+});
+ $(document).ready(function(){
+  $('[data-toggle="Accept"]').tooltip();
+   
+});
+ $(document).ready(function(){
+  $('[data-toggle="Manual"]').tooltip();   
+});
+$(".AcceptClass").click(function (e) {
+  var id = $(this).attr("data");
+     var btn = $(this);
+     var json = @Html.Raw(Json.Serialize(@Model));
+     var obj = "";
+     for(var i =0 ; i < Object.keys(json).length;i++)
+     {
+        if(json[i].id == id)
+        {
+          obj = json[i];
+        }
+
+     }
+      console.log(obj);
+       var a = [];
+       var StdList = $(this).parent().parent().parent().next().find(".StdClass");
+       var b = $(this).parent().parent().parent().next().find(".StdClass").find(".AllocationAmount");
+       var status = $(this).parent().parent().parent().next().find(".StdClass").find(".StdStatus")
+       var tid = $(this).parent().parent().parent().next().find(".StdClass").find(".StdTid")
+
+       for(var i=0;i<b.length;i++)
+       {
+            a.push($(this).parent().parent().parent().next().find(".StdClass").find(".AllocationAmount").val());
+            console.log(b.eq(i).val());
+       }
+      
+
+       
+         for(var i =0 ; i < Object.keys(obj.faatScholarLog).length;i++)
+     {
+        
+        
+          obj.faatScholarLog[i].allocationAmount = b.eq(i).val();
+          obj.faatScholarLog[i].Status = status.eq(i).val();
+          obj.faatScholarLog[i].Tid = tid.eq(i).val();       
+        
+
+     }
+     console.log(obj);
+
+      $.ajax
+        ({
+            url: "/Home/AcceptMeritClass/",     
+            type: "post",
+            dataType: "json",
+            data: { "Class":JSON.stringify(obj) }, 
+           
+            success: function (result) 
+            { 
+              
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                  $(btn).prop('disabled',true);         
+                   $(btn).prev().prop('disabled',false);
+                   console.log(result);
+                   $(StdList).each(function(i)
+                   {
+                      var count = 0;
+                     $(this).find('.StdTid').each(function(n)
+                     {
+                       
+                       $(this).val(result.tid[count]);
+                      
+                       count = count + 1;
+                     }
+                     );
+                      $(this).find('.StdStatus').each(function(m)
+                      {
+                        $(this).val("Accept");
+                      }
+                      );
+                      $(this).css('background-color','#D9FEE5');
+                       $(this).find('.Accept').each(function(j)
+                       {
+                             $(this).prop('disabled',true);
+                             if($(this).find(".fa-ban").length >1)
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+                             }
+                             else
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                             }
+
+                       }
+                       
+                       ) ; 
+                       $(this).find('.Reject').each(function(k)
+                       {
+
+                              $(this).prop('disabled',false);
+                              $(this).find(".fa-ban").attr("hidden",true);
+                       }
+                       
+                       );
+
+                   }
+                   );
+                    var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() != "Accept")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                  $('.RejectAll').prop('disabled',false);
+                }
+                else
+                {
+                  $('.AcceptAll').prop('disabled',false);
+                  $('.RejectAll').prop('disabled',false);
+
+
+                }
+
+                  
+                   
+
+                  
+                  
+                   
+
+                  
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        
+        return false;
+     
+@*
+     //var json = @Html.Raw(Json.Serialize(md));
+    //console.log(json);
+
+       //console.log("Modal");
+   //    var a = [];
+   //    var b = $(this).parent().parent().parent().next().find(".StdClass").find(".Accept");
+    //   for(var i=0;i<b.length;i++)
+     //  {
+           // a.push($(this).parent().parent().parent().next().find(".StdClass").find(".Accept").val());
+     //       console.log(b.eq(i).attr('value'));
+     //  }
+       
+    //   console.log(a[0]);
+    //   var val = $(this).attr("value")
+     //  console.log(val);
+  *@    
+    });
+$(".RejectClass").click(function (e) {
+    var btn = $(this);
+
+  var id = $(this).attr("data");
+           var StdList = $(this).parent().parent().parent().next().find(".StdClass");
+           var status = $(this).parent().parent().parent().next().find(".StdClass").find(".StdStatus")
+     var tid = $(this).parent().parent().parent().next().find(".StdClass").find(".StdTid");
+
+
+     var json = @Html.Raw(Json.Serialize(@Model));
+     var obj = "";
+     for(var i =0 ; i < Object.keys(json).length;i++)
+     {
+        if(json[i].id == id)
+        {
+          obj = json[i];
+        }
+
+     }
+         for(var i =0 ; i < Object.keys(obj.faatScholarLog).length;i++)
+     {
+        
+        
+       
+          obj.faatScholarLog[i].Status = status.eq(i).val();
+          obj.faatScholarLog[i].Tid = tid.eq(i).val();        
+
+        
+
+     }
+      
+      $.ajax
+        ({
+            url: "/Home/RejectMeritClass/",     
+            type: "post",
+            dataType: "json",
+            data: { "Class":JSON.stringify(obj) }, 
+           
+            success: function (result) 
+            { 
+              
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                   $(btn).prop('disabled',true);
+                             
+                             $(btn).next().prop('disabled',false);
+                             
+                          console.log(result);    
+
+                   $(StdList).each(function(i)
+                   {
+                     var count = 0;
+                     $(this).find('.StdTid').each(function(n)
+                     {
+                       if(result.tid[count] != null)
+                       {
+                       $(this).val(result.tid[count]);
+                       
+                       }//console.log(result.Tid[count].Tid);
+                       count = count + 1;
+                     }
+                     );
+                      $(this).find('.StdStatus').each(function(m)
+                      {
+                        $(this).val("Reject");
+                      }
+                      );
+                      $(this).css('background-color','#E9967A');
+                       $(this).find('.Reject').each(function(j)
+                       {
+                             $(this).prop('disabled',true);
+                             if($(this).find(".fa-ban").length >1)
+                             {
+                                $(this).find(".fa-ban").eq(0).attr("hidden",true);
+                               $(this).find(".fa-ban").eq(1).attr("hidden",false);
+                             }
+                             else
+                             {
+                               $(this).find(".fa-ban").eq(0).attr("hidden",false);
+                             }
+                       }
+                       
+                       ) ; 
+                       $(this).find('.Accept').each(function(k)
+                       {
+
+                              $(this).prop('disabled',false);
+
+                              
+                              $(this).find(".fa-ban").attr("hidden",true);
+                       }
+                       
+                       );
+                       $(this).find('.AllocationAmount').each(function(l)
+                       {
+                             $(this).val(0);    
+
+                       }
+                       
+                       );
+
+
+                   }
+                   );
+                     var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() != "Reject")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',false);
+                  $('.RejectAll').prop('disabled',true);
+                }
+                else
+                {
+                   $('.AcceptAll').prop('disabled',false);
+                  $('.RejectAll').prop('disabled',false);
+
+                }
+
+                  
+                   
+
+                  
+                   
+
+                  
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        
+        return false;
+     
+  
+    });
+
+
+
+
+$(".ManualAdd").click(function () {
+       //console.log("Modal");
+       var val = $(this).attr("value")
+       console.log(val);
+        $.ajax({
+            
+            url: "/Home/ManualAddMerit/",
+            type: "GET",
+             data: { "id":val },                
+                success: function (result) {
+                  //console.log(result);
+                  $('.modal-body').empty();        
+                  $('.modal-body').append(result);  
+                    
+                    $('#modal').modal('show');                   
+                
+            },
+            error: function() {  
+                    alert("Content load failed.");  
+                }  
+        });
+        return false;
+    });
+     $("#closbtn").click(function()  
+        {  
+             
+            $('#modal').modal('hide');  
+        });
+
+@* function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByClassName("MainTable")
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByClassName("Cell")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+} *@
+
+function myFunction() 
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    @* table = document.getElementById("myTable");
+    tr = table.getElementsByClassName("MainTable")
+    //tr[i] is one Main Table:- Head (Class) + Body (Students)
+    //Search Class
+    var ClassFound = false;
+    for (i = 0; i < tr.length; i++)     
+    {        
+        td = tr[i].getElementsByClassName("Cell")[0];
+        if (td) 
+        {
+            txtValue = td.textContent || td.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+                tr[i].style.display = "";
+                ClassFound = true;
+            } 
+            else 
+            {
+                tr[i].style.display = "none";
+              
+            }
+        }       
+    }     *@
+    //Search Class
+    var ClassFound = false;
+    $( ".MainTable" ).each(function( index ) 
+    {            
+        if ($( this ).find(".Cell").first().text().toUpperCase().indexOf(filter) > -1) 
+        {
+            ClassFound = true;
+            $( this ).css("display","");
+            $( this ).find(".NameCell" ).each(function( index ) 
+            {                       
+                $( this ).closest("li").css("display","");                
+            });
+
+            $( this ).find(".Arid" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+            $( this ).find(".Amount" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".CGPA" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".CID" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".DISP" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEMS" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEMC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".STRENGTH" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+
+        }
+        else
+        {
+            $( this ).css("display","none");
+            $(this).attr("disabled",true);
+             $( this ).find(".Arid" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+            $( this ).find(".Amount" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".CGPA" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".CID" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".DISP" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEMS" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEMC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".STRENGTH" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+
+            
+        }
+            
+    });
+
+    //Search Student Name
+    //console.log("ClassFound: " + ClassFound);
+    var StudentNameFound = false;    
+    if(!ClassFound)
+    {   
+        $( ".MainTable" ).each(function( index ) 
+        {            
+            $( this ).find(".NameCell" ).each(function( index ) 
+            {         
+                var name = $( this ).text();               
+                if (name.toUpperCase().indexOf(filter) > -1) 
+                {
+                    //console.log($( this ).closest(".MainTable").find(".Cell").first().text());
+                    //console.log(name);             
+                    $( this ).closest(".MainTable").css("display","");
+                    $( this ).closest("li").css("display","");
+                    $( this ).find(".Arid" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+            $( this ).find(".Amount" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".CGPA" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".CID" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".DISP" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEMS" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEMC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".SEC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+             $( this ).find(".STRENGTH" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",false);                
+            });
+
+                    StudentNameFound = true;
+                }
+                else
+                {                    
+                    $( this ).closest("li").css("display","none");
+                                 $( this ).find(".Arid" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+            $( this ).find(".Amount" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".CGPA" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".CID" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".DISP" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEMS" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEMC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".SEC" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+             $( this ).find(".STRENGTH" ).each(function( index ) 
+            {                       
+                $( this ).attr("disabled",true);                
+            });
+
+
+                }
+            });    
+        });
+    }
+
+    console.log("ClassFound:" + ClassFound);
+    console.log("StudentNameFound:" + StudentNameFound);
+    if(!ClassFound && !StudentNameFound)
+    {
+        $( ".MainTable" ).each(function( index ) 
+        {            
+            $( this ).find(".AridNoCell" ).each(function( index ) 
+            {                   
+                var arid_no = $( this ).text();               
+                if (arid_no.toUpperCase().indexOf(filter) > -1) 
+                {                    
+                    $( this ).closest(".MainTable").css("display","");                    
+                    $( this ).closest("li").css("display","");
+                }
+                else
+                {                    
+                    $( this ).closest("li").css("display","none");
+                }
+            });    
+        });
+    }
+}
+
+    $(".Accept").click(function (e) { 
+             
+        //alert('Accept');
+        $.ajax
+        ({
+            url: "/Home/AcceptMeritBased/",     
+            type: "post",
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).parent().parent().find(".amount").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            { 
+              console.log(result);
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                     $(e.target).parent().parent().parent().find('.StdTid').each(function(n)
+                  {
+                        $(this).val(result.tid);
+                  }
+                  
+                  );
+                   $(e.target).parent().parent().parent().find('.StdStatus').each(function(n)
+                  {
+                        $(this).val('Accept');
+                  }
+                  
+                  );
+                  var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                 
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() != "Accept")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',true);
+                   $('.RejectAll').prop('disabled',false);
+
+                }
+                else
+                {
+                  $('.AcceptAll').prop('disabled',false);
+                   $('.RejectAll').prop('disabled',false);
+
+                }
+
+                 var statuses =  $(e.target).parent().parent().parent().parent().find('.StdStatus');
+
+                  var check = false;
+                 
+                    $(statuses).each(function(i)
+                    {
+
+                    if(statuses.eq(i).val() != "Accept")
+                              {
+                                      check = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                
+                 if(check == false)
+                 {
+                       $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',true);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',false);
+
+                 }
+                 else
+                 {
+                    $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',false);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',false);
+
+
+                 }
+     
+
+                  $(e.target).parent().parent().parent().css('background-color','#D9FEE5');
+                  $(e.target).parent().next().find('.Reject').prop('disabled',false); 
+                  $(e.target).prop('disabled',true);
+                  if($(e.target).find(".fa-ban").length >0)
+                  {
+                  $(e.target).find(".fa-ban").eq(0).attr("hidden",false);
+
+                  }
+
+
+                 
+                $(e.target).parent().next().find('.Reject').find(".fa-ban").attr("hidden",true);  
+
+                  
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+    $(".Reject").click(function (e) {
+        
+       
+
+        //console.log($(this).closest("tr").find(".AllocationAmount").val()); 
+                 
+        $.ajax
+        ({
+            url: "/Home/RejectMeritBased/",  
+            type: "post",   
+            data: 
+            { 
+              "Arid_No":$(this).attr('value'),
+              "AllocationAmount":$(this).parent().parent().find(".amount").find(".AllocationAmount").val()
+            },
+            success: function (result) 
+            {
+              if (result.status === 'OK') {                                   
+                  //window.location.href = result.url;
+                  $(".DonationAccountStatus").text(result.donationAccountStatus);
+                  $(".DonationAccountVal").text(result.donationAccountVal);
+                  $(".ErrorMessage").text('');
+                  $(e.target).parent().parent().parent().find('.StdTid').each(function(n)
+                  {
+                        $(this).val(result.tid);
+                  }
+                  
+                  );
+                  $(e.target).parent().parent().parent().find('.StdStatus').each(function(n)
+                  {
+                        $(this).val('Reject');
+                  }
+                  
+                  );
+                  var AllStatus = $('.StdStatus');
+                  var Acheck = false;
+                   console.log(AllStatus);
+                    $(AllStatus).each(function(i)
+                    {
+
+                    if(AllStatus.eq(i).val() != "Reject")
+                              {
+                                      Acheck = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                if(Acheck == false)
+                {
+                  $('.AcceptAll').prop('disabled',false);
+                  $('.RejectAll').prop('disabled',true);
+                }
+                else
+                {
+                   $('.AcceptAll').prop('disabled',false);
+                  $('.RejectAll').prop('disabled',false);
+
+                }
+
+
+                  var statuses =  $(e.target).parent().parent().parent().parent().find('.StdStatus');
+
+                     var check = false;
+                     console.log(statuses);
+                    $(statuses).each(function(i)
+                    {
+                      console.log(statuses.eq(i).val());
+
+                    if(statuses.eq(i).val() != "Reject")
+                              {
+                                      check = true;
+                              }
+
+                    }
+                    
+                    
+                    );
+                
+                 if(check == false)
+                 {
+                       $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',false);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',true);
+
+                 }
+                 else
+                 {
+                       $(e.target).parent().parent().parent().parent().parent().prev().find('.AcceptClass').prop('disabled',false);
+                      $(e.target).parent().parent().parent().parent().parent().prev().find('.RejectClass').prop('disabled',false);
+
+
+                 }
+     
+     
+     
+
+                  $(e.target).parent().parent().find('.AllocationAmount').val(0);
+                  $(e.target).parent().parent().parent().css('background-color','#E9967A');
+                 console.log($(this).parent().prev().find('.Accept')); 
+                  
+                  $(e.target).parent().prev().find('.Accept').prop('disabled',false); 
+                  $(e.target).prop('disabled',true);
+                  if($(e.target).find(".fa-ban").length>0)
+                  {
+                   $(e.target).find(".fa-ban").eq(0).attr("hidden",false);
+                  }
+        $(e.target).parent().prev().find('.Accept').find(".fa-ban").attr("hidden",true);
+              }
+              else if (result.status === 'Error') {                 
+                $(".ErrorMessage").text(result.message);                 
+              }
+              else {
+                  //alert("The status cannot be updated at this time");
+                  $(".ErrorMessage").text("The status cannot be updated at this time.");                 
+              }   
+            },
+            error: function (response) {
+              //alert("error!");  // 
+              $(".ErrorMessage").text("Exception has been raised.");                 
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.THead', function (e) {           
+        $(this).parent().next('.TBody').toggleClass("collapse");
+        
+        return false;
+    });
+
+</script>

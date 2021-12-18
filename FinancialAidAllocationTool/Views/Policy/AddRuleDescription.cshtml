@@ -1,0 +1,44 @@
+@using HtmlHelpers.BeginCollectionItemCore;
+@model FinancialAidAllocationTool.Models.Policy.FaatRuleDescription
+
+@{
+    ViewData["Title"] = "Edit"; 
+}
+
+
+
+@using (Html.BeginHtmlFieldPrefixScope(@ViewData["ContainerPrefix"].ToString()))
+{
+    @using (Html.BeginCollectionItem("FaatRuleDescription"))
+    {
+ <li class="list-group-item bg-secondary D">
+            <div class="row">
+                <div class="form-group col-lg-1 col-1 px-0" >
+                                    
+                </div>
+                <div class="form-group col-lg-3 col-3 px-0 text-center">
+                    <label asp-for="StudentNo" class="control-label text-white"></label>
+                </div>
+                <div class="form-group col-lg-2 col-2 px-0 text-center">                    
+                    <input asp-for="StudentNo" class="form-control" />
+                </div>
+
+                <div class="form-group col-lg-2 col-2 px-1 text-center">
+                    <label asp-for="Amount" class="control-label text-white"></label>
+                </div>
+                <div class="form-group col-lg-2 col-2 px-0 text-center">
+                    <input asp-for="Amount" class="form-control" />                    
+                </div>
+
+                <div class="form-group col-lg-2 col-2 px-1 text-center">
+                    <a href="#" class="btn btn-danger delete-ruleDesc">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+ </li>
+    
+    }
+}
+
+

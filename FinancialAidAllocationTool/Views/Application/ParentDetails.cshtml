@@ -1,0 +1,348 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppParentDetail
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+
+}
+
+@using (Html.BeginCollectionItem("FaatAppParentDetail"))
+{      
+
+    
+    <section class="ParentDetails tab ">
+<div class="row">
+   <div class="col-xl-12 col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+          
+             <div class="row">
+                <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                <h5>Parent Details</h5>
+                </div>
+            </div>
+             <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-12 px-0 px-0 MyFont">
+
+                            <label class="font-weight-bold" style="margin-top: 6px;">Who is Financing or Supporting you?</label>  
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                            <input asp-for="FinancingPerson" class="form-control">
+
+
+                    </div>
+           </div>
+           <hr style="border-bottom: 1px solid grey;">
+          
+             <div class="row" style="margin-top: 1px;">
+               
+            <div class="col-12 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                  <div class="row">
+                 <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                <h6>Father/Guardian Details</h6>
+                </div>
+                </div>
+                   <div class="row">
+                       <div class="col-xl-4 col-lg-6 col-md-12 col-12 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;" asp-for="FatherIsAlive"></label>
+                       </div>
+                       <div class="col-xl-4 col-lg-6 col-md-12 col-12 MyFont px-0">
+                            <label>Alive</label>
+                             <input type="radio" asp-for="FatherIsAlive" value="" class="CNIC">
+                            <label>Not Alive</label>
+                             <input type="radio" asp-for="FatherIsAlive" value="" class="DC" >
+                       </div>
+                 
+                   
+                       <div class="col-xl-4 col-lg-12 col-md-12 col-12 px-0">
+                           
+                            <div class="collapse D custom-file MyFont">
+                                    
+                                    <a class="AttachDC"><i class="fa fa-paperclip" aria-hidden="true"></i></a><span>Death Certificate</span><img class="ViewImage" hidden alt="" src="" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                     <input type="file" class="custom-file-input" hidden asp-for="FatherFile" id="customFile">
+                                      
+                            </div>
+                       </div>
+                     </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Name</label> 
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                        <input class="form-control" asp-for="GName">    
+                        <span asp-validation-for="GName" class="text-danger"></span>
+                       </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;">Company</label>
+                       </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont">
+                         <input asp-for="GCompany" class="form-control"> 
+                         <span asp-validation-for="GCompany" class="text-danger"></span>
+   
+
+                        </div>
+
+                   </div>
+                  
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Occupation</label>
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="GOccupation">    
+                        <span asp-validation-for="GOccupation" class="text-danger"></span>
+
+                       </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Designation</label>
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="GDesignation">    
+                         <span asp-validation-for="GDesignation" class="text-danger"></span>
+
+                       </div>
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;">Monthly Income</label>
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                            <input class="form-control" asp-for="GMonthlyIncome" type="number">    
+                            <span asp-validation-for="GMonthlyIncome" class="text-danger"></span>
+
+                       </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;">Office Tel:</label>
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                            <input class="form-control" asp-for="GOfficeTelNo">    
+                            <span asp-validation-for="GOfficeTelNo" class="text-danger"></span>
+
+                       </div>
+
+                   </div>
+                    
+                      <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;">Office Address</label>
+                       </div>
+                       <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                            <input class="form-control" asp-for="GOfficeAddress">    
+                            <span asp-validation-for="GOfficeAddress" class="text-danger"></span>
+
+                       </div>
+                         <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                                    <label class="font-weight-bold" style="margin-top: 6px;">Email Address</label>
+                                </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                                    <input class="form-control" asp-for="GEmailAddress">    
+                                    <span asp-validation-for="GEmailAddress" class="text-danger"></span>
+
+                            </div>
+
+                   </div>
+                    <hr style="border-bottom: 1px solid grey;">    
+                   <div class="row" style="margin-top: 1px;">
+                       <div class="col-12">
+                            <a href="#" class="text-success GuardianIncome float-left fa fa-plus" data ="@ViewData["ContainerPrefix"]">Other Income Resources</a> 
+                       </div>
+
+                   </div>
+                    <ul class="list-group MainTable2">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-3 col-lg-3 col-md-3" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-3 col-lg-3 col-md-3" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-3" style="text-align: center;">
+                                   Resource File
+                              </div>
+                               <div class="col-xl-2 col-lg-2 col-md-3" style="text-align: center;">
+                                   Discard
+                              </div>
+                             
+                         </div>
+                    </li>
+               
+                    <section class="GI">
+                      
+                    </section>
+                    </ul>
+
+                 
+
+            </div>
+              
+                
+                
+             
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                 <div class="row">
+                      <div class="col-12 d-xl-none d-lg-none d-md-none" style="margin-top: 5px;">
+                           <hr>
+                      </div>
+                 </div>
+                <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 px-0" id="ParentDetails">
+                         <h6>Mother Details</h6>
+                        </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                       <div class="col-xl-4 col-lg-5 col-md-12 col-12 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;" asp-for="MotherIsAlive"></label>
+                       </div>
+                       <div class="col-xl-4 col-lg-7 col-md-12 col-12 MyFont px-0">
+                            <label>Alive</label>
+                             <input type="radio" asp-for="MotherIsAlive" value="" class="CNIC">
+                            <label>Not Alive</label>
+                             <input type="radio" asp-for="MotherIsAlive" value="" class="DC" >
+                       </div>
+                
+               
+                       <div class="col-xl-4 col-lg-12 col-md-12 col-12 px-0">
+                            
+                            <div class="collapse D custom-file MyFont">
+                                    
+                                    <a class="AttachDC"><i class="fa fa-paperclip" aria-hidden="true"></i></a><span>Death Certificate</span><img class="ViewImage" hidden alt="" src="" style="width: 30px;height:30px;margin-left:4px;border: 3px solid black">
+                                     <input type="file" class="custom-file-input" hidden id="customFile1" asp-for="MotherFile">
+                                      
+                            </div>
+                       </div>
+                </div>
+                <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Name:</label> 
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="MName"> 
+                        <span asp-validation-for="MName" class="text-danger"></span>
+
+                    </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold"  style="margin-top: 6px;">Company</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="MCompany">    
+                        <span asp-validation-for="MCompany" class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                  
+                  <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                        <label class="font-weight-bold" style="margin-top: 6px;">Occupation</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="MOccupation">    
+                        <span asp-validation-for="MOccupation" class="text-danger"></span>
+
+                    </div>
+                      <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                            <label class="font-weight-bold" style="margin-top: 6px;">Designation</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="MDesignation">    
+                        <span asp-validation-for="MDesignation" class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                  
+                    <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                                     <label class="font-weight-bold" style="margin-top: 6px;">Monthly Income</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                        <input class="form-control" asp-for="MMonthlyIncome">    
+                        <span asp-validation-for="MMonthlyIncome" class="text-danger"></span>
+
+                    </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                                     <label class="font-weight-bold" style="margin-top: 6px;">Office Tel:</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                                     <input class="form-control" asp-for="MOfficeTelNo">    
+                                    <span asp-validation-for="MOfficeTelNo" class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                   
+                   <div class="row" style="margin-top: 1px;">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                                     <label class="font-weight-bold" style="margin-top: 6px;">Office Address</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                                     <input class="form-control" asp-for="MOfficeAddress">    
+                                    <span asp-validation-for="MOfficeAddress" class="text-danger"></span>
+
+                    </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-6 MyFont px-0">
+                                     <label class="font-weight-bold" style="margin-top: 6px;">Email Address</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                                     <input class="form-control" asp-for="MEmailAddress">    
+                                    <span asp-validation-for="MEmailAddress" class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                  <hr style="border-bottom: 1px solid grey;">
+                <div class="row" style="margin-top: 1px;">
+                       <div class="col-12">
+                            <a href="#" class="text-success MotherIncome float-left fa fa-plus"  data ="@ViewData["ContainerPrefix"]">Other Income Resources</a> 
+                       </div>
+
+                   </div>
+                   <ul class="list-group">
+                    <li class="list-group-item bg-info d-xl-block d-lg-none d-none d-md-none">
+                         <div class="row" style="text-align: center;">
+                              
+                              <div class="col-xl-3 col-lg-3 col-md-3" style="text-align: center;">
+                                   Resource Type
+                              </div>
+                              <div class="col-xl-3 col-lg-3 col-md-3" style="text-align: center;">
+                                   Income
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-3" style="text-align: center;">
+                                   Resource File
+                              </div>
+                              <div class="col-xl-2 col-lg-2 col-md-3" style="text-align: center;">
+                                   Discard
+                              </div>
+                             
+                         </div>
+                    </li>
+               
+                   <section class="MI">
+                  
+                    </section>
+                   </ul>
+            </div>
+    </div>
+    
+                           
+          </div>
+      </div>
+
+   </div>
+</div>
+        
+
+       
+    
+  
+                 
+    
+    </section>
+   
+
+}
+
+

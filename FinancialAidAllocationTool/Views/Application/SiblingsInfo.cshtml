@@ -1,0 +1,87 @@
+@model  FinancialAidAllocationTool.Models.Application.FaatAppSiblingInfo
+@using HtmlHelpers.BeginCollectionItemCore;
+@{
+   
+    
+}
+
+@using (Html.BeginCollectionItem("FaatAppSiblingInfo"))
+{
+<section class="SiblingInfo tab" style="">
+    <input asp-for="NoOfSibling" type="hidden">
+ <div class="row">
+   <div class="col-lg-12 col-12">
+      <div class="card border-left-success shadow">
+          <div class="card-body">
+                  <div class="row">
+                        <div class="col-sm-12 text-xs font-weight-bold text-success text-uppercase mb-1 pl-3" id="SiblingInfo">
+                        <h5>Sibling Information</h5>
+                        </div>
+                </div>
+                <hr style="border-bottom: 1px solid grey;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                <div class="row">
+                     <div class="col-sm-12 s MyFont">
+                        <label class="font-weight-bold text-success text-lg" style="margin-top: 6px;">Add Student</label> 
+                               <button type="button" id="AddStudent" class="float-left AddStudent btn btn-sm btn-success" data ="@ViewData["ContainerPrefix"]">
+                                <i class="fa fa-plus-square" aria-hidden="true"></i>                            
+                                </button>
+
+                    </div>
+
+                </div>
+                
+                <section class="AddStudentRow">
+                     
+
+                </section>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                  <div class="row">
+                        <div class="col-12 d-xl-none d-lg-none d-md-none" style="margin-top: 6px;">
+                    
+
+                <hr style="border-bottom: 1px solid grey;">
+
+        
+                        </div>
+                  </div>
+                <div class="row" style="margin-top: 4px;">
+                    <div class="col-sm-12 MyFont">
+                             <label class="font-weight-bold text-success text-lg" style="margin-top: 6px;">Add JobHolders</label> 
+                            <button type="button"  id="AddJobHolders" class="float-left AddJobHolders btn btn-sm btn-success" data ="@ViewData["ContainerPrefix"]">
+                            <i class="fa fa-plus-square" aria-hidden="true"></i>                            
+                            </button>
+
+                    </div>
+
+                </div>
+                <section class="AddJobHolderRow">
+                        
+
+                </section>
+                </div>
+
+</div>
+          </div>
+
+              
+          </div>
+      </div>
+
+   </div>
+
+      
+
+
+
+
+
+</section>
+
+
+
+
+
+}
