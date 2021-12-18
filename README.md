@@ -21,6 +21,10 @@ Link\
 9. Administrator can Review the Recommendations of all the commettiee members to the specific scholar and the Previous history of the scholars
 10. Parents of the Specfic Student can Review the Fee schedule and the allocation amount of the Scholars and remaining Dues of every semester
 
+# Video Link
+Link\
+[GNU/GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
 # Basic Instructions
 1. Download the Project
 2. Open the database Folder
