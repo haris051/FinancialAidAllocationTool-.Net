@@ -23,7 +23,7 @@ Link\
 
 # Video Link
 Link\
-[GNU/GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[FinancialAidAllocationTool(BIIT)](https://u.pcloud.link/publink/show?code=XZPYcNXZCFLMVB8dUTFIg8sJ1MoXl4FWYNXX)
 
 # Basic Instructions
 1. Download the Project
