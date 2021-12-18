@@ -28,6 +28,8 @@ Link\
 4. copy the Schema Script and run on SQL Server 
 5. Copy the Data Script and run on Sql Server 
 6. Copy the FAAT_APP_Comments Script and run on the sql Server
+7. Run the Solution File on Visual Studio 
+8. ! The domain of this project was ARID (BIIT)
 
 
 
